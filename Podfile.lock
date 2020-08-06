@@ -1,0 +1,72 @@
+PODS:
+  - AEPCore (0.0.1):
+    - AEPServices
+    - SwiftRulesEngine
+  - AEPIdentity (0.0.1):
+    - AEPCore
+  - AEPLifecycle (0.0.1):
+    - AEPCore
+  - AEPServices (0.0.1)
+  - AEPSignal (0.0.1):
+    - AEPCore
+  - SwiftRulesEngine (0.0.1)
+
+DEPENDENCIES:
+  - "AEPCore (from `git@github.com:nporter-adbe/aepsdk-core-ios.git`, branch `compatiblity-updates`)"
+  - "AEPIdentity (from `git@github.com:nporter-adbe/aepsdk-core-ios.git`, branch `compatiblity-updates`)"
+  - "AEPLifecycle (from `git@github.com:nporter-adbe/aepsdk-core-ios.git`, branch `compatiblity-updates`)"
+  - "AEPServices (from `git@github.com:nporter-adbe/aepsdk-core-ios.git`, branch `compatiblity-updates`)"
+  - "AEPSignal (from `git@github.com:nporter-adbe/aepsdk-core-ios.git`, branch `compatiblity-updates`)"
+  - "SwiftRulesEngine (from `git@github.com:adobe/aepsdk-rulesengine-ios.git`, branch `dev`)"
+
+EXTERNAL SOURCES:
+  AEPCore:
+    :branch: compatiblity-updates
+    :git: "git@github.com:nporter-adbe/aepsdk-core-ios.git"
+  AEPIdentity:
+    :branch: compatiblity-updates
+    :git: "git@github.com:nporter-adbe/aepsdk-core-ios.git"
+  AEPLifecycle:
+    :branch: compatiblity-updates
+    :git: "git@github.com:nporter-adbe/aepsdk-core-ios.git"
+  AEPServices:
+    :branch: compatiblity-updates
+    :git: "git@github.com:nporter-adbe/aepsdk-core-ios.git"
+  AEPSignal:
+    :branch: compatiblity-updates
+    :git: "git@github.com:nporter-adbe/aepsdk-core-ios.git"
+  SwiftRulesEngine:
+    :branch: dev
+    :git: "git@github.com:adobe/aepsdk-rulesengine-ios.git"
+
+CHECKOUT OPTIONS:
+  AEPCore:
+    :commit: 47e823c4881855af276284701c8455b9b8a79391
+    :git: "git@github.com:nporter-adbe/aepsdk-core-ios.git"
+  AEPIdentity:
+    :commit: 47e823c4881855af276284701c8455b9b8a79391
+    :git: "git@github.com:nporter-adbe/aepsdk-core-ios.git"
+  AEPLifecycle:
+    :commit: 47e823c4881855af276284701c8455b9b8a79391
+    :git: "git@github.com:nporter-adbe/aepsdk-core-ios.git"
+  AEPServices:
+    :commit: 47e823c4881855af276284701c8455b9b8a79391
+    :git: "git@github.com:nporter-adbe/aepsdk-core-ios.git"
+  AEPSignal:
+    :commit: 47e823c4881855af276284701c8455b9b8a79391
+    :git: "git@github.com:nporter-adbe/aepsdk-core-ios.git"
+  SwiftRulesEngine:
+    :commit: 433ec80ba9d053cfb791a34f27d06ddcbebc9d0a
+    :git: "git@github.com:adobe/aepsdk-rulesengine-ios.git"
+
+SPEC CHECKSUMS:
+  AEPCore: 7a49a854b024ebe50f60f4370919304fc48bcf24
+  AEPIdentity: f46a1b34363243f8d417a8143bfb876a36809104
+  AEPLifecycle: 9e63cf6a8085161f95706ddbffef20dd1d748c3e
+  AEPServices: ad642c76cede1c7babb61e6804198ded4317d74f
+  AEPSignal: b6473f4543d2b876c124d162228b49d53a31a552
+  SwiftRulesEngine: 5b6727f221618ef9a2c84705d563d321451da0cc
+
+PODFILE CHECKSUM: 2d01f74c695a35ccb80aa487a3387458956d17f9
+
+COCOAPODS: 1.9.3
