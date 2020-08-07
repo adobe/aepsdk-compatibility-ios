@@ -1,4 +1,4 @@
-# Backwards Compatiblity
+# ACP -> AEP Backwards Compatiblity
 
 This project contains the code required to upgrade from the existing ACP SDK to the latest AEP SDK without introducing breaking changes so you can enjoy the benefits of the newest AEP SDK without needing to reimplement the SDK.
 
