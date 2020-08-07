@@ -11,6 +11,7 @@ governing permissions and limitations under the License.
 */
 
 import UIKit
+import ACPCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,120 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        ACPCore.setLogLevel(.verbose)
+        ACPCore.configure(withAppId: "")
+        ACPCore.configureWithFile(inPath: "")
+        
+        ACPCore.getSdkIdentities { (ids) in
+            // handle
+        }
+        
+        ACPCore.getSdkIdentities { (ids, error) in
+            // handle
+        }
+        
+        ACPCore.registerURLHandler { (url) -> Bool in
+            return true
+        }
+        
+        ACPCore.getPrivacyStatus { (status) in
+            // handle
+        }
+        
+        ACPCore.getPrivacyStatus { (status, error) in
+            // handle
+        }
+        
+        let version = ACPCore.extensionVersion()
+        let version1 = ACPIdentity.extensionVersion()
+        let version2 = ACPSignal.extensionVersion()
+        let version3 = ACPLifecycle.extensionVersion()
+        
+        ACPCore.setAppGroup("")
+        
+        ACPCore.setLogLevel(.debug)
+        
+        ACPCore.updateConfiguration([:])
+        
+        ACPCore.collectPii([:])
+        
+        ACPCore.lifecyclePause()
+        
+        ACPCore.setAdvertisingIdentifier("")
+        
+        ACPCore.setPushIdentifier(Data())
+        
+        ACPCore.trackAction("", data: nil)
+        
+        ACPCore.trackState("", data: nil)
+        
+        let event = try! ACPExtensionEvent(name: "", type: "", source: "", data: nil)
+        try? ACPCore.dispatchEvent(event)
+        
+        try? ACPCore.dispatchEvent(withResponseCallback: event) { (responseEvent) in
+            // handle
+        }
+        
+        try? ACPCore.dispatchResponseEvent(event, request: event)
+        
+        ACPCore.collectLaunchInfo([:])
+        
+        ACPCore.collectMessageInfo([:])
+        
+        ACPCore.downloadRules()
+        
+        let level = ACPCore.logLevel()
+        
+        ACPCore.log(level, tag: "", message: "")
+        
+        ACPCore.setWrapperType(.flutter)
+        
+        ACPIdentity.registerExtension()
+        ACPLifecycle.registerExtension()
+        ACPSignal.registerExtension()
+        
+        ACPCore.start {
+            ACPCore.lifecycleStart(nil)
+        }
+        
+        ACPIdentity.append(to: URL(string: "")!) { (url) in
+            // handle
+        }
+        
+        ACPIdentity.append(to: URL(string: "")!) { (url, error) in
+            // handle
+        }
+        
+        ACPIdentity.getIdentifiers { (ids) in
+            // handle
+        }
+        
+        ACPIdentity.getIdentifiersWithCompletionHandler { (ids, error) in
+            // handle
+        }
+        
+        ACPIdentity.getExperienceCloudId { (id) in
+            // handle
+        }
+        
+        ACPIdentity.getExperienceCloudId { (id, error) in
+            // handle
+        }
+        
+        ACPIdentity.syncIdentifier("", identifier: "", authentication: .authenticated)
+        
+        ACPIdentity.syncIdentifiers([:])
+        
+        ACPIdentity.syncIdentifiers([:], authentication: .loggedOut)
+        
+        ACPIdentity.getUrlVariables { (vars) in
+            // handle
+        }
+        
+        ACPIdentity.getUrlVariables { (vars, error) in
+            // handle
+        }
+        
         return true
     }
 

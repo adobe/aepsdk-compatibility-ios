@@ -17,11 +17,6 @@ governing permissions and limitations under the License.
 #import <ACPCore/ACPSignal.h>
 #import <ACPCore/ACPExtensionEvent.h>
 
-
-@interface AppDelegate ()
-
-@end
-
 @implementation AppDelegate
 
 

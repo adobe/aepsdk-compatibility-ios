@@ -1,0 +1,83 @@
+PODS:
+  - ACPCore (0.0.1):
+    - AEPCore
+    - AEPIdentity
+    - AEPLifecycle
+    - AEPServices
+    - AEPSignal
+    - SwiftRulesEngine
+  - AEPCore (0.0.1):
+    - AEPServices
+    - SwiftRulesEngine
+  - AEPIdentity (0.0.1):
+    - AEPCore
+  - AEPLifecycle (0.0.1):
+    - AEPCore
+  - AEPServices (0.0.1)
+  - AEPSignal (0.0.1):
+    - AEPCore
+  - SwiftRulesEngine (0.0.1)
+
+DEPENDENCIES:
+  - ACPCore (from `../../`)
+  - "AEPCore (from `git@github.com:adobe/aepsdk-core-ios.git`, branch `main`)"
+  - "AEPIdentity (from `git@github.com:adobe/aepsdk-core-ios.git`, branch `main`)"
+  - "AEPLifecycle (from `git@github.com:adobe/aepsdk-core-ios.git`, branch `main`)"
+  - "AEPServices (from `git@github.com:adobe/aepsdk-core-ios.git`, branch `main`)"
+  - "AEPSignal (from `git@github.com:adobe/aepsdk-core-ios.git`, branch `main`)"
+  - "SwiftRulesEngine (from `git@github.com:adobe/aepsdk-rulesengine-ios.git`, branch `dev`)"
+
+EXTERNAL SOURCES:
+  ACPCore:
+    :path: "../../"
+  AEPCore:
+    :branch: main
+    :git: "git@github.com:adobe/aepsdk-core-ios.git"
+  AEPIdentity:
+    :branch: main
+    :git: "git@github.com:adobe/aepsdk-core-ios.git"
+  AEPLifecycle:
+    :branch: main
+    :git: "git@github.com:adobe/aepsdk-core-ios.git"
+  AEPServices:
+    :branch: main
+    :git: "git@github.com:adobe/aepsdk-core-ios.git"
+  AEPSignal:
+    :branch: main
+    :git: "git@github.com:adobe/aepsdk-core-ios.git"
+  SwiftRulesEngine:
+    :branch: dev
+    :git: "git@github.com:adobe/aepsdk-rulesengine-ios.git"
+
+CHECKOUT OPTIONS:
+  AEPCore:
+    :commit: dfed9041a6debcba5ed5435c1154af01f62352a7
+    :git: "git@github.com:adobe/aepsdk-core-ios.git"
+  AEPIdentity:
+    :commit: dfed9041a6debcba5ed5435c1154af01f62352a7
+    :git: "git@github.com:adobe/aepsdk-core-ios.git"
+  AEPLifecycle:
+    :commit: dfed9041a6debcba5ed5435c1154af01f62352a7
+    :git: "git@github.com:adobe/aepsdk-core-ios.git"
+  AEPServices:
+    :commit: dfed9041a6debcba5ed5435c1154af01f62352a7
+    :git: "git@github.com:adobe/aepsdk-core-ios.git"
+  AEPSignal:
+    :commit: dfed9041a6debcba5ed5435c1154af01f62352a7
+    :git: "git@github.com:adobe/aepsdk-core-ios.git"
+  SwiftRulesEngine:
+    :commit: 433ec80ba9d053cfb791a34f27d06ddcbebc9d0a
+    :git: "git@github.com:adobe/aepsdk-rulesengine-ios.git"
+
+SPEC CHECKSUMS:
+  ACPCore: bf6632e4aad2940baf6ee113f2ace9af40ec4e69
+  AEPCore: 7a49a854b024ebe50f60f4370919304fc48bcf24
+  AEPIdentity: f46a1b34363243f8d417a8143bfb876a36809104
+  AEPLifecycle: 9e63cf6a8085161f95706ddbffef20dd1d748c3e
+  AEPServices: ad642c76cede1c7babb61e6804198ded4317d74f
+  AEPSignal: b6473f4543d2b876c124d162228b49d53a31a552
+  SwiftRulesEngine: 5b6727f221618ef9a2c84705d563d321451da0cc
+
+PODFILE CHECKSUM: a66082300a82a0d2db574ba222fe25c04aa9b5b8
+
+COCOAPODS: 1.9.3
