@@ -6,11 +6,11 @@ target 'ACPCore' do
   use_frameworks!
 
   # Pods for ACPCore
-  pod 'AEPServices', :git => 'git@github.com:nporter-adbe/aepsdk-core-ios.git', :branch => 'compatiblity-updates'
-  pod 'AEPCore', :git => 'git@github.com:nporter-adbe/aepsdk-core-ios.git', :branch => 'compatiblity-updates'
-  pod 'AEPLifecycle', :git => 'git@github.com:nporter-adbe/aepsdk-core-ios.git', :branch => 'compatiblity-updates'
-  pod 'AEPIdentity', :git => 'git@github.com:nporter-adbe/aepsdk-core-ios.git', :branch => 'compatiblity-updates'
-  pod 'AEPSignal', :git => 'git@github.com:nporter-adbe/aepsdk-core-ios.git', :branch => 'compatiblity-updates'
+  pod 'AEPServices', :git => 'git@github.com:adobe/aepsdk-core-ios.git', :branch => 'main'
+  pod 'AEPCore', :git => 'git@github.com:adobe/aepsdk-core-ios.git', :branch => 'main'
+  pod 'AEPLifecycle', :git => 'git@github.com:adobe/aepsdk-core-ios.git', :branch => 'main'
+  pod 'AEPIdentity', :git => 'git@github.com:adobe/aepsdk-core-ios.git', :branch => 'main'
+  pod 'AEPSignal', :git => 'git@github.com:adobe/aepsdk-core-ios.git', :branch => 'main'
   pod 'SwiftRulesEngine', :git => 'git@github.com:adobe/aepsdk-rulesengine-ios.git', :branch => 'dev'
 
   target 'ACPCoreTests' do
