@@ -9,11 +9,11 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-
+#import <AEPCore/AEPCore-Swift.h>
+#import <AEPServices/AEPServices-Swift.h>
 #import "ACPCore.h"
 #import "ACPExtensionEvent.h"
 #import "NSError+AEPError.h"
-#import "AEPCore-Swift.h"
 
 #pragma mark - ACPCore Implementation
 

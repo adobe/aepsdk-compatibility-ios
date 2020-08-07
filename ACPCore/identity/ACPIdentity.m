@@ -11,9 +11,9 @@ governing permissions and limitations under the License.
 */
 
 #import <Foundation/Foundation.h>
+#import <AEPIdentity/AEPIdentity-Swift.h>
 #import "ACPIdentity.h"
 #import "ACPCore.h"
-#import "AEPIdentity-Swift.h"
 #import "ACPMobileVisitorId.h"
 #import "NSError+AEPError.h"
 

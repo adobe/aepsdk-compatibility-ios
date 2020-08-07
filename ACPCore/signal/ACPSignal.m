@@ -11,9 +11,9 @@ governing permissions and limitations under the License.
 */
 
 #import <Foundation/Foundation.h>
+#import <AEPSignal/AEPSignal-Swift.h>
 #import "ACPCore.h"
 #import "ACPSignal.h"
-#import "AEPSignal-Swift.h"
 
 @implementation ACPSignal
 

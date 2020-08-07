@@ -10,9 +10,9 @@ governing permissions and limitations under the License.
 */
 
 #import <Foundation/Foundation.h>
+#import <AEPLifecycle/AEPLifecycle-Swift.h>
 #import "ACPCore.h"
 #import "ACPLifecycle.h"
-#import "AEPLifecycle-Swift.h"
 
 @implementation ACPLifecycle
 

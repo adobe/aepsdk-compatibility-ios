@@ -9,8 +9,8 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+#import <AEPCore/AEPCore-Swift.h>
 #import "NSError+AEPError.h"
-#import "AEPCore-Swift.h"
 
 NSString* const ACPErrorDomain = @"com.adobe.marketing.mobile";
 
