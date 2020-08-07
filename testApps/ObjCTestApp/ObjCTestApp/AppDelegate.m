@@ -11,11 +11,12 @@ governing permissions and limitations under the License.
 */
 
 #import "AppDelegate.h"
-#import "ACPCore.h"
-#import "ACPIdentity.h"
-#import "ACPLifecycle.h"
-#import "ACPSignal.h"
-#import "ACPExtensionEvent.h"
+#import <ACPCore/ACPCore.h>
+#import <ACPCore/ACPIdentity.h>
+#import <ACPCore/ACPLifecycle.h>
+#import <ACPCore/ACPSignal.h>
+#import <ACPCore/ACPExtensionEvent.h>
+
 
 @interface AppDelegate ()
 
