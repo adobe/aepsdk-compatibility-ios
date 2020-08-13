@@ -15,4 +15,11 @@ target 'ObjCTestApp' do
   pod 'AEPIdentity', :git => 'git@github.com:adobe/aepsdk-core-ios.git', :branch => 'main'
   pod 'AEPSignal', :git => 'git@github.com:adobe/aepsdk-core-ios.git', :branch => 'main'
   pod 'SwiftRulesEngine', :git => 'git@github.com:adobe/aepsdk-rulesengine-ios.git', :branch => 'dev'
+  
+  pod 'ACPGriffon'
+  
+  # Test 3rd parties
+  pod 'AppsFlyerAdobeExtension', '~> 5.4'
+  pod 'AdformAdobeExtension'
+  
 end

@@ -16,6 +16,10 @@ governing permissions and limitations under the License.
 #import <ACPCore/ACPLifecycle.h>
 #import <ACPCore/ACPSignal.h>
 #import <ACPCore/ACPExtensionEvent.h>
+#import "AppsFlyerAdobeExtension/AppsFlyerAdobeExtension.h"
+#import <AdformAdobeExtension/AdformAdobeExtension.h>
+#import <ACPGriffon/ACPGriffon.h>
+#import "SkeletonExtension.h"
 
 @implementation AppDelegate
 
@@ -23,7 +27,7 @@ governing permissions and limitations under the License.
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [ACPCore setLogLevel:ACPMobileLogLevelVerbose];
-    [ACPCore configureWithAppId:@"test-ap-id"];
+    [ACPCore configureWithAppId:@"test-app-id"];
     [ACPCore configureWithFileInPath:@"path"];
     
     [ACPCore getSdkIdentities:^(NSString * _Nullable content) {
@@ -97,7 +101,11 @@ governing permissions and limitations under the License.
     [ACPIdentity registerExtension];
     [ACPLifecycle registerExtension];
     [ACPSignal registerExtension];
-    
+    [ACPCore registerExtension:[SkeletonExtension class] error:nil];
+    [AppsFlyerAdobeExtension registerExtension];
+    [AdformAdobeExtension registerExtension];
+    [ACPGriffon registerExtension];
+
     [ACPCore start:^{
         [ACPCore lifecycleStart:nil];
     }];

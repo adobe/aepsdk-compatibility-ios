@@ -24,6 +24,16 @@
 		21558BD724DCA4E9004B3921 /* ACPLifecycle.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558BD524DCA4E9004B3921 /* ACPLifecycle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21558BDA24DCA4F6004B3921 /* ACPSignal.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558BD824DCA4F6004B3921 /* ACPSignal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21558BDB24DCA4F6004B3921 /* ACPSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 21558BD924DCA4F6004B3921 /* ACPSignal.m */; };
+		21558C3824DDD352004B3921 /* ACPExtensionError.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558C3424DDD352004B3921 /* ACPExtensionError.h */; };
+		21558C3924DDD352004B3921 /* ACPExtensionListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558C3524DDD352004B3921 /* ACPExtensionListener.h */; };
+		21558C3A24DDD352004B3921 /* ACPExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558C3624DDD352004B3921 /* ACPExtension.h */; };
+		21558C3B24DDD352004B3921 /* ACPExtensionApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558C3724DDD352004B3921 /* ACPExtensionApi.h */; };
+		21558C4024DDD3A8004B3921 /* ACPExtensionListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 21558C3C24DDD3A8004B3921 /* ACPExtensionListener.m */; };
+		21558C4124DDD3A8004B3921 /* ACPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 21558C3D24DDD3A8004B3921 /* ACPExtension.m */; };
+		21558C4224DDD3A8004B3921 /* ACPExtensionApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 21558C3E24DDD3A8004B3921 /* ACPExtensionApi.m */; };
+		21558C4324DDD3A8004B3921 /* ACPExtensionError.m in Sources */ = {isa = PBXBuildFile; fileRef = 21558C3F24DDD3A8004B3921 /* ACPExtensionError.m */; };
+		21558C4624DE1D44004B3921 /* ACPBridgeExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558C4424DE1D44004B3921 /* ACPBridgeExtension.h */; };
+		21558C4724DE1D44004B3921 /* ACPBridgeExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 21558C4524DE1D44004B3921 /* ACPBridgeExtension.m */; };
 		975248CD3BA74F1731A0BAB5 /* Pods_ACPCore_ACPCoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5FF225D46F436B40871F06 /* Pods_ACPCore_ACPCoreTests.framework */; };
 		DFBBEF4BDD09554134B12D72 /* Pods_ACPCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBF8ACCB7BF85927CDCC2F7 /* Pods_ACPCore.framework */; };
 /* End PBXBuildFile section */
@@ -61,6 +71,16 @@
 		21558BD824DCA4F6004B3921 /* ACPSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPSignal.h; sourceTree = "<group>"; };
 		21558BD924DCA4F6004B3921 /* ACPSignal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPSignal.m; sourceTree = "<group>"; };
 		21558BDC24DCAD74004B3921 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		21558C3424DDD352004B3921 /* ACPExtensionError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPExtensionError.h; sourceTree = "<group>"; };
+		21558C3524DDD352004B3921 /* ACPExtensionListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPExtensionListener.h; sourceTree = "<group>"; };
+		21558C3624DDD352004B3921 /* ACPExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPExtension.h; sourceTree = "<group>"; };
+		21558C3724DDD352004B3921 /* ACPExtensionApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPExtensionApi.h; sourceTree = "<group>"; };
+		21558C3C24DDD3A8004B3921 /* ACPExtensionListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPExtensionListener.m; sourceTree = "<group>"; };
+		21558C3D24DDD3A8004B3921 /* ACPExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPExtension.m; sourceTree = "<group>"; };
+		21558C3E24DDD3A8004B3921 /* ACPExtensionApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPExtensionApi.m; sourceTree = "<group>"; };
+		21558C3F24DDD3A8004B3921 /* ACPExtensionError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPExtensionError.m; sourceTree = "<group>"; };
+		21558C4424DE1D44004B3921 /* ACPBridgeExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACPBridgeExtension.h; sourceTree = "<group>"; };
+		21558C4524DE1D44004B3921 /* ACPBridgeExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACPBridgeExtension.m; sourceTree = "<group>"; };
 		4CBF8ACCB7BF85927CDCC2F7 /* Pods_ACPCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACPCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D385E2E3759857490D2259 /* Pods-ACPCore-ACPCoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPCore-ACPCoreTests.release.xcconfig"; path = "Target Support Files/Pods-ACPCore-ACPCoreTests/Pods-ACPCore-ACPCoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		91F2EFCBAC5F76897D7A8E3E /* Pods-ACPCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPCore.release.xcconfig"; path = "Target Support Files/Pods-ACPCore/Pods-ACPCore.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +132,7 @@
 		21558BA424DCA373004B3921 /* ACPCore */ = {
 			isa = PBXGroup;
 			children = (
+				21558C3324DDD26B004B3921 /* extensions */,
 				21558BBC24DCA3D9004B3921 /* core */,
 				21558BBE24DCA3E5004B3921 /* identity */,
 				21558BBD24DCA3DE004B3921 /* lifecycle */,
@@ -174,6 +195,23 @@
 			path = signal;
 			sourceTree = "<group>";
 		};
+		21558C3324DDD26B004B3921 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				21558C3624DDD352004B3921 /* ACPExtension.h */,
+				21558C3D24DDD3A8004B3921 /* ACPExtension.m */,
+				21558C3724DDD352004B3921 /* ACPExtensionApi.h */,
+				21558C3E24DDD3A8004B3921 /* ACPExtensionApi.m */,
+				21558C3424DDD352004B3921 /* ACPExtensionError.h */,
+				21558C3F24DDD3A8004B3921 /* ACPExtensionError.m */,
+				21558C3524DDD352004B3921 /* ACPExtensionListener.h */,
+				21558C3C24DDD3A8004B3921 /* ACPExtensionListener.m */,
+				21558C4424DE1D44004B3921 /* ACPBridgeExtension.h */,
+				21558C4524DE1D44004B3921 /* ACPBridgeExtension.m */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
 		7760FA52E364B0E47A19AD11 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,8 +240,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				21558BC824DCA415004B3921 /* ACPExtensionEvent.h in Headers */,
+				21558C3924DDD352004B3921 /* ACPExtensionListener.h in Headers */,
 				21558BCA24DCA415004B3921 /* ACPCore.h in Headers */,
+				21558C4624DE1D44004B3921 /* ACPBridgeExtension.h in Headers */,
 				21558BB324DCA373004B3921 /* ACPCoreUmbrella.h in Headers */,
+				21558C3A24DDD352004B3921 /* ACPExtension.h in Headers */,
+				21558C3824DDD352004B3921 /* ACPExtensionError.h in Headers */,
+				21558C3B24DDD352004B3921 /* ACPExtensionApi.h in Headers */,
 				21558BDA24DCA4F6004B3921 /* ACPSignal.h in Headers */,
 				21558BD224DCA4C8004B3921 /* ACPIdentity.h in Headers */,
 				21558BCF24DCA415004B3921 /* NSError+AEPError.h in Headers */,
@@ -376,12 +419,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21558C4324DDD3A8004B3921 /* ACPExtensionError.m in Sources */,
+				21558C4124DDD3A8004B3921 /* ACPExtension.m in Sources */,
 				21558BD324DCA4C8004B3921 /* ACPIdentity.m in Sources */,
 				21558BD624DCA4E9004B3921 /* ACPLifecycle.m in Sources */,
 				21558BC924DCA415004B3921 /* ACPExtensionEvent.m in Sources */,
+				21558C4724DE1D44004B3921 /* ACPBridgeExtension.m in Sources */,
 				21558BCC24DCA415004B3921 /* ACPMobileVisitorId.m in Sources */,
 				21558BDB24DCA4F6004B3921 /* ACPSignal.m in Sources */,
 				21558BCB24DCA415004B3921 /* ACPCore.m in Sources */,
+				21558C4224DDD3A8004B3921 /* ACPExtensionApi.m in Sources */,
+				21558C4024DDD3A8004B3921 /* ACPExtensionListener.m in Sources */,
 				21558BCE24DCA415004B3921 /* NSError+AEPError.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

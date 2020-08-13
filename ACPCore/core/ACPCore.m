@@ -9,10 +9,13 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+#import <objc/runtime.h>
 #import <AEPCore/AEPCore-Swift.h>
 #import <AEPServices/AEPServices-Swift.h>
 #import "ACPCore.h"
 #import "ACPExtensionEvent.h"
+#import "ACPExtension.h"
+#import "ACPBridgeExtension.h"
 #import "NSError+AEPError.h"
 
 #pragma mark - ACPCore Implementation
@@ -79,6 +82,12 @@ static NSMutableArray *_pendingExtensions;
 
 + (BOOL) registerExtension: (nonnull Class) extensionClass
                      error: (NSError* _Nullable* _Nullable) error {
+    // If registering a legacy 3rd party extension, we need to create a wrapper extension
+    extensionClass = [self wrapExtensionClassIfNeeded:extensionClass];
+    if (!extensionClass) {
+        return nil;
+    }
+    
     if (!_pendingExtensions) {
         _pendingExtensions = [NSMutableArray array];
     }
@@ -200,6 +209,31 @@ static NSMutableArray *_pendingExtensions;
 
 + (void) setWrapperType: (ACPMobileWrapperType) wrapperType {
     [AEPCore setWrapperType:wrapperType];
+}
+
+#pragma mark - Private Helpers
+
+/// This method determines if `extensionClass` is a descendent of `ACPExtension`, if so, it dynamically creates a new class derived from `ACPBridgeExtension`  to wrap the instance of `ACPExtension`
+/// @param extensionClass the class which should be registered with the `EventHub`
++ (Class _Nonnull)wrapExtensionClassIfNeeded:(Class _Nonnull)extensionClass {
+    // This extension is a legacy 3rd party extension if it inherits from `ACPExtension`
+    if (class_getSuperclass(extensionClass) == [ACPExtension class]) {
+        // attempting to register a legacy 3rd party extension, create a wrapper class
+        NSString *wrapperClassName = [NSString stringWithFormat:@"Bridged%@", NSStringFromClass(extensionClass)];
+        Class wrapperClass = objc_allocateClassPair([ACPBridgeExtension class], wrapperClassName.UTF8String, 0); // create a subclass of ACPBridgeExtension named wrapperClassName
+        if (!wrapperClass) {
+            NSString *errorMsg = [NSString stringWithFormat:@"Failed to created bridged extension for class %@, registration failed.", NSStringFromClass(extensionClass)];
+            [ACPCore log:ACPMobileLogLevelError tag:@"wrapExtensionClassIfNeeded" message:errorMsg];
+            return nil;
+        }
+        
+        objc_registerClassPair(wrapperClass);
+        [ACPBridgeExtension setExtensionClass:extensionClass withName:wrapperClassName]; // set the underlying extension class to the original extension class
+        
+        return wrapperClass;
+    }
+    
+    return extensionClass;
 }
 
 @end

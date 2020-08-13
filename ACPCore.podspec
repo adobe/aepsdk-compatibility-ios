@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "ACPCore"
-  s.version          = "0.0.1"
+  s.version          = "2.9.9"
   s.summary          = "ACPCore"
   s.description      = <<-DESC
 ACPCore backward compatible layer
