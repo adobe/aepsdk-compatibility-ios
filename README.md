@@ -6,7 +6,7 @@ This project contains the code required to upgrade from the existing ACP SDK to 
 To upgrade, simply update your refrence to `ACPCore` in your projects `Podfile` as such:
 ```diff
 - pod 'ACPCore'
-+ pod 'ACPCore', :git => 'https://git.corp.adobe.com/nporter/aep-sdk-compatibility-ios.git', :branch => 'main'
++ pod 'ACPCore', :git => 'https://github.com/adobe/aep-sdk-compatibility-ios.git', :branch => 'main'
 ```
 
 Then run `pod install` and build your project and you will be using the latest `AEPCore` SDK.
