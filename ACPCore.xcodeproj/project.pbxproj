@@ -17,17 +17,17 @@
 		21558BCC24DCA415004B3921 /* ACPMobileVisitorId.m in Sources */ = {isa = PBXBuildFile; fileRef = 21558BC424DCA415004B3921 /* ACPMobileVisitorId.m */; };
 		21558BCD24DCA415004B3921 /* ACPMobileVisitorId.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558BC524DCA415004B3921 /* ACPMobileVisitorId.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21558BCE24DCA415004B3921 /* NSError+AEPError.m in Sources */ = {isa = PBXBuildFile; fileRef = 21558BC624DCA415004B3921 /* NSError+AEPError.m */; };
-		21558BCF24DCA415004B3921 /* NSError+AEPError.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558BC724DCA415004B3921 /* NSError+AEPError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21558BCF24DCA415004B3921 /* NSError+AEPError.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558BC724DCA415004B3921 /* NSError+AEPError.h */; };
 		21558BD224DCA4C8004B3921 /* ACPIdentity.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558BD024DCA4C8004B3921 /* ACPIdentity.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21558BD324DCA4C8004B3921 /* ACPIdentity.m in Sources */ = {isa = PBXBuildFile; fileRef = 21558BD124DCA4C8004B3921 /* ACPIdentity.m */; };
 		21558BD624DCA4E9004B3921 /* ACPLifecycle.m in Sources */ = {isa = PBXBuildFile; fileRef = 21558BD424DCA4E8004B3921 /* ACPLifecycle.m */; };
 		21558BD724DCA4E9004B3921 /* ACPLifecycle.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558BD524DCA4E9004B3921 /* ACPLifecycle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21558BDA24DCA4F6004B3921 /* ACPSignal.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558BD824DCA4F6004B3921 /* ACPSignal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21558BDB24DCA4F6004B3921 /* ACPSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 21558BD924DCA4F6004B3921 /* ACPSignal.m */; };
-		21558C3824DDD352004B3921 /* ACPExtensionError.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558C3424DDD352004B3921 /* ACPExtensionError.h */; };
-		21558C3924DDD352004B3921 /* ACPExtensionListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558C3524DDD352004B3921 /* ACPExtensionListener.h */; };
-		21558C3A24DDD352004B3921 /* ACPExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558C3624DDD352004B3921 /* ACPExtension.h */; };
-		21558C3B24DDD352004B3921 /* ACPExtensionApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558C3724DDD352004B3921 /* ACPExtensionApi.h */; };
+		21558C3824DDD352004B3921 /* ACPExtensionError.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558C3424DDD352004B3921 /* ACPExtensionError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21558C3924DDD352004B3921 /* ACPExtensionListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558C3524DDD352004B3921 /* ACPExtensionListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21558C3A24DDD352004B3921 /* ACPExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558C3624DDD352004B3921 /* ACPExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21558C3B24DDD352004B3921 /* ACPExtensionApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558C3724DDD352004B3921 /* ACPExtensionApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21558C4024DDD3A8004B3921 /* ACPExtensionListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 21558C3C24DDD3A8004B3921 /* ACPExtensionListener.m */; };
 		21558C4124DDD3A8004B3921 /* ACPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 21558C3D24DDD3A8004B3921 /* ACPExtension.m */; };
 		21558C4224DDD3A8004B3921 /* ACPExtensionApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 21558C3E24DDD3A8004B3921 /* ACPExtensionApi.m */; };
@@ -575,7 +575,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = GP6Z9HB7H4;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -600,7 +600,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = GP6Z9HB7H4;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
