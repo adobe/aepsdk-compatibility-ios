@@ -19,11 +19,11 @@ governing permissions and limitations under the License.
 #pragma mark - Lifecycle
 
 + (nonnull NSString*) extensionVersion {
-    return [AEPLifecycle extensionVersion];
+    return [AEPMobileLifecycle extensionVersion];
 }
 
 + (void) registerExtension {
-    [ACPCore registerExtension:[AEPLifecycle class] error:nil];
+    [ACPCore registerExtension:[AEPMobileLifecycle class] error:nil];
 }
 
 @end

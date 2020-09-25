@@ -20,11 +20,11 @@ governing permissions and limitations under the License.
 #pragma mark - Signal
 
 + (nonnull NSString*) extensionVersion {
-    return [AEPSignal extensionVersion];
+    return [AEPMobileSignal extensionVersion];
 }
 
 + (void) registerExtension {
-    [ACPCore registerExtension:[AEPSignal class] error:nil];
+    [ACPCore registerExtension:[AEPMobileSignal class] error:nil];
 }
 
 @end

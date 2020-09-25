@@ -96,11 +96,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             ACPCore.lifecycleStart(nil)
         }
         
-        ACPIdentity.append(to: URL(string: "")!) { (url) in
+        ACPIdentity.append(to: URL(string: "https://test.com")!) { (url) in
             // handle
         }
         
-        ACPIdentity.append(to: URL(string: "")!) { (url, error) in
+        ACPIdentity.append(to: URL(string: "https://test.com")!) { (url, error) in
             // handle
         }
         

@@ -3,13 +3,13 @@ PODS:
     - AEPCore
     - AEPIdentity
     - AEPLifecycle
+    - AEPRulesEngine
     - AEPServices
     - AEPSignal
-    - SwiftRulesEngine
-  - ACPGriffon (1.1.3):
+  - ACPGriffon (1.2.0):
     - ACPCore
-    - ACPGriffon/iOS (= 1.1.3)
-  - ACPGriffon/iOS (1.1.3):
+    - ACPGriffon/iOS (= 1.2.0)
+  - ACPGriffon/iOS (1.2.0):
     - ACPCore
   - AdformAdobeExtension (1.5.1):
     - ACPCore (~> 2.3)
@@ -17,21 +17,21 @@ PODS:
   - AdformTracking (1.5.1):
     - Protobuf (~> 3.1)
   - AEPCore (0.0.1):
+    - AEPRulesEngine
     - AEPServices
-    - SwiftRulesEngine
   - AEPIdentity (0.0.1):
     - AEPCore
   - AEPLifecycle (0.0.1):
     - AEPCore
+  - AEPRulesEngine (0.0.1)
   - AEPServices (0.0.1)
   - AEPSignal (0.0.1):
     - AEPCore
   - AppsFlyerAdobeExtension (5.4.1):
     - ACPCore
     - AppsFlyerFramework (~> 5.4.1)
-  - AppsFlyerFramework (5.4.3)
-  - Protobuf (3.12.0)
-  - SwiftRulesEngine (0.0.1)
+  - AppsFlyerFramework (5.4.4)
+  - Protobuf (3.13.0)
 
 DEPENDENCIES:
   - ACPCore (from `../../`)
@@ -40,10 +40,10 @@ DEPENDENCIES:
   - "AEPCore (from `git@github.com:adobe/aepsdk-core-ios.git`, branch `main`)"
   - "AEPIdentity (from `git@github.com:adobe/aepsdk-core-ios.git`, branch `main`)"
   - "AEPLifecycle (from `git@github.com:adobe/aepsdk-core-ios.git`, branch `main`)"
+  - "AEPRulesEngine (from `git@github.com:adobe/aepsdk-rulesengine-ios.git`, branch `main`)"
   - "AEPServices (from `git@github.com:adobe/aepsdk-core-ios.git`, branch `main`)"
   - "AEPSignal (from `git@github.com:adobe/aepsdk-core-ios.git`, branch `main`)"
   - AppsFlyerAdobeExtension (~> 5.4)
-  - "SwiftRulesEngine (from `git@github.com:adobe/aepsdk-rulesengine-ios.git`, branch `dev`)"
 
 SPEC REPOS:
   trunk:
@@ -66,51 +66,51 @@ EXTERNAL SOURCES:
   AEPLifecycle:
     :branch: main
     :git: "git@github.com:adobe/aepsdk-core-ios.git"
+  AEPRulesEngine:
+    :branch: main
+    :git: "git@github.com:adobe/aepsdk-rulesengine-ios.git"
   AEPServices:
     :branch: main
     :git: "git@github.com:adobe/aepsdk-core-ios.git"
   AEPSignal:
     :branch: main
     :git: "git@github.com:adobe/aepsdk-core-ios.git"
-  SwiftRulesEngine:
-    :branch: dev
-    :git: "git@github.com:adobe/aepsdk-rulesengine-ios.git"
 
 CHECKOUT OPTIONS:
   AEPCore:
-    :commit: 348ddce450dab4da4e5667bf32061d5a849c5021
+    :commit: fe6ea7b92d2affa6d8b84d1981a6a6c37f191e47
     :git: "git@github.com:adobe/aepsdk-core-ios.git"
   AEPIdentity:
-    :commit: 348ddce450dab4da4e5667bf32061d5a849c5021
+    :commit: fe6ea7b92d2affa6d8b84d1981a6a6c37f191e47
     :git: "git@github.com:adobe/aepsdk-core-ios.git"
   AEPLifecycle:
-    :commit: 348ddce450dab4da4e5667bf32061d5a849c5021
+    :commit: fe6ea7b92d2affa6d8b84d1981a6a6c37f191e47
     :git: "git@github.com:adobe/aepsdk-core-ios.git"
+  AEPRulesEngine:
+    :commit: b7e2b7d778b07be8fccd6641e8119767bfc26b1f
+    :git: "git@github.com:adobe/aepsdk-rulesengine-ios.git"
   AEPServices:
-    :commit: 348ddce450dab4da4e5667bf32061d5a849c5021
+    :commit: fe6ea7b92d2affa6d8b84d1981a6a6c37f191e47
     :git: "git@github.com:adobe/aepsdk-core-ios.git"
   AEPSignal:
-    :commit: 348ddce450dab4da4e5667bf32061d5a849c5021
+    :commit: fe6ea7b92d2affa6d8b84d1981a6a6c37f191e47
     :git: "git@github.com:adobe/aepsdk-core-ios.git"
-  SwiftRulesEngine:
-    :commit: df4dd8d0112eed11972649ff28b8e07f17125507
-    :git: "git@github.com:adobe/aepsdk-rulesengine-ios.git"
 
 SPEC CHECKSUMS:
-  ACPCore: e06e71a717e2663734995604e8a517e31e465f57
-  ACPGriffon: f34c6e6fa4887a7de339f4fb9cf5fd9fbb82fe6e
+  ACPCore: 54bea9e0ab404307eb1e11806049a5a748156bbc
+  ACPGriffon: 53b524a9366c34968cce9b4eba50cbf72d0221d8
   AdformAdobeExtension: b123105956913d2789b98a05418ee2ff120b9ae6
   AdformTracking: 8bfde03b85e745a35bd66983384cf82f5a05d2f2
-  AEPCore: 7a49a854b024ebe50f60f4370919304fc48bcf24
+  AEPCore: e8ddaae01a787926fde35cfcc24770b26a765e58
   AEPIdentity: f46a1b34363243f8d417a8143bfb876a36809104
   AEPLifecycle: 9e63cf6a8085161f95706ddbffef20dd1d748c3e
+  AEPRulesEngine: 5742652bd7ab65aa7325f731725d995947e41db8
   AEPServices: ad642c76cede1c7babb61e6804198ded4317d74f
   AEPSignal: b6473f4543d2b876c124d162228b49d53a31a552
   AppsFlyerAdobeExtension: 804317126d74cb753ff6c7e8088235908d0cd503
-  AppsFlyerFramework: 9cd43c6d763c8f3f3b654532d17fd336b5142a5a
-  Protobuf: 2793fcd0622a00b546c60e7cbbcc493e043e9bb9
-  SwiftRulesEngine: 5b6727f221618ef9a2c84705d563d321451da0cc
+  AppsFlyerFramework: a511099f7bedbb1d5804d733c6152d6f8092c4fa
+  Protobuf: 3dac39b34a08151c6d949560efe3f86134a3f748
 
-PODFILE CHECKSUM: faaaf0de72ef048997ccab8ae0b0e0a0699df1e4
+PODFILE CHECKSUM: c4975e7bfe407c7d21ee1f926c674d353fb1c6f6
 
 COCOAPODS: 1.9.3

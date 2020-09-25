@@ -22,45 +22,45 @@ governing permissions and limitations under the License.
 #pragma mark - Identity
 
 + (nonnull NSString*) extensionVersion {
-    return [AEPIdentity extensionVersion];
+    return [AEPMobileIdentity extensionVersion];
 }
 
 + (void) registerExtension {
-    [ACPCore registerExtension:[AEPIdentity class] error:nil];
+    [ACPCore registerExtension:[AEPMobileIdentity class] error:nil];
 }
 
 + (void) appendToUrl: (nullable NSURL*) baseUrl withCallback: (nullable void (^) (NSURL* __nullable urlWithVisitorData)) callback {
-    [AEPIdentity appendToUrl:baseUrl completion:^(NSURL * _Nullable url, enum AEPError error) {
+    [AEPMobileIdentity appendToUrl:baseUrl completion:^(NSURL * _Nullable url, enum AEPError error) {
         callback(url);
     }];
 }
 
 + (void) appendToUrl: (NSURL*) baseUrl withCompletionHandler: (void (^) (NSURL* _Nullable, NSError* _Nullable)) completionHandler {
-    [AEPIdentity appendToUrl:baseUrl completion:^(NSURL * _Nullable url, enum AEPError error) {
+    [AEPMobileIdentity appendToUrl:baseUrl completion:^(NSURL * _Nullable url, enum AEPError error) {
         completionHandler(url, [NSError errorFromAEPError:error]);
     }];
 }
 
 + (void) getIdentifiers: (nonnull void (^) (NSArray<ACPMobileVisitorId*>* __nullable visitorIDs)) callback {
-    [AEPIdentity getIdentifiers:^(NSArray<id<AEPIdentifiable>> * _Nullable visitorIDs, enum AEPError error) {
+    [AEPMobileIdentity getIdentifiers:^(NSArray<id<AEPIdentifiable>> * _Nullable visitorIDs, enum AEPError error) {
         callback(convertVisitorIds(visitorIDs));
     }];
 }
 
 + (void) getIdentifiersWithCompletionHandler: (void (^) (NSArray<ACPMobileVisitorId*>* _Nullable, NSError* _Nullable)) completionHandler {
-    [AEPIdentity getIdentifiers:^(NSArray<id<AEPIdentifiable>> * _Nullable visitorIDs, enum AEPError error) {
+    [AEPMobileIdentity getIdentifiers:^(NSArray<id<AEPIdentifiable>> * _Nullable visitorIDs, enum AEPError error) {
        completionHandler(convertVisitorIds(visitorIDs), [NSError errorFromAEPError:error]);
     }];
 }
 
 + (void) getExperienceCloudId: (nonnull void (^) (NSString* __nullable experienceCloudId)) callback {
-    [AEPIdentity getExperienceCloudId:^(NSString * _Nullable experienceCloudId) {
+    [AEPMobileIdentity getExperienceCloudId:^(NSString * _Nullable experienceCloudId) {
         callback(experienceCloudId);
     }];
 }
 
 + (void) getExperienceCloudIdWithCompletionHandler: (void (^) (NSString* _Nullable, NSError* _Nullable)) completionHandler {
-    [AEPIdentity getExperienceCloudId:^(NSString * _Nullable experienceCloudId) {
+    [AEPMobileIdentity getExperienceCloudId:^(NSString * _Nullable experienceCloudId) {
         completionHandler(experienceCloudId, nil);
     }];
 }
@@ -71,21 +71,21 @@ governing permissions and limitations under the License.
 }
 
 + (void) syncIdentifiers: (nullable NSDictionary*) identifiers {
-    [AEPIdentity syncIdentifiers:identifiers];
+    [AEPMobileIdentity syncIdentifiers:identifiers];
 }
 
 + (void) syncIdentifiers: (nullable NSDictionary*) identifiers authentication: (ACPMobileVisitorAuthenticationState) authenticationState {
-    [AEPIdentity syncIdentifiers:identifiers authenticationState:authenticationState];
+    [AEPMobileIdentity syncIdentifiers:identifiers authenticationState:authenticationState];
 }
 
 + (void) getUrlVariables: (nonnull void (^) (NSString* __nullable urlVariables)) callback {
-    [AEPIdentity getUrlVariables:^(NSString * _Nullable variables, enum AEPError error) {
+    [AEPMobileIdentity getUrlVariables:^(NSString * _Nullable variables, enum AEPError error) {
         callback(variables);
     }];
 }
 
 + (void) getUrlVariablesWithCompletionHandler: (void (^) (NSString* _Nullable, NSError* _Nullable)) completionHandler {
-    [AEPIdentity getUrlVariables:^(NSString * _Nullable variables, enum AEPError error) {
+    [AEPMobileIdentity getUrlVariables:^(NSString * _Nullable variables, enum AEPError error) {
         completionHandler(variables, [NSError errorFromAEPError:error]);
     }];
 }

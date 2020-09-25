@@ -129,7 +129,7 @@ governing permissions and limitations under the License.
                                          event: (nullable ACPExtensionEvent*) event
                                          error: (NSError* _Nullable* _Nullable) error {
     AEPEvent *convertedEvent = [[AEPEvent alloc] initWithName:event.eventName type:event.eventType source:event.eventSource data:event.eventData];
-    AEPSharedStateResult *result = [runtime_ getSharedStateWithExtensionName:name event:convertedEvent];
+    AEPSharedStateResult *result = [runtime_ getSharedStateWithExtensionName:name event:convertedEvent  barrier:false];
     return result.value;
 }
 
