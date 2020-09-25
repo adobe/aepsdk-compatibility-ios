@@ -20,6 +20,6 @@ ACPCore backward compatible layer
   s.dependency 'AEPLifecycle'
   s.dependency 'AEPIdentity'
   s.dependency 'AEPSignal'
-  s.dependency 'SwiftRulesEngine'
+  s.dependency 'AEPRulesEngine'
 
 end
