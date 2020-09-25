@@ -12,6 +12,9 @@ governing permissions and limitations under the License.
 
 import UIKit
 import ACPCore
+import AEPIdentity
+import AEPLifecycle
+import AEPSignal
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -88,11 +91,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         ACPCore.setWrapperType(.flutter)
         
-        ACPIdentity.registerExtension()
-        ACPLifecycle.registerExtension()
-        ACPSignal.registerExtension()
-        
-        ACPCore.start {
+        let extensionsToRegister = [Identity.self, Lifecycle.self, Signal.self]
+        ACPCore.registerExtensions(extensionsToRegister) {
             ACPCore.lifecycleStart(nil)
         }
         
