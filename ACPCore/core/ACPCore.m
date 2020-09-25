@@ -27,55 +27,55 @@ static NSMutableArray *_pendingExtensions;
 #pragma mark - Configuration
 
 + (void) configureWithAppId: (NSString* __nullable) appid {
-    [AEPCore configureWithAppId:appid];
+    [AEPMobileCore configureWithAppId:appid];
 }
 
 + (void) configureWithFileInPath: (NSString* __nullable) filepath {
-    [AEPCore configureWithFilePath:filepath];
+    [AEPMobileCore configureWithFilePath:filepath];
 }
 
 + (void) getSdkIdentities: (nullable void (^) (NSString* __nullable content)) callback {
-    [AEPCore getSdkIdentities:^(NSString * _Nullable content, enum AEPError error) {
+    [AEPMobileCore getSdkIdentities:^(NSString * _Nullable content, enum AEPError error) {
         callback(content);
     }];
 }
 
 + (void) getSdkIdentitiesWithCompletionHandler: (nullable void (^) (NSString* __nullable content, NSError* _Nullable error)) callback {
-    [AEPCore getSdkIdentities:^(NSString * _Nullable content, enum AEPError error) {
+    [AEPMobileCore getSdkIdentities:^(NSString * _Nullable content, enum AEPError error) {
         callback(content, [NSError errorFromAEPError:error]);
     }];
 }
 
 + (void) getPrivacyStatus: (nonnull void (^) (ACPMobilePrivacyStatus status)) callback {
-    [AEPCore getPrivacyStatus:^(enum AEPPrivacyStatus status) {
+    [AEPMobileCore getPrivacyStatus:^(enum AEPPrivacyStatus status) {
         callback((ACPMobilePrivacyStatus) status);
     }];
 }
 
 + (void) getPrivacyStatusWithCompletionHandler: (nonnull void (^) (ACPMobilePrivacyStatus status, NSError* _Nullable error)) callback {
-    [AEPCore getPrivacyStatus:^(enum AEPPrivacyStatus status) {
+    [AEPMobileCore getPrivacyStatus:^(enum AEPPrivacyStatus status) {
         callback((ACPMobilePrivacyStatus) status, nil);
     }];
 }
 
 + (nonnull NSString*) extensionVersion {
-    return [AEPCore extensionVersion];
+    return [AEPMobileCore extensionVersion];
 }
 
 + (void) setAppGroup: (nullable NSString*) appGroup {
-    [AEPCore setAppGroup:appGroup];
+    [AEPMobileCore setAppGroup:appGroup];
 }
 
 + (void) setLogLevel: (ACPMobileLogLevel) logLevel {
-    [AEPCore setLogLevel:logLevel];
+    [AEPMobileCore setLogLevel:logLevel];
 }
 
 + (void) setPrivacyStatus: (ACPMobilePrivacyStatus) status {
-    [AEPCore setPrivacy:(AEPPrivacyStatus) status];
+    [AEPMobileCore setPrivacy:(AEPPrivacyStatus) status];
 }
 
 + (void) updateConfiguration: (NSDictionary* __nullable) config {
-    [AEPCore updateConfiguration:config];
+    [AEPMobileCore updateConfiguration:config];
 }
 
 #pragma mark - Extensions
@@ -98,7 +98,7 @@ static NSMutableArray *_pendingExtensions;
 }
 
 + (void) start: (nullable void (^) (void)) callback {
-    [AEPCore registerExtensions:_pendingExtensions completion:^{
+    [AEPMobileCore registerExtensions:_pendingExtensions completion:^{
         [_pendingExtensions removeAllObjects];
         callback();
     }];
@@ -110,15 +110,15 @@ static NSMutableArray *_pendingExtensions;
 }
 
 + (void) lifecyclePause {
-    [AEPCore lifecyclePause];
+    [AEPMobileCore lifecyclePause];
 }
 
 + (void) lifecycleStart: (nullable NSDictionary<NSString*, NSString*>*) additionalContextData {
-    [AEPCore lifecycleStart:additionalContextData];
+    [AEPMobileCore lifecycleStart:additionalContextData];
 }
 
 + (void) setAdvertisingIdentifier: (nullable NSString*) adId {
-    [AEPCore setAdvertisingIdentifier:adId];
+    [AEPMobileCore setAdvertisingIdentifier:adId];
 }
 
 #if !TARGET_OS_WATCH
@@ -128,7 +128,7 @@ static NSMutableArray *_pendingExtensions;
 #endif
 
 + (void) setPushIdentifier: (nullable NSData*) deviceToken {
-    [AEPCore setPushIdentifier:deviceToken];
+    [AEPMobileCore setPushIdentifier:deviceToken];
 }
 
 + (void) trackAction: (nullable NSString*) action data: (nullable NSDictionary<NSString*, NSString*>*) data {
@@ -142,7 +142,7 @@ static NSMutableArray *_pendingExtensions;
 + (BOOL) dispatchEvent: (nonnull ACPExtensionEvent*) event
                  error: (NSError* _Nullable* _Nullable) error {
     AEPEvent *convertedEvent = [[AEPEvent alloc] initWithName:event.eventName type:event.eventType source:event.eventSource data:event.eventData];
-    [AEPCore dispatch:convertedEvent];
+    [AEPMobileCore dispatch:convertedEvent];
     return YES;
 }
 
@@ -151,7 +151,7 @@ static NSMutableArray *_pendingExtensions;
                                      error: (NSError* _Nullable* _Nullable) error {
     
     AEPEvent *convertedEvent = [[AEPEvent alloc] initWithName:requestEvent.eventName type:requestEvent.eventType source:requestEvent.eventSource data:requestEvent.eventData];
-    [AEPCore dispatch:convertedEvent responseCallback:^(AEPEvent * _Nullable responseEvent) {
+    [AEPMobileCore dispatch:convertedEvent responseCallback:^(AEPEvent * _Nullable responseEvent) {
         ACPExtensionEvent *convertedResponseEvent = [[ACPExtensionEvent alloc] initWithAEPEvent:responseEvent];
         responseCallback(convertedResponseEvent);
     }];
@@ -208,7 +208,7 @@ static NSMutableArray *_pendingExtensions;
 #pragma mark - Wrapper Support
 
 + (void) setWrapperType: (ACPMobileWrapperType) wrapperType {
-    [AEPCore setWrapperType:wrapperType];
+    [AEPMobileCore setWrapperType:wrapperType];
 }
 
 #pragma mark - Private Helpers
