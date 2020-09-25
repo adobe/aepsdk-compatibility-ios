@@ -183,7 +183,7 @@ static NSMutableArray *_pendingExtensions;
 }
 
 + (void) collectMessageInfo: (nonnull NSDictionary*) messageInfo {
-    // TODO
+    [AEPMobileCore collectMessageInfo:messageInfo];
 }
 
 #pragma mark - Logging Utilities
