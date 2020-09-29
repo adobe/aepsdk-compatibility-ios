@@ -81,7 +81,7 @@ static NSMutableArray *_pendingExtensions;
 #pragma mark - Extensions
 
 + (void) registerExtensions: (NSArray* __nullable) extensions callback:(nullable void (^) (void)) callback {
-    NSMutableArray *cleanedExtensions = [NSMutableArray array];
+    NSMutableArray *cleanedExtensions = [NSMutableArray arrayWithArray:_pendingExtensions];
     for (id extensionClass in extensions) {
         Class wrappedExtension = [self wrapExtensionClassIfNeeded:extensionClass];
         if (wrappedExtension) {
@@ -90,6 +90,7 @@ static NSMutableArray *_pendingExtensions;
     }
     
     [AEPMobileCore registerExtensions:cleanedExtensions completion:callback];
+    [_pendingExtensions removeAllObjects];
 }
 
 + (BOOL) registerExtension: (nonnull Class) extensionClass
@@ -118,7 +119,7 @@ static NSMutableArray *_pendingExtensions;
 
 #pragma mark - Generic Methods
 + (void) collectPii: (nonnull NSDictionary<NSString*, NSString*>*) data {
-    // TODO
+    [AEPMobileCore collectPii:data];
 }
 
 + (void) lifecyclePause {
