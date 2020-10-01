@@ -61,5 +61,9 @@ governing permissions and limitations under the License.
     return -1;
 }
 
+- (AEPEvent *)aepEvent {
+    return event_;
+}
+
 @end
 

@@ -106,8 +106,7 @@ governing permissions and limitations under the License.
         return NO;
     }
     
-    AEPEvent *convertedEvent = [[AEPEvent alloc] initWithName:event.eventName type:event.eventType source:event.eventSource data:event.eventData];
-    [runtime_ createSharedStateWithData:state event:convertedEvent];
+    [runtime_ createSharedStateWithData:state event:event.aepEvent];
     return YES;
 }
 
@@ -128,8 +127,7 @@ governing permissions and limitations under the License.
 - (nullable NSDictionary*) getSharedEventState: (nonnull NSString*) name
                                          event: (nullable ACPExtensionEvent*) event
                                          error: (NSError* _Nullable* _Nullable) error {
-    AEPEvent *convertedEvent = [[AEPEvent alloc] initWithName:event.eventName type:event.eventType source:event.eventSource data:event.eventData];
-    AEPSharedStateResult *result = [runtime_ getSharedStateWithExtensionName:name event:convertedEvent  barrier:false];
+    AEPSharedStateResult *result = [runtime_ getSharedStateWithExtensionName:name event:event.aepEvent  barrier:false];
     return result.value;
 }
 

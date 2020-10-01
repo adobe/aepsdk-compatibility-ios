@@ -95,6 +95,11 @@ governing permissions and limitations under the License.
  */
 @property(nonatomic, readonly) long eventTimestamp;
 
+/**
+* @brief The underlying `AEPEvent`
+*/
+@property(nonatomic, readonly) AEPEvent* _Nonnull aepEvent;
+
 
 @end
 
