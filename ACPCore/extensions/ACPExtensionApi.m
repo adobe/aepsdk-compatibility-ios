@@ -106,8 +106,7 @@ governing permissions and limitations under the License.
         return NO;
     }
     
-    AEPEvent *convertedEvent = [[AEPEvent alloc] initWithName:event.eventName type:event.eventType source:event.eventSource data:event.eventData];
-    [runtime_ createSharedStateWithData:state event:convertedEvent];
+    [runtime_ createSharedStateWithData:state event:event.aepEvent];
     return YES;
 }
 
