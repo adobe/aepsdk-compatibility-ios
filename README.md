@@ -22,6 +22,12 @@ Then run `pod install` and build your project and you will be using the latest `
 ### Sample Apps
 Two sample apps for this project exist under the `testApps` directory, there exists one Swift and one Objective-C. 
 
+### Troubleshooting
+ * `AEPCore/AEPCore-Swift.h` file not found
+
+   - Ensure you are using the `use_frameworks!` flag in your `Podfile`.
+   - https://github.com/adobe/aepsdk-compatibility-ios/blob/main/testApps/SwiftTestApp/Podfile#L6
+
 ### Contributing
 
 Contributions are welcomed! Read the [Contributing Guide](./.github/CONTRIBUTING.md) for more information.
