@@ -6,16 +6,16 @@ PODS:
     - AEPRulesEngine
     - AEPServices
     - AEPSignal
-  - ACPGriffon (1.2.0):
-    - ACPCore
-    - ACPGriffon/iOS (= 1.2.0)
-  - ACPGriffon/iOS (1.2.0):
-    - ACPCore
   - AdformAdobeExtension (1.5.1):
     - ACPCore (~> 2.3)
     - AdformTracking (~> 1.5.1)
   - AdformTracking (1.5.1):
     - Protobuf (~> 3.1)
+  - AEPAssurance (1.0.0):
+    - ACPCore
+    - AEPAssurance/iOS (= 1.0.0)
+  - AEPAssurance/iOS (1.0.0):
+    - ACPCore
   - AEPCore (0.0.1):
     - AEPRulesEngine
     - AEPServices
@@ -35,8 +35,8 @@ PODS:
 
 DEPENDENCIES:
   - ACPCore (from `../../`)
-  - ACPGriffon
   - AdformAdobeExtension
+  - AEPAssurance
   - "AEPCore (from `git@github.com:adobe/aepsdk-core-ios.git`, branch `main`)"
   - "AEPIdentity (from `git@github.com:adobe/aepsdk-core-ios.git`, branch `main`)"
   - "AEPLifecycle (from `git@github.com:adobe/aepsdk-core-ios.git`, branch `main`)"
@@ -47,9 +47,9 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - ACPGriffon
     - AdformAdobeExtension
     - AdformTracking
+    - AEPAssurance
     - AppsFlyerAdobeExtension
     - AppsFlyerFramework
     - Protobuf
@@ -78,29 +78,29 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AEPCore:
-    :commit: fe6ea7b92d2affa6d8b84d1981a6a6c37f191e47
+    :commit: 265a2db21b0c464b3259441323b4fcb91888a938
     :git: "git@github.com:adobe/aepsdk-core-ios.git"
   AEPIdentity:
-    :commit: fe6ea7b92d2affa6d8b84d1981a6a6c37f191e47
+    :commit: 265a2db21b0c464b3259441323b4fcb91888a938
     :git: "git@github.com:adobe/aepsdk-core-ios.git"
   AEPLifecycle:
-    :commit: fe6ea7b92d2affa6d8b84d1981a6a6c37f191e47
+    :commit: 265a2db21b0c464b3259441323b4fcb91888a938
     :git: "git@github.com:adobe/aepsdk-core-ios.git"
   AEPRulesEngine:
     :commit: b7e2b7d778b07be8fccd6641e8119767bfc26b1f
     :git: "git@github.com:adobe/aepsdk-rulesengine-ios.git"
   AEPServices:
-    :commit: fe6ea7b92d2affa6d8b84d1981a6a6c37f191e47
+    :commit: 265a2db21b0c464b3259441323b4fcb91888a938
     :git: "git@github.com:adobe/aepsdk-core-ios.git"
   AEPSignal:
-    :commit: fe6ea7b92d2affa6d8b84d1981a6a6c37f191e47
+    :commit: 265a2db21b0c464b3259441323b4fcb91888a938
     :git: "git@github.com:adobe/aepsdk-core-ios.git"
 
 SPEC CHECKSUMS:
   ACPCore: 54bea9e0ab404307eb1e11806049a5a748156bbc
-  ACPGriffon: 53b524a9366c34968cce9b4eba50cbf72d0221d8
   AdformAdobeExtension: b123105956913d2789b98a05418ee2ff120b9ae6
   AdformTracking: 8bfde03b85e745a35bd66983384cf82f5a05d2f2
+  AEPAssurance: 79480081626b89fc37af26bbbf4522af9718e75f
   AEPCore: e8ddaae01a787926fde35cfcc24770b26a765e58
   AEPIdentity: f46a1b34363243f8d417a8143bfb876a36809104
   AEPLifecycle: 9e63cf6a8085161f95706ddbffef20dd1d748c3e
@@ -111,6 +111,6 @@ SPEC CHECKSUMS:
   AppsFlyerFramework: a511099f7bedbb1d5804d733c6152d6f8092c4fa
   Protobuf: 3dac39b34a08151c6d949560efe3f86134a3f748
 
-PODFILE CHECKSUM: c4975e7bfe407c7d21ee1f926c674d353fb1c6f6
+PODFILE CHECKSUM: aa44c22ae7ffae3da7174853a2b5b6086ee02bad
 
 COCOAPODS: 1.9.3

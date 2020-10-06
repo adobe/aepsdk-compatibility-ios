@@ -18,7 +18,7 @@ governing permissions and limitations under the License.
 #import <ACPCore/ACPExtensionEvent.h>
 #import "AppsFlyerAdobeExtension/AppsFlyerAdobeExtension.h"
 #import <AdformAdobeExtension/AdformAdobeExtension.h>
-#import <ACPGriffon/ACPGriffon.h>
+#import <AEPAssurance/AEPAssurance.h>
 #import "SkeletonExtension.h"
 
 @implementation AppDelegate
@@ -104,7 +104,7 @@ governing permissions and limitations under the License.
     [ACPCore registerExtension:[SkeletonExtension class] error:nil];
     [AppsFlyerAdobeExtension registerExtension];
     [AdformAdobeExtension registerExtension];
-    [ACPGriffon registerExtension];
+    [AEPAssurance registerExtension];
 
     [ACPCore start:^{
         [ACPCore lifecycleStart:nil];
