@@ -145,11 +145,15 @@ static NSMutableArray *_pendingExtensions;
 }
 
 + (void) trackAction: (nullable NSString*) action data: (nullable NSDictionary<NSString*, NSString*>*) data {
-    // TODO
+    // clean the dictionary first, ensuring all key and value entries are strings
+    NSDictionary *cleanedData = [ACPCore sanitizeTrackingDataDictionary:data];
+    [AEPMobileCore trackAction:action data:cleanedData];
 }
 
 + (void) trackState: (nullable NSString*) state data: (nullable NSDictionary<NSString*, NSString*>*) data {
-    // TODO
+    // clean the dictionary first, ensuring all key and value entries are strings
+    NSDictionary *cleanedData = [ACPCore sanitizeTrackingDataDictionary:data];
+    [AEPMobileCore trackState:state data:cleanedData];
 }
 
 + (BOOL) dispatchEvent: (nonnull ACPExtensionEvent*) event
@@ -247,6 +251,30 @@ static NSMutableArray *_pendingExtensions;
     }
     
     return extensionClass;
+}
+
+/// Ensures that all keys and values of `inputData` are `NSString` type.
+/// If a key or value is not of type NSString, the KVP will be removed from the sanitized result.
+/// @param inputData The dictionary to be sanitized
+/// @returns a sanitized dictionary of <NSString, NSString> key-value pairs
++ (NSDictionary * _Nullable) sanitizeTrackingDataDictionary:(nullable NSDictionary *)inputData {
+    NSMutableDictionary *sanitizedDictionary = [NSMutableDictionary dictionaryWithCapacity:inputData.count];
+    for (id key in inputData.allKeys) {
+        if (![key isKindOfClass:NSString.class]) {
+            NSString *errorMessage = [NSString stringWithFormat:@"Removing entry with non-string key: %@", key];
+            [ACPCore log:ACPMobileLogLevelWarning tag:@"ACPCore Compatibility" message:@""];
+            continue;
+        }
+        id value = inputData[key];
+        if (![value isKindOfClass:NSString.class]) {
+            NSString *errorMessage = [NSString stringWithFormat:@"Removing entry for key '%@' with non-string value: %@", key, value];
+            [ACPCore log:ACPMobileLogLevelWarning tag:@"ACPCore Compatibility" message:@""];
+            continue;
+        }
+        sanitizedDictionary[key] = value;
+    }
+    
+    return sanitizedDictionary;
 }
 
 @end
