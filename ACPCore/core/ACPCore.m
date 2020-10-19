@@ -262,13 +262,13 @@ static NSMutableArray *_pendingExtensions;
     for (id key in inputData.allKeys) {
         if (![key isKindOfClass:NSString.class]) {
             NSString *errorMessage = [NSString stringWithFormat:@"Removing entry with non-string key: %@", key];
-            [ACPCore log:ACPMobileLogLevelWarning tag:@"ACPCore Compatibility" message:@""];
+            [ACPCore log:ACPMobileLogLevelWarning tag:@"ACPCore Compatibility" message:errorMessage];
             continue;
         }
         id value = inputData[key];
         if (![value isKindOfClass:NSString.class]) {
             NSString *errorMessage = [NSString stringWithFormat:@"Removing entry for key '%@' with non-string value: %@", key, value];
-            [ACPCore log:ACPMobileLogLevelWarning tag:@"ACPCore Compatibility" message:@""];
+            [ACPCore log:ACPMobileLogLevelWarning tag:@"ACPCore Compatibility" message:errorMessage];
             continue;
         }
         sanitizedDictionary[key] = value;
