@@ -71,7 +71,7 @@ static NSMutableArray *_pendingExtensions;
 }
 
 + (void) setPrivacyStatus: (ACPMobilePrivacyStatus) status {
-    [AEPMobileCore setPrivacy:(AEPPrivacyStatus) status];
+    [AEPMobileCore setPrivacyStatus:(AEPPrivacyStatus) status];
 }
 
 + (void) updateConfiguration: (NSDictionary* __nullable) config {
