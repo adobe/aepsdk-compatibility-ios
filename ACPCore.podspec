@@ -8,7 +8,7 @@ ACPCore backward compatible layer
   s.homepage         = "https://github.com/adobe/aepsdk-core-ios"
   s.license          = 'Apache V2'
   s.author       = "Adobe Experience Platform SDK Team"
-  s.source           = { :git => "https://git.corp.adobe.com/nporter/aep-sdk-compatibility-ios", :tag => s.version.to_s }
+  s.source           = { :git => "https://git.corp.adobe.com/adobe/aepsdk-compatibility-ios", :tag => s.version.to_s }
 
   s.ios.deployment_target = '10.0'
   s.pod_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
