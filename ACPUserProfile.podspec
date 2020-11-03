@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "ACPUserProfile"
-  s.version          = "3.0.0-beta.1"
+  s.version          = "2.9.9"
   s.summary          = "ACPUserProfile"
   s.description      = <<-DESC
   ACPUserProfile backward compatible layer
