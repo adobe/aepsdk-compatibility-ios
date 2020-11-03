@@ -8,6 +8,7 @@ target 'SwiftTestApp' do
   # Pods for SwiftTestApp
 #   pod 'ACPCore'
    pod 'ACPCore', :path => '../../'
+   pod 'ACPUserProfile', :path => '../../'
 
    # Adding these to the podfile won't be required once these pods are public
    pod 'AEPServices', :git => 'git@github.com:adobe/aepsdk-core-ios.git', :branch => 'main'
@@ -16,4 +17,5 @@ target 'SwiftTestApp' do
    pod 'AEPIdentity', :git => 'git@github.com:adobe/aepsdk-core-ios.git', :branch => 'main'
    pod 'AEPSignal', :git => 'git@github.com:adobe/aepsdk-core-ios.git', :branch => 'main'
    pod 'AEPRulesEngine', :git => 'git@github.com:adobe/aepsdk-rulesengine-ios.git', :branch => 'main'
+   pod 'AEPUserProfile', :git => 'git@github.com:adobe/aepsdk-userprofile-ios.git', :branch => 'main'
 end
