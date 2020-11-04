@@ -15,6 +15,8 @@ import ACPCore
 import AEPIdentity
 import AEPLifecycle
 import AEPSignal
+import ACPUserProfile
+import AEPUserProfile
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -91,7 +93,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         ACPCore.setWrapperType(.flutter)
         
-        let extensionsToRegister = [Identity.self, Lifecycle.self, Signal.self]
+        let extensionsToRegister = [Identity.self, Lifecycle.self, Signal.self, UserProfile.self]
         ACPCore.registerExtensions(extensionsToRegister) {
             ACPCore.lifecycleStart(nil)
         }
@@ -133,6 +135,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ACPIdentity.getUrlVariables { (vars, error) in
             // handle
         }
+        
+        ACPUserProfile.updateUserAttribute("username", withValue: "Will Smith");
+        var profileMap = [AnyHashable: Any]()
+        profileMap["username"] = "will_smith"
+        profileMap["usertype"] = "Actor"
+        ACPUserProfile.updateUserAttributes(profileMap)
+        ACPUserProfile.removeUserAttribute("itemsAddedToCart")
+        ACPUserProfile.removeUserAttributes(["username","usertype"])
+        ACPUserProfile.getUserAttributes(["itemsAddedToCart"], withCompletionHandler: {(dict: [AnyHashable: Any]?, error: Error?) -> Void in
+                      // your customized code
+        })
         
         return true
     }

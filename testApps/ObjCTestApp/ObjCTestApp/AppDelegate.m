@@ -16,10 +16,12 @@ governing permissions and limitations under the License.
 #import <ACPCore/ACPLifecycle.h>
 #import <ACPCore/ACPSignal.h>
 #import <ACPCore/ACPExtensionEvent.h>
+#import <ACPUserProfile/ACPUserProfile.h>
 #import "AppsFlyerAdobeExtension/AppsFlyerAdobeExtension.h"
 #import <AdformAdobeExtension/AdformAdobeExtension.h>
 #import <AEPAssurance/AEPAssurance.h>
 #import "SkeletonExtension.h"
+
 
 @implementation AppDelegate
 
@@ -105,6 +107,7 @@ governing permissions and limitations under the License.
     [AppsFlyerAdobeExtension registerExtension];
     [AdformAdobeExtension registerExtension];
     [AEPAssurance registerExtension];
+    [ACPUserProfile registerExtension];
 
     [ACPCore start:^{
         [ACPCore lifecycleStart:nil];
@@ -146,6 +149,19 @@ governing permissions and limitations under the License.
     
     [ACPIdentity getUrlVariablesWithCompletionHandler:^(NSString * _Nullable urlVariables, NSError * _Nullable error) {
         // handle
+    }];
+    
+    [ACPUserProfile updateUserAttribute:@"username" withValue:@"Will Smith"];
+    NSMutableDictionary *profileMap = [NSMutableDictionary dictionary];
+    [profileMap setObject:@"username" forKey:@"will_smith"];
+    [profileMap setObject:@"usertype" forKey:@"Actor"];
+    [ACPUserProfile updateUserAttributes:profileMap];
+    [ACPUserProfile removeUserAttribute:@"itemsAddedToCart"];
+    [ACPUserProfile removeUserAttributes:@[@"username", @"usertype"]];
+    NSArray *attributes;
+    attributes = [NSArray arrayWithObjects: @"username", nil];
+    [ACPUserProfile getUserAttributes:attributes withCompletionHandler:^(NSDictionary* dict, NSError* error){
+    // your customized code
     }];
     
     return YES;

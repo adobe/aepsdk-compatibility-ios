@@ -6,29 +6,45 @@ PODS:
     - AEPRulesEngine
     - AEPServices
     - AEPSignal
-  - AEPCore (0.0.1):
+  - ACPUserProfile (3.0.0-beta.1):
+    - ACPCore
+    - AEPCore
+    - AEPIdentity
+    - AEPLifecycle
     - AEPRulesEngine
     - AEPServices
-  - AEPIdentity (0.0.1):
+    - AEPSignal
+    - AEPUserProfile
+  - AEPCore (3.0.0-beta.1):
+    - AEPRulesEngine
+    - AEPServices
+  - AEPIdentity (3.0.0-beta.1):
     - AEPCore
-  - AEPLifecycle (0.0.1):
+  - AEPLifecycle (3.0.0-beta.1):
     - AEPCore
-  - AEPRulesEngine (0.0.1)
-  - AEPServices (0.0.1)
-  - AEPSignal (0.0.1):
+  - AEPRulesEngine (1.0.0-beta.1)
+  - AEPServices (3.0.0-beta.1)
+  - AEPSignal (3.0.0-beta.1):
     - AEPCore
+  - AEPUserProfile (3.0.0-beta.1):
+    - AEPCore
+    - AEPServices
 
 DEPENDENCIES:
   - ACPCore (from `../../`)
+  - ACPUserProfile (from `../../`)
   - "AEPCore (from `git@github.com:adobe/aepsdk-core-ios.git`, branch `main`)"
   - "AEPIdentity (from `git@github.com:adobe/aepsdk-core-ios.git`, branch `main`)"
   - "AEPLifecycle (from `git@github.com:adobe/aepsdk-core-ios.git`, branch `main`)"
   - "AEPRulesEngine (from `git@github.com:adobe/aepsdk-rulesengine-ios.git`, branch `main`)"
   - "AEPServices (from `git@github.com:adobe/aepsdk-core-ios.git`, branch `main`)"
   - "AEPSignal (from `git@github.com:adobe/aepsdk-core-ios.git`, branch `main`)"
+  - "AEPUserProfile (from `git@github.com:adobe/aepsdk-userprofile-ios.git`, branch `main`)"
 
 EXTERNAL SOURCES:
   ACPCore:
+    :path: "../../"
+  ACPUserProfile:
     :path: "../../"
   AEPCore:
     :branch: main
@@ -48,36 +64,44 @@ EXTERNAL SOURCES:
   AEPSignal:
     :branch: main
     :git: "git@github.com:adobe/aepsdk-core-ios.git"
+  AEPUserProfile:
+    :branch: main
+    :git: "git@github.com:adobe/aepsdk-userprofile-ios.git"
 
 CHECKOUT OPTIONS:
   AEPCore:
-    :commit: fe6ea7b92d2affa6d8b84d1981a6a6c37f191e47
+    :commit: 51a6bd926c8c0beb526604ac0c2bc01b86158cc8
     :git: "git@github.com:adobe/aepsdk-core-ios.git"
   AEPIdentity:
-    :commit: fe6ea7b92d2affa6d8b84d1981a6a6c37f191e47
+    :commit: 51a6bd926c8c0beb526604ac0c2bc01b86158cc8
     :git: "git@github.com:adobe/aepsdk-core-ios.git"
   AEPLifecycle:
-    :commit: fe6ea7b92d2affa6d8b84d1981a6a6c37f191e47
+    :commit: 51a6bd926c8c0beb526604ac0c2bc01b86158cc8
     :git: "git@github.com:adobe/aepsdk-core-ios.git"
   AEPRulesEngine:
-    :commit: b7e2b7d778b07be8fccd6641e8119767bfc26b1f
+    :commit: b2e0247bf57975209997dd9a26fd576b7c420394
     :git: "git@github.com:adobe/aepsdk-rulesengine-ios.git"
   AEPServices:
-    :commit: fe6ea7b92d2affa6d8b84d1981a6a6c37f191e47
+    :commit: 51a6bd926c8c0beb526604ac0c2bc01b86158cc8
     :git: "git@github.com:adobe/aepsdk-core-ios.git"
   AEPSignal:
-    :commit: fe6ea7b92d2affa6d8b84d1981a6a6c37f191e47
+    :commit: 51a6bd926c8c0beb526604ac0c2bc01b86158cc8
     :git: "git@github.com:adobe/aepsdk-core-ios.git"
+  AEPUserProfile:
+    :commit: dddd83cf99e50a1aff4c1715094e04322ed6734f
+    :git: "git@github.com:adobe/aepsdk-userprofile-ios.git"
 
 SPEC CHECKSUMS:
-  ACPCore: 54bea9e0ab404307eb1e11806049a5a748156bbc
-  AEPCore: e8ddaae01a787926fde35cfcc24770b26a765e58
-  AEPIdentity: f46a1b34363243f8d417a8143bfb876a36809104
-  AEPLifecycle: 9e63cf6a8085161f95706ddbffef20dd1d748c3e
-  AEPRulesEngine: 5742652bd7ab65aa7325f731725d995947e41db8
-  AEPServices: ad642c76cede1c7babb61e6804198ded4317d74f
-  AEPSignal: b6473f4543d2b876c124d162228b49d53a31a552
+  ACPCore: 67e4b855bf16cfb6a63024a4ddb73d15c0fd30e5
+  ACPUserProfile: 079727e16fc72b26e317c790fbde536806dee550
+  AEPCore: d4b8b2ac2d5d91ea11c4535bc574bb31e684b83c
+  AEPIdentity: 1b726ffc2fe131f444cd24388eb19aaa5a1e9a6a
+  AEPLifecycle: e416a9017c7d094a925edb5bf4e819019f0d78fe
+  AEPRulesEngine: 3860846bc56a1b1e3e69194016e168358b4b8efd
+  AEPServices: d5c727ccaba06c0e7149b7bf4baebcd5f5c0f7e8
+  AEPSignal: 1e8b5bff111ff975d6f6f3a672a4721675d2a0c7
+  AEPUserProfile: 041364645c36e29119eb6dc680e12fddb562c2c8
 
-PODFILE CHECKSUM: df44539983d8edbb5cecc0506d5c4ee15401689d
+PODFILE CHECKSUM: 611e3911ad1eb581b269b7f8a671bec27fba8478
 
 COCOAPODS: 1.9.3
