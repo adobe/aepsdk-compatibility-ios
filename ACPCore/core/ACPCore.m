@@ -35,14 +35,14 @@ static NSMutableArray *_pendingExtensions;
 }
 
 + (void) getSdkIdentities: (nullable void (^) (NSString* __nullable content)) callback {
-    [AEPMobileCore getSdkIdentities:^(NSString * _Nullable content, enum AEPError error) {
+    [AEPMobileCore getSdkIdentities:^(NSString * _Nullable content, NSError * _Nullable error) {
         callback(content);
     }];
 }
 
 + (void) getSdkIdentitiesWithCompletionHandler: (nullable void (^) (NSString* __nullable content, NSError* _Nullable error)) callback {
-    [AEPMobileCore getSdkIdentities:^(NSString * _Nullable content, enum AEPError error) {
-        callback(content, [NSError errorFromAEPError:error]);
+    [AEPMobileCore getSdkIdentities:^(NSString * _Nullable content, NSError * _Nullable error) {
+        callback(content, error);
     }];
 }
 
