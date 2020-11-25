@@ -30,26 +30,26 @@ governing permissions and limitations under the License.
 }
 
 + (void) appendToUrl: (nullable NSURL*) baseUrl withCallback: (nullable void (^) (NSURL* __nullable urlWithVisitorData)) callback {
-    [AEPMobileIdentity appendToUrl:baseUrl completion:^(NSURL * _Nullable url, enum AEPError error) {
+    [AEPMobileIdentity appendToUrl:baseUrl completion:^(NSURL * _Nullable url, NSError * _Nullable error) {
         callback(url);
     }];
 }
 
 + (void) appendToUrl: (NSURL*) baseUrl withCompletionHandler: (void (^) (NSURL* _Nullable, NSError* _Nullable)) completionHandler {
-    [AEPMobileIdentity appendToUrl:baseUrl completion:^(NSURL * _Nullable url, enum AEPError error) {
-        completionHandler(url, [NSError errorFromAEPError:error]);
+    [AEPMobileIdentity appendToUrl:baseUrl completion:^(NSURL * _Nullable url, NSError * _Nullable error) {
+        completionHandler(url, error);
     }];
 }
 
 + (void) getIdentifiers: (nonnull void (^) (NSArray<ACPMobileVisitorId*>* __nullable visitorIDs)) callback {
-    [AEPMobileIdentity getIdentifiers:^(NSArray<id<AEPIdentifiable>> * _Nullable visitorIDs, enum AEPError error) {
+    [AEPMobileIdentity getIdentifiers:^(NSArray<id<AEPIdentifiable>> * _Nullable visitorIDs, NSError * _Nullable error) {
         callback(convertVisitorIds(visitorIDs));
     }];
 }
 
 + (void) getIdentifiersWithCompletionHandler: (void (^) (NSArray<ACPMobileVisitorId*>* _Nullable, NSError* _Nullable)) completionHandler {
-    [AEPMobileIdentity getIdentifiers:^(NSArray<id<AEPIdentifiable>> * _Nullable visitorIDs, enum AEPError error) {
-       completionHandler(convertVisitorIds(visitorIDs), [NSError errorFromAEPError:error]);
+    [AEPMobileIdentity getIdentifiers:^(NSArray<id<AEPIdentifiable>> * _Nullable visitorIDs, NSError * _Nullable error) {
+       completionHandler(convertVisitorIds(visitorIDs), error);
     }];
 }
 
@@ -79,14 +79,14 @@ governing permissions and limitations under the License.
 }
 
 + (void) getUrlVariables: (nonnull void (^) (NSString* __nullable urlVariables)) callback {
-    [AEPMobileIdentity getUrlVariables:^(NSString * _Nullable variables, enum AEPError error) {
+    [AEPMobileIdentity getUrlVariables:^(NSString * _Nullable variables, NSError * _Nullable error) {
         callback(variables);
     }];
 }
 
 + (void) getUrlVariablesWithCompletionHandler: (void (^) (NSString* _Nullable, NSError* _Nullable)) completionHandler {
-    [AEPMobileIdentity getUrlVariables:^(NSString * _Nullable variables, enum AEPError error) {
-        completionHandler(variables, [NSError errorFromAEPError:error]);
+    [AEPMobileIdentity getUrlVariables:^(NSString * _Nullable variables, NSError * _Nullable error) {
+        completionHandler(variables, error);
     }];
 }
 
