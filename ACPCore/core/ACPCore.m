@@ -35,14 +35,14 @@ static NSMutableArray *_pendingExtensions;
 }
 
 + (void) getSdkIdentities: (nullable void (^) (NSString* __nullable content)) callback {
-    [AEPMobileCore getSdkIdentities:^(NSString * _Nullable content, enum AEPError error) {
+    [AEPMobileCore getSdkIdentities:^(NSString * _Nullable content, NSError * _Nullable error) {
         callback(content);
     }];
 }
 
 + (void) getSdkIdentitiesWithCompletionHandler: (nullable void (^) (NSString* __nullable content, NSError* _Nullable error)) callback {
-    [AEPMobileCore getSdkIdentities:^(NSString * _Nullable content, enum AEPError error) {
-        callback(content, [NSError errorFromAEPError:error]);
+    [AEPMobileCore getSdkIdentities:^(NSString * _Nullable content, NSError * _Nullable error) {
+        callback(content, error);
     }];
 }
 
@@ -168,7 +168,7 @@ static NSMutableArray *_pendingExtensions;
                                      error: (NSError* _Nullable* _Nullable) error {
     
     AEPEvent *convertedEvent = [[AEPEvent alloc] initWithName:requestEvent.eventName type:requestEvent.eventType source:requestEvent.eventSource data:requestEvent.eventData];
-    [AEPMobileCore dispatch:convertedEvent responseCallback:^(AEPEvent * _Nullable responseEvent) {
+    [AEPMobileCore dispatch:convertedEvent timeout:1 responseCallback:^(AEPEvent * _Nullable responseEvent) {
         ACPExtensionEvent *convertedResponseEvent = [[ACPExtensionEvent alloc] initWithAEPEvent:responseEvent];
         responseCallback(convertedResponseEvent);
     }];
