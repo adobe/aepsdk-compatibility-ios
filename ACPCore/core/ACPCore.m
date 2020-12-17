@@ -168,7 +168,7 @@ static NSMutableArray *_pendingExtensions;
                                      error: (NSError* _Nullable* _Nullable) error {
     
     AEPEvent *convertedEvent = [[AEPEvent alloc] initWithName:requestEvent.eventName type:requestEvent.eventType source:requestEvent.eventSource data:requestEvent.eventData];
-    [AEPMobileCore dispatch:convertedEvent responseCallback:^(AEPEvent * _Nullable responseEvent) {
+    [AEPMobileCore dispatch:convertedEvent timeout:1 responseCallback:^(AEPEvent * _Nullable responseEvent) {
         ACPExtensionEvent *convertedResponseEvent = [[ACPExtensionEvent alloc] initWithAEPEvent:responseEvent];
         responseCallback(convertedResponseEvent);
     }];
