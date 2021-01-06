@@ -17,6 +17,8 @@ import AEPLifecycle
 import AEPSignal
 import ACPUserProfile
 import AEPUserProfile
+import ACPAudience
+import AEPAudience
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -93,7 +95,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         ACPCore.setWrapperType(.flutter)
         
-        let extensionsToRegister = [Identity.self, Lifecycle.self, Signal.self, UserProfile.self]
+        let extensionsToRegister = [Identity.self, Lifecycle.self, Signal.self, UserProfile.self, Audience.self]
         ACPCore.registerExtensions(extensionsToRegister) {
             ACPCore.lifecycleStart(nil)
         }
@@ -146,6 +148,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ACPUserProfile.getUserAttributes(["itemsAddedToCart"], withCompletionHandler: {(dict: [AnyHashable: Any]?, error: Error?) -> Void in
                       // your customized code
         })
+        
+        // Audience Manager Testing
+        ACPCore.setPrivacyStatus(.optIn)
+        sleep(1)
+        let traits = ["mykey":"myvalue"]
+        ACPAudience.signal(withData: traits) { (profile, error) in
+            print("vistor profile: \(String(describing: profile))")
+            ACPAudience.getVisitorProfile { (retrievedProfile, error) in
+                print("retrieved profile: \(String(describing: retrievedProfile))")
+            }
+        }
+        ACPAudience.reset()
         
         return true
     }
