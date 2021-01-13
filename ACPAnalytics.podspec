@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = "ACPAnalyticsProfile"
+  s.name             = "ACPAnalytics"
   s.version          = "2.9.9"
   s.summary          = "ACPAnaltyics"
   s.description      = <<-DESC
