@@ -156,9 +156,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         sleep(1)
         let traits = ["mykey":"myvalue"]
         ACPAudience.signal(withData: traits) { (profile, error) in
-            print("vistor profile: \(String(describing: profile))")
+            print("visitor profile: \(String(describing: profile))")
             ACPAudience.getVisitorProfile { (retrievedProfile, error) in
-                print("retrieved profile: \(String(describing: retrievedProfile))")
+                print("retrieved visitor profile: \(String(describing: retrievedProfile))")
             }
         }
         ACPAudience.reset()

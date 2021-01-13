@@ -174,9 +174,9 @@ governing permissions and limitations under the License.
     NSMutableDictionary *traits = [[NSMutableDictionary alloc] init];
         [traits setObject:@"myvalue" forKey:@"mykey"];
     [ACPAudience signalWithData:traits withCompletionHandler:^(NSDictionary * _Nullable profile, NSError * _Nullable error) {
-        NSLog(@"vistor profile: %@",[profile descriptionInStringsFileFormat]);
+        NSLog(@"visitor profile: %@",[profile descriptionInStringsFileFormat]);
         [ACPAudience getVisitorProfile:^(NSDictionary * _Nullable profile, NSError * _Nullable error) {
-            NSLog(@"retrieved profile: %@",[profile descriptionInStringsFileFormat]);
+            NSLog(@"retrieved visitor profile: %@",[profile descriptionInStringsFileFormat]);
         }];
     }];
     
