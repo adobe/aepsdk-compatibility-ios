@@ -1,5 +1,5 @@
 /*
-Copyright 2018 Adobe. All rights reserved.
+Copyright 2021 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -20,6 +20,7 @@ governing permissions and limitations under the License.
 #import "AppsFlyerAdobeExtension/AppsFlyerAdobeExtension.h"
 #import <AdformAdobeExtension/AdformAdobeExtension.h>
 #import <AEPAssurance/AEPAssurance.h>
+#import <ACPAnalytics/ACPAnalytics.h>
 #import "SkeletonExtension.h"
 
 
@@ -108,6 +109,7 @@ governing permissions and limitations under the License.
     [AdformAdobeExtension registerExtension];
     [AEPAssurance registerExtension];
     [ACPUserProfile registerExtension];
+    [ACPAnalytics registerExtension];
 
     [ACPCore start:^{
         [ACPCore lifecycleStart:nil];
@@ -162,6 +164,38 @@ governing permissions and limitations under the License.
     attributes = [NSArray arrayWithObjects: @"username", nil];
     [ACPUserProfile getUserAttributes:attributes withCompletionHandler:^(NSDictionary* dict, NSError* error){
     // your customized code
+    }];
+    
+    //Analytics Testing
+
+    NSString *analyticsVersion = [ACPAnalytics extensionVersion];
+    
+    [ACPAnalytics getQueueSize:^(NSUInteger queueSize) {
+       //handle
+    }];
+    
+    [ACPAnalytics getQueueSizeWithCompletionHandler:^(NSUInteger queueSize, NSError * _Nullable error) {
+        //handle
+    }];
+    
+    [ACPAnalytics sendQueuedHits];
+    
+    [ACPAnalytics clearQueue];
+    
+    [ACPAnalytics getTrackingIdentifier:^(NSString * _Nullable trackingIdentifier) {
+        //handle
+    }];
+    
+    [ACPAnalytics getTrackingIdentifierWithCompletionHandler:^(NSString * _Nullable trackingIdentifier, NSError * _Nullable error) {
+        //handle
+    }];
+    
+    [ACPAnalytics getVisitorIdentifier:^(NSString * _Nullable visitorIdentifier) {
+        //handle
+    }];
+
+    [ACPAnalytics getVisitorIdentifierWithCompletionHandler:^(NSString * _Nullable visitorIdentifier, NSError * _Nullable error) {
+        //handle
     }];
     
     return YES;

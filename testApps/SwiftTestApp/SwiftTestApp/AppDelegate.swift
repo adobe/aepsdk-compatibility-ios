@@ -1,5 +1,5 @@
 /*
-Copyright 2020 Adobe. All rights reserved.
+Copyright 2021 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -17,6 +17,8 @@ import AEPLifecycle
 import AEPSignal
 import ACPUserProfile
 import AEPUserProfile
+import ACPAnalytics
+import AEPAnalytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -93,7 +95,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         ACPCore.setWrapperType(.flutter)
         
-        let extensionsToRegister = [Identity.self, Lifecycle.self, Signal.self, UserProfile.self]
+        let extensionsToRegister = [Identity.self, Lifecycle.self, Signal.self, UserProfile.self, Analytics.self]
         ACPCore.registerExtensions(extensionsToRegister) {
             ACPCore.lifecycleStart(nil)
         }
@@ -146,6 +148,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ACPUserProfile.getUserAttributes(["itemsAddedToCart"], withCompletionHandler: {(dict: [AnyHashable: Any]?, error: Error?) -> Void in
                       // your customized code
         })
+        
+        //Analytics Testing
+        
+        let analyticsVersion = ACPAnalytics.extensionVersion()
+        
+        ACPAnalytics.getQueueSize { (queueSize, error) in
+            //handle
+        }
+        
+        ACPAnalytics.getQueueSize { (queueSize, error) in
+            //handle
+        }
+        
+        ACPAnalytics.sendQueuedHits()
+        
+        ACPAnalytics.clearQueue()
+        
+        ACPAnalytics.getVisitorIdentifier { (visitorIdentifier) in
+          //handle
+        }
+        
+        ACPAnalytics.getVisitorIdentifier { (visitorIdentifier, error) in
+          //handle
+        }
+        
+        ACPAnalytics.getTrackingIdentifier { (trackingIdentifier) in
+          //handle
+        }
+        
+        ACPAnalytics.getTrackingIdentifier { (trackingIdentifier, error) in
+          //handle
+        }
         
         return true
     }

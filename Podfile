@@ -33,3 +33,15 @@ target 'ACPUserProfile' do
   pod 'AEPRulesEngine', :git => 'git@github.com:adobe/aepsdk-rulesengine-ios.git', :branch => 'main'
   pod 'AEPUserProfile', :git => 'git@github.com:adobe/aepsdk-userprofile-ios.git', :branch => 'main'
 end
+
+target 'ACPAnalytics' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+# Pods for ACPAnalytics
+  pod 'ACPCore', :path => './'
+  pod 'AEPCore', :git => 'git@github.com:adobe/aepsdk-core-ios.git', :branch => 'main'
+  pod 'AEPServices', :git => 'git@github.com:adobe/aepsdk-core-ios.git', :branch => 'main'
+  pod 'AEPIdentity', :git => 'git@github.com:adobe/aepsdk-core-ios.git', :branch => 'main'
+  pod 'AEPAnalytics', :git => 'git@github.com:adobe/aepsdk-analytics-ios.git', :branch => 'main'
+end
