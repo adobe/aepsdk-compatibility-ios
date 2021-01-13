@@ -17,6 +17,8 @@ import AEPLifecycle
 import AEPSignal
 import ACPUserProfile
 import AEPUserProfile
+import ACPAudience
+import AEPAudience
 import ACPAnalytics
 import AEPAnalytics
 
@@ -95,7 +97,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         ACPCore.setWrapperType(.flutter)
         
-        let extensionsToRegister = [Identity.self, Lifecycle.self, Signal.self, UserProfile.self, Analytics.self]
+        let extensionsToRegister = [Identity.self, Lifecycle.self, Signal.self, UserProfile.self, Analytics.self, Audience.self]
         ACPCore.registerExtensions(extensionsToRegister) {
             ACPCore.lifecycleStart(nil)
         }
@@ -149,6 +151,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                       // your customized code
         })
         
+        // Audience Manager Testing
+        ACPCore.setPrivacyStatus(.optIn)
+        sleep(1)
+        let traits = ["mykey":"myvalue"]
+        ACPAudience.signal(withData: traits) { (profile, error) in
+            print("visitor profile: \(String(describing: profile))")
+            ACPAudience.getVisitorProfile { (retrievedProfile, error) in
+                print("retrieved visitor profile: \(String(describing: retrievedProfile))")
+            }
+        }
+        ACPAudience.reset()
+
         //Analytics Testing
         
         let analyticsVersion = ACPAnalytics.extensionVersion()

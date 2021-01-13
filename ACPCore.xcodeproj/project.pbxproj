@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		149C39C1206E0467D54154B0 /* Pods_ACPAudience.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70D649236C206224270B160 /* Pods_ACPAudience.framework */; };
 		21558BAC24DCA373004B3921 /* ACPCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21558BA224DCA373004B3921 /* ACPCore.framework */; };
 		21558BB124DCA373004B3921 /* ACPCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21558BB024DCA373004B3921 /* ACPCoreTests.m */; };
 		21558BB324DCA373004B3921 /* ACPCoreUmbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558BA524DCA373004B3921 /* ACPCoreUmbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,6 +41,8 @@
 		92438BF525A5388300359C53 /* ACPAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = 92438BF425A5388300359C53 /* ACPAnalytics.m */; };
 		975248CD3BA74F1731A0BAB5 /* Pods_ACPCore_ACPCoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5FF225D46F436B40871F06 /* Pods_ACPCore_ACPCoreTests.framework */; };
 		BBFCF5A32552004A000EA193 /* ACPUserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = BBFCF5A12552004A000EA193 /* ACPUserProfile.m */; };
+		D6DBA86D25A5251A0089FB71 /* ACPAudience.h in Headers */ = {isa = PBXBuildFile; fileRef = D6DBA86B25A5251A0089FB71 /* ACPAudience.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6DBA88B25A527760089FB71 /* ACPAudience.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DBA88A25A527760089FB71 /* ACPAudience.m */; };
 		DFBBEF4BDD09554134B12D72 /* Pods_ACPCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBF8ACCB7BF85927CDCC2F7 /* Pods_ACPCore.framework */; };
 		FA807DDB05775B3552B84E0E /* Pods_ACPUserProfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE930440D2BEA4AB7BBD72ED /* Pods_ACPUserProfile.framework */; };
 /* End PBXBuildFile section */
@@ -88,6 +91,7 @@
 		21558C4424DE1D44004B3921 /* ACPBridgeExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACPBridgeExtension.h; sourceTree = "<group>"; };
 		21558C4524DE1D44004B3921 /* ACPBridgeExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACPBridgeExtension.m; sourceTree = "<group>"; };
 		21C7E300A6664489755A841E /* Pods-ACPUserProfile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPUserProfile.debug.xcconfig"; path = "Target Support Files/Pods-ACPUserProfile/Pods-ACPUserProfile.debug.xcconfig"; sourceTree = "<group>"; };
+		39E3043AA19547343B6B1809 /* Pods-ACPAudience.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPAudience.debug.xcconfig"; path = "Target Support Files/Pods-ACPAudience/Pods-ACPAudience.debug.xcconfig"; sourceTree = "<group>"; };
 		23F8EB6057F2220DC4C7C88F /* Pods_ACPAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACPAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F975D6B256D801100C490DC /* ACPUserProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPUserProfile.h; sourceTree = "<group>"; };
 		4CBF8ACCB7BF85927CDCC2F7 /* Pods_ACPCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACPCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,11 +103,17 @@
 		92438BF425A5388300359C53 /* ACPAnalytics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACPAnalytics.m; sourceTree = "<group>"; };
 		96087480F6F8EE933A5D9972 /* Pods-ACPCore-ACPCoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPCore-ACPCoreTests.debug.xcconfig"; path = "Target Support Files/Pods-ACPCore-ACPCoreTests/Pods-ACPCore-ACPCoreTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9639640F8E8B012FBBF2F35C /* Pods-ACPUserProfile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPUserProfile.release.xcconfig"; path = "Target Support Files/Pods-ACPUserProfile/Pods-ACPUserProfile.release.xcconfig"; sourceTree = "<group>"; };
+		A70D649236C206224270B160 /* Pods_ACPAudience.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACPAudience.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98194C2C6BE8BCEE422CF790 /* Pods-ACPAnalytics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPAnalytics.debug.xcconfig"; path = "Target Support Files/Pods-ACPAnalytics/Pods-ACPAnalytics.debug.xcconfig"; sourceTree = "<group>"; };
 		AE930440D2BEA4AB7BBD72ED /* Pods_ACPUserProfile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACPUserProfile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA2B12A3E10D4F0295BC67B6 /* Pods-ACPAudience.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPAudience.release.xcconfig"; path = "Target Support Files/Pods-ACPAudience/Pods-ACPAudience.release.xcconfig"; sourceTree = "<group>"; };
 		BBFCF5982552001B000EA193 /* ACPUserProfile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACPUserProfile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBFCF59B2552001B000EA193 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBFCF5A12552004A000EA193 /* ACPUserProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPUserProfile.m; sourceTree = "<group>"; };
+		D6DBA86925A5251A0089FB71 /* ACPAudience.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACPAudience.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6DBA86B25A5251A0089FB71 /* ACPAudience.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACPAudience.h; sourceTree = "<group>"; };
+		D6DBA86C25A5251A0089FB71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6DBA88A25A527760089FB71 /* ACPAudience.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACPAudience.m; sourceTree = "<group>"; };
 		C26E738D6E100EDC7C8CF07D /* Pods-ACPAnalytics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPAnalytics.release.xcconfig"; path = "Target Support Files/Pods-ACPAnalytics/Pods-ACPAnalytics.release.xcconfig"; sourceTree = "<group>"; };
 		FE13D1FCDB9783830360EF51 /* Pods-ACPCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPCore.debug.xcconfig"; path = "Target Support Files/Pods-ACPCore/Pods-ACPCore.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,6 +152,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D6DBA86625A5251A0089FB71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				149C39C1206E0467D54154B0 /* Pods_ACPAudience.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -151,6 +169,7 @@
 				21558BA424DCA373004B3921 /* ACPCore */,
 				21558BAF24DCA373004B3921 /* ACPCoreTests */,
 				BBFCF5992552001B000EA193 /* ACPUserProfile */,
+				D6DBA86A25A5251A0089FB71 /* ACPAudience */,
 				92438BE925A5354500359C53 /* ACPAnalytics */,
 				21558BA324DCA373004B3921 /* Products */,
 				7760FA52E364B0E47A19AD11 /* Pods */,
@@ -164,6 +183,7 @@
 				21558BA224DCA373004B3921 /* ACPCore.framework */,
 				21558BAB24DCA373004B3921 /* ACPCoreTests.xctest */,
 				BBFCF5982552001B000EA193 /* ACPUserProfile.framework */,
+				D6DBA86925A5251A0089FB71 /* ACPAudience.framework */,
 				92438BE825A5354500359C53 /* ACPAnalytics.framework */,
 			);
 			name = Products;
@@ -261,6 +281,8 @@
 				90D385E2E3759857490D2259 /* Pods-ACPCore-ACPCoreTests.release.xcconfig */,
 				21C7E300A6664489755A841E /* Pods-ACPUserProfile.debug.xcconfig */,
 				9639640F8E8B012FBBF2F35C /* Pods-ACPUserProfile.release.xcconfig */,
+				39E3043AA19547343B6B1809 /* Pods-ACPAudience.debug.xcconfig */,
+				BA2B12A3E10D4F0295BC67B6 /* Pods-ACPAudience.release.xcconfig */,
 				98194C2C6BE8BCEE422CF790 /* Pods-ACPAnalytics.debug.xcconfig */,
 				C26E738D6E100EDC7C8CF07D /* Pods-ACPAnalytics.release.xcconfig */,
 			);
@@ -287,12 +309,23 @@
 			path = ACPUserProfile;
 			sourceTree = "<group>";
 		};
+		D6DBA86A25A5251A0089FB71 /* ACPAudience */ = {
+			isa = PBXGroup;
+			children = (
+				D6DBA86B25A5251A0089FB71 /* ACPAudience.h */,
+				D6DBA88A25A527760089FB71 /* ACPAudience.m */,
+				D6DBA86C25A5251A0089FB71 /* Info.plist */,
+			);
+			path = ACPAudience;
+			sourceTree = "<group>";
+		};
 		E5A701BD62609B58F7C128D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				4CBF8ACCB7BF85927CDCC2F7 /* Pods_ACPCore.framework */,
 				0F5FF225D46F436B40871F06 /* Pods_ACPCore_ACPCoreTests.framework */,
 				AE930440D2BEA4AB7BBD72ED /* Pods_ACPUserProfile.framework */,
+				A70D649236C206224270B160 /* Pods_ACPAudience.framework */,
 				23F8EB6057F2220DC4C7C88F /* Pods_ACPAnalytics.framework */,
 			);
 			name = Frameworks;
@@ -334,6 +367,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F975D6C256D801100C490DC /* ACPUserProfile.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6DBA86425A5251A0089FB71 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6DBA86D25A5251A0089FB71 /* ACPAudience.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +458,25 @@
 			productReference = BBFCF5982552001B000EA193 /* ACPUserProfile.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		D6DBA86825A5251A0089FB71 /* ACPAudience */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6DBA86E25A5251A0089FB71 /* Build configuration list for PBXNativeTarget "ACPAudience" */;
+			buildPhases = (
+				9FA7C9B3545D28D05CC0668C /* [CP] Check Pods Manifest.lock */,
+				D6DBA86425A5251A0089FB71 /* Headers */,
+				D6DBA86525A5251A0089FB71 /* Sources */,
+				D6DBA86625A5251A0089FB71 /* Frameworks */,
+				D6DBA86725A5251A0089FB71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ACPAudience;
+			productName = ACPAudience;
+			productReference = D6DBA86925A5251A0089FB71 /* ACPAudience.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -438,6 +498,9 @@
 					BBFCF5972552001B000EA193 = {
 						CreatedOnToolsVersion = 11.7;
 					};
+					D6DBA86825A5251A0089FB71 = {
+						CreatedOnToolsVersion = 12.3;
+					};
 				};
 			};
 			buildConfigurationList = 21558B9C24DCA373004B3921 /* Build configuration list for PBXProject "ACPCore" */;
@@ -456,6 +519,7 @@
 				21558BA124DCA373004B3921 /* ACPCore */,
 				21558BAA24DCA373004B3921 /* ACPCoreTests */,
 				BBFCF5972552001B000EA193 /* ACPUserProfile */,
+				D6DBA86825A5251A0089FB71 /* ACPAudience */,
 				92438BE725A5354500359C53 /* ACPAnalytics */,
 			);
 		};
@@ -490,6 +554,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D6DBA86725A5251A0089FB71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -509,6 +580,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-ACPUserProfile-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FA7C9B3545D28D05CC0668C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ACPAudience-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -641,6 +734,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBFCF5A32552004A000EA193 /* ACPUserProfile.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6DBA86525A5251A0089FB71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6DBA88B25A527760089FB71 /* ACPAudience.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -957,6 +1058,58 @@
 			};
 			name = Release;
 		};
+		D6DBA86F25A5251A0089FB71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39E3043AA19547343B6B1809 /* Pods-ACPAudience.debug.xcconfig */;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ACPAudience/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.aep.ACPAudience;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D6DBA87025A5251A0089FB71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA2B12A3E10D4F0295BC67B6 /* Pods-ACPAudience.release.xcconfig */;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ACPAudience/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.aep.ACPAudience;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1001,6 +1154,15 @@
 			buildConfigurations = (
 				BBFCF59D2552001B000EA193 /* Debug */,
 				BBFCF59E2552001B000EA193 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6DBA86E25A5251A0089FB71 /* Build configuration list for PBXNativeTarget "ACPAudience" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6DBA86F25A5251A0089FB71 /* Debug */,
+				D6DBA87025A5251A0089FB71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

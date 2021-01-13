@@ -17,6 +17,7 @@ governing permissions and limitations under the License.
 #import <ACPCore/ACPSignal.h>
 #import <ACPCore/ACPExtensionEvent.h>
 #import <ACPUserProfile/ACPUserProfile.h>
+#import <ACPAudience/ACPAudience.h>
 #import "AppsFlyerAdobeExtension/AppsFlyerAdobeExtension.h"
 #import <AdformAdobeExtension/AdformAdobeExtension.h>
 #import <AEPAssurance/AEPAssurance.h>
@@ -109,6 +110,7 @@ governing permissions and limitations under the License.
     [AdformAdobeExtension registerExtension];
     [AEPAssurance registerExtension];
     [ACPUserProfile registerExtension];
+    [ACPAudience registerExtension];
     [ACPAnalytics registerExtension];
 
     [ACPCore start:^{
@@ -166,6 +168,20 @@ governing permissions and limitations under the License.
     // your customized code
     }];
     
+    // Audience Manager Testing
+    [ACPCore setPrivacyStatus:ACPMobilePrivacyStatusOptIn];
+    sleep(1);
+    NSMutableDictionary *traits = [[NSMutableDictionary alloc] init];
+        [traits setObject:@"myvalue" forKey:@"mykey"];
+    [ACPAudience signalWithData:traits withCompletionHandler:^(NSDictionary * _Nullable profile, NSError * _Nullable error) {
+        NSLog(@"visitor profile: %@",[profile descriptionInStringsFileFormat]);
+        [ACPAudience getVisitorProfile:^(NSDictionary * _Nullable profile, NSError * _Nullable error) {
+            NSLog(@"retrieved visitor profile: %@",[profile descriptionInStringsFileFormat]);
+        }];
+    }];
+    
+    [ACPAudience reset];
+
     //Analytics Testing
 
     NSString *analyticsVersion = [ACPAnalytics extensionVersion];
