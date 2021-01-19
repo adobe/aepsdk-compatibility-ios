@@ -54,14 +54,14 @@ governing permissions and limitations under the License.
 }
 
 + (void) getExperienceCloudId: (nonnull void (^) (NSString* __nullable experienceCloudId)) callback {
-    [AEPMobileIdentity getExperienceCloudId:^(NSString * _Nullable experienceCloudId) {
+    [AEPMobileIdentity getExperienceCloudId:^(NSString * _Nullable experienceCloudId, NSError * _Nullable error) {
         callback(experienceCloudId);
     }];
 }
 
 + (void) getExperienceCloudIdWithCompletionHandler: (void (^) (NSString* _Nullable, NSError* _Nullable)) completionHandler {
-    [AEPMobileIdentity getExperienceCloudId:^(NSString * _Nullable experienceCloudId) {
-        completionHandler(experienceCloudId, nil);
+    [AEPMobileIdentity getExperienceCloudId:^(NSString * _Nullable experienceCloudId, NSError * _Nullable error) {
+        completionHandler(experienceCloudId, error);
     }];
 }
 
