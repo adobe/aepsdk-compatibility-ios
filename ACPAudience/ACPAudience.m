@@ -31,14 +31,14 @@ governing permissions and limitations under the License.
 }
 
 + (void) getVisitorProfile: (nullable void (^) (NSDictionary* __nullable profile, NSError* _Nullable error)) completionHandler {
-    [AEPMobileAudience getVisitorProfile:^(NSDictionary<NSString *,NSString *> * _Nullable profile, enum AEPError error) {
-        completionHandler(profile, [NSError errorFromAEPError:error]);
+    [AEPMobileAudience getVisitorProfile:^(NSDictionary<NSString *,NSString *> * _Nullable profile, NSError* _Nullable error) {
+        completionHandler(profile, error);
     }];
 }
 
 + (void) signalWithData: (NSDictionary* __nullable) data withCompletionHandler: (nullable void (^) (NSDictionary* __nullable profile, NSError* _Nullable error)) completionHandler {
-    [AEPMobileAudience signalWithData:data completion:^(NSDictionary<NSString *,NSString *> * _Nullable profile, enum AEPError error) {
-        completionHandler(profile, [NSError errorFromAEPError:error]);
+    [AEPMobileAudience signalWithData:data completion:^(NSDictionary<NSString *,NSString *> * _Nullable profile, NSError* _Nullable error) {
+        completionHandler(profile, error);
     }];
 }
 
