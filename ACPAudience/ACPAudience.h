@@ -28,9 +28,24 @@ governing permissions and limitations under the License.
 /**
  * Audience Manager API to return the visitor profile that was most recently obtained.
  *
+ * @param callback a void-returning method that has an NSDictionary param containing the visitor profile that was most recently obtained
+ */
++ (void) getVisitorProfile: (nonnull void (^) (NSDictionary* __nullable visitorProfile)) callback;
+
+/**
+ * Audience Manager API to return the visitor profile that was most recently obtained.
+ *
  * @param completionHandler a void-returning method that has an NSDictionary param containing the visitor profile that was most recently obtained, and an NSError param if the request failed
  */
-+ (void) getVisitorProfile: (nullable void (^) (NSDictionary* __nullable profile, NSError* _Nullable error)) completionHandler;
++ (void) getVisitorProfileWithCompletionHandler: (nonnull void (^) (NSDictionary* __nullable visitorProfile, NSError* __nullable error)) completionHandler;
+
+/**
+ * Audience Manager API to signal Audience Manager with traits and returns the matching segments for the visitor in a closure.
+ *
+ * @param data Traits data for the current visitor
+ * @param callback a void-returning method that has an NSDictionary param containing the returned visitor profile
+ */
++ (void) signalWithData: (NSDictionary<NSString*, NSString*>* __nullable) data callback: (nullable void (^) (NSDictionary* __nullable visitorProfile)) callback;
 
 /**
  * Audience Manager API to signal Audience Manager with traits and returns the matching segments for the visitor in a closure.
@@ -38,7 +53,7 @@ governing permissions and limitations under the License.
  * @param data Traits data for the current visitor
  * @param completionHandler a void-returning method that has an NSDictionary param containing the returned visitor profile, and an NSError param if the request failed
  */
-+ (void) signalWithData: (NSDictionary* __nullable) data withCompletionHandler: (nullable void (^) (NSDictionary* __nullable profile, NSError* _Nullable error)) completionHandler;
++ (void) signalWithData: (NSDictionary<NSString*, NSString*>* __nonnull) data withCompletionHandler: (nonnull void (^) (NSDictionary* __nullable visitorProfile, NSError* __nullable error)) completionHandler;
 
 /**
  * Audience Manager API to reset the Audience Manager UUID and purge the current visitor profile from NSUserDefaults.
