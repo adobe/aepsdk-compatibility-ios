@@ -30,15 +30,30 @@ governing permissions and limitations under the License.
     [ACPCore registerExtension:[AEPMobileAudience class] error:nil];
 }
 
-+ (void) getVisitorProfile: (nullable void (^) (NSDictionary* __nullable profile, NSError* _Nullable error)) completionHandler {
++ (void) getVisitorProfile: (nonnull void (^) (NSDictionary* __nullable visitorProfile)) callback {
+    [AEPMobileAudience getVisitorProfile:^(NSDictionary<NSString *,NSString *> * _Nullable profile, NSError* _Nullable error) {
+        callback(profile);
+    }];
+}
+
++ (void) getVisitorProfileWithCompletionHandler: (nonnull void (^) (NSDictionary* __nullable visitorProfile,
+                                                                    NSError* __nullable error)) completionHandler {
     [AEPMobileAudience getVisitorProfile:^(NSDictionary<NSString *,NSString *> * _Nullable profile, NSError* _Nullable error) {
         completionHandler(profile, error);
     }];
 }
 
-+ (void) signalWithData: (NSDictionary* __nullable) data withCompletionHandler: (nullable void (^) (NSDictionary* __nullable profile, NSError* _Nullable error)) completionHandler {
++ (void) signalWithData: (NSDictionary<NSString*, NSString*>* __nullable) data
+               callback: (nullable void (^) (NSDictionary* __nullable visitorProfile)) callback {
     [AEPMobileAudience signalWithData:data completion:^(NSDictionary<NSString *,NSString *> * _Nullable profile, NSError* _Nullable error) {
-        completionHandler(profile, error);
+            callback(profile);
+    }];
+}
+
++ (void) signalWithData: (NSDictionary<NSString*, NSString*>* __nonnull) data
+    withCompletionHandler: (nonnull void (^) (NSDictionary* _Nullable, NSError* _Nullable)) completionHandler {
+    [AEPMobileAudience signalWithData:data completion:^(NSDictionary<NSString *,NSString *> * _Nullable profile, NSError* _Nullable error) {
+            completionHandler(profile, error);
     }];
 }
 
