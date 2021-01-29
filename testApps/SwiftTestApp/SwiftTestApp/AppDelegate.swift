@@ -155,12 +155,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ACPCore.setPrivacyStatus(.optIn)
         sleep(1)
         let traits = ["mykey":"myvalue"]
+        ACPAudience.signal(withData: traits) { (profile) in
+            print("Audience::#signalWithData - retrieved visitor profile: \(String(describing: profile))")
+        }
+        
         ACPAudience.signal(withData: traits) { (profile, error) in
-            print("visitor profile: \(String(describing: profile))")
-            ACPAudience.getVisitorProfile { (retrievedProfile, error) in
-                print("retrieved visitor profile: \(String(describing: retrievedProfile))")
+            if error != nil {
+                print("Audience::#signalWithDataWithCompletionHandler - error: \(String(describing: error?.localizedDescription))")
+            }
+            else {
+                print("Audience::#signalWithDataWithCompletionHandler - retrieved visitor profile: \(String(describing: profile))")
             }
         }
+        
+        ACPAudience.getVisitorProfile { (retrievedProfile) in
+            print("Audience::#getVisitorProfile - retrieved visitor profile: \(String(describing: retrievedProfile))")
+        }
+                                         
+        ACPAudience.getVisitorProfile { (retrievedProfile, error) in
+            if error != nil {
+                print("Audience::#getVisitorProfileWithCompletionHandler - error : \(String(describing: error?.localizedDescription))")
+            }
+            else {
+                print("Audience::#getVisitorProfileWithCompletionHandler - retrieved visitor profile: \(String(describing: retrievedProfile))")
+            }
+        }
+        
         ACPAudience.reset()
 
         //Analytics Testing

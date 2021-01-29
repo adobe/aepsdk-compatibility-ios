@@ -173,11 +173,31 @@ governing permissions and limitations under the License.
     sleep(1);
     NSMutableDictionary *traits = [[NSMutableDictionary alloc] init];
         [traits setObject:@"myvalue" forKey:@"mykey"];
-    [ACPAudience signalWithData:traits withCompletionHandler:^(NSDictionary * _Nullable profile, NSError * _Nullable error) {
-        NSLog(@"visitor profile: %@",[profile descriptionInStringsFileFormat]);
-        [ACPAudience getVisitorProfile:^(NSDictionary * _Nullable profile, NSError * _Nullable error) {
-            NSLog(@"retrieved visitor profile: %@",[profile descriptionInStringsFileFormat]);
-        }];
+    
+    [ACPAudience signalWithData:traits callback:^(NSDictionary * _Nullable visitorProfile) {
+        NSLog(@"Audience::#signalWithData - visitor profile: %@",[visitorProfile descriptionInStringsFileFormat]);
+    }];
+    
+    [ACPAudience signalWithData:traits withCompletionHandler:^(NSDictionary * _Nullable visitorProfile, NSError * _Nullable error) {
+        if(error) {
+            NSLog(@"Audience::#signalWithDataWithCompletionHandler - error occured: %@", [error localizedDescription]);
+        }
+        else{
+            NSLog(@"Audience::#signalWithDataWithCompletionHandler - visitor profile: %@",[visitorProfile descriptionInStringsFileFormat]);
+        }
+    }];
+    
+    [ACPAudience getVisitorProfile:^(NSDictionary * _Nullable profile) {
+        NSLog(@"Audience::#getVisitorProfile - retrieved visitor profile: %@",[profile descriptionInStringsFileFormat]);
+    }];
+    
+    [ACPAudience getVisitorProfileWithCompletionHandler:^(NSDictionary * _Nullable visitorProfile, NSError * _Nullable error) {
+        if(error) {
+            NSLog(@"Audience::#getVisitorProfileWithCompletionHandler - error while retrieving visitor profile: %@", [error localizedDescription]);
+        }
+        else {
+            NSLog(@"Audience::#getVisitorProfileWithCompletionHandler - retrieved visitor profile: %@",[visitorProfile descriptionInStringsFileFormat]);
+        }
     }];
     
     [ACPAudience reset];
