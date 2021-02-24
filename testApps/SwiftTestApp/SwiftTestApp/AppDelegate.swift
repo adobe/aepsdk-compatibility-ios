@@ -187,7 +187,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let analyticsVersion = ACPAnalytics.extensionVersion()
         
-        ACPAnalytics.getQueueSize { (queueSize, error) in
+        ACPAnalytics.getQueueSize { (queueSize) in
             //handle
         }
         
