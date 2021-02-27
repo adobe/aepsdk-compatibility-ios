@@ -35,26 +35,26 @@ governing permissions and limitations under the License.
 }
 
 + (void) getQueueSize: (nonnull void (^) (NSUInteger queueSize)) callback {
-    [AEPMobileAnalytics getQueueSize:^(NSInteger queueSize, enum AEPError error) {
+    [AEPMobileAnalytics getQueueSize:^(NSInteger queueSize, NSError* _Nullable error) {
         callback(queueSize);
     }];
 }
 
 + (void) getQueueSizeWithCompletionHandler: (void (^) (NSUInteger, NSError* _Nullable)) completionHandler {
-    [AEPMobileAnalytics getQueueSize:^(NSInteger queueSize, enum AEPError error) {
-       completionHandler(queueSize, [NSError errorFromAEPError:error]);
+    [AEPMobileAnalytics getQueueSize:^(NSInteger queueSize, NSError* _Nullable error) {
+       completionHandler(queueSize, error);
     }];
 }
 
 + (void) getTrackingIdentifier: (nonnull void (^) (NSString* __nullable trackingIdentifier)) callback {
-    [AEPMobileAnalytics getTrackingIdentifier:^(NSString * _Nullable trackingIdentifier, enum AEPError error) {
+    [AEPMobileAnalytics getTrackingIdentifier:^(NSString * _Nullable trackingIdentifier, NSError* _Nullable error) {
         callback(trackingIdentifier);
     }];
 }
 
 + (void) getTrackingIdentifierWithCompletionHandler: (void (^) (NSString* _Nullable, NSError* _Nullable)) completionHandler {
-    [AEPMobileAnalytics getTrackingIdentifier:^(NSString * _Nullable trackingIdentifier , enum AEPError error) {
-        completionHandler(trackingIdentifier, [NSError errorFromAEPError:error]);
+    [AEPMobileAnalytics getTrackingIdentifier:^(NSString * _Nullable trackingIdentifier , NSError* _Nullable error) {
+        completionHandler(trackingIdentifier, error);
     }];
 }
 
@@ -63,14 +63,14 @@ governing permissions and limitations under the License.
 }
 
 + (void) getVisitorIdentifier: (nonnull void (^) (NSString* __nullable visitorIdentifier)) callback {
-    [AEPMobileAnalytics getVisitorIdentifier:^(NSString * _Nullable visitorIdentifier, enum AEPError error) {
+    [AEPMobileAnalytics getVisitorIdentifier:^(NSString * _Nullable visitorIdentifier, NSError* _Nullable error) {
         callback(visitorIdentifier);
     }];
 }
 
 + (void) getVisitorIdentifierWithCompletionHandler: (void (^) (NSString* _Nullable, NSError* _Nullable)) completionHandler {
-    [AEPMobileAnalytics getVisitorIdentifier:^(NSString * _Nullable visitorIdentifier, enum AEPError error){
-        completionHandler(visitorIdentifier, [NSError errorFromAEPError:error]);
+    [AEPMobileAnalytics getVisitorIdentifier:^(NSString * _Nullable visitorIdentifier, NSError* _Nullable error){
+        completionHandler(visitorIdentifier, error);
     }];
 }
 
