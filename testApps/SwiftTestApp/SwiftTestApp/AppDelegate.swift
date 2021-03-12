@@ -21,6 +21,8 @@ import ACPAudience
 import AEPAudience
 import ACPAnalytics
 import AEPAnalytics
+import AEPMedia
+import ACPMedia
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -97,7 +99,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         ACPCore.setWrapperType(.flutter)
         
-        let extensionsToRegister = [Identity.self, Lifecycle.self, Signal.self, UserProfile.self, Analytics.self, Audience.self]
+        let extensionsToRegister = [Identity.self, Lifecycle.self, Signal.self, UserProfile.self, Analytics.self, Audience.self, Media.self]
         ACPCore.registerExtensions(extensionsToRegister) {
             ACPCore.lifecycleStart(nil)
         }
@@ -215,8 +217,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           //handle
         }
         
+        //Media Analytics Testing
+        
+        let mediaAnalyticsVersion = ACPMedia.extensionVersion()
+        
+        var config: [String: Any] = [:]
+        config[ACPMediaKeyConfigChannel] = "custom-channel"  // Override channel configured from launch
+        config[ACPMediaKeyConfigDownloadedContent] = true
+        
+        let mediaTracker = ACPMedia.createTracker(withConfig:config)
+        
+        let mediaObject = ACPMedia.createMediaObject(withName: "media-name", mediaId: "media-id", length: 60, streamType: ACPMediaStreamTypeVod, mediaType:ACPMediaType.video)
+        
+        var mediaMetadata = [ACPVideoMetadataKeyShow: "Sample show", ACPVideoMetadataKeySeason: "Sample season"]
+        mediaMetadata["isUserLoggedIn"] = "false"
+        mediaMetadata["tvStation"] = "Sample TV station"
+        
+        mediaTracker?.trackSessionStart(mediaObject, data: mediaMetadata)
+        mediaTracker?.trackPlay()
+        mediaTracker?.trackPause()
+        mediaTracker?.trackError("testError")
+        //mediaTracker?.trackEvent(<#T##event: ACPMediaEvent##ACPMediaEvent#>, info: <#T##[AnyHashable : Any]?#>, data: <#T##[AnyHashable : Any]?#>)
+        let qoeObject = ACPMedia.createQoEObject(withBitrate: 1000000, startupTime: 2, fps: 25, droppedFrames: 10)
+        mediaTracker?.updateQoEObject(qoeObject)
+        mediaTracker?.trackComplete()
+        mediaTracker?.trackSessionEnd()
+
         return true
     }
+       
+    
 
     // MARK: UISceneSession Lifecycle
 

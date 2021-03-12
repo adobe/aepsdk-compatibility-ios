@@ -13,11 +13,11 @@ governing permissions and limitations under the License.
 
 #import <AEPMedia/AEPMedia-Swift.h>
 
-@interface ACPMediaTracker()
+@interface ACPMediaTracker() <AEPMediaTracker>
 
-- (instancetype _Nonnull) initWithCoreTracker: (MediaPublicTracker* _Nonnull) tracker;
+- (instancetype _Nonnull) initWithCoreTracker: (id<AEPMediaTracker>) tracker;
 
-//- (std::string) eventToString: (ACPMediaEvent) event;
+- (NSString*) eventToString: (ACPMediaEvent) event;
 
 @end
 

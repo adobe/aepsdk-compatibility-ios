@@ -18,7 +18,9 @@ governing permissions and limitations under the License.
 #import <AEPServices/AEPServices-Swift.h>
 #import "ACPMedia.h"
 #import <AEPMedia/AEPMedia-Swift.h>
-
+//@interface ACPMediaTracker() <MediaTracker>
+//  
+//@end
 
 @implementation ACPMedia{
  
@@ -37,8 +39,8 @@ governing permissions and limitations under the License.
 }
 
 + (ACPMediaTracker* _Nullable) createTrackerWithConfig: (NSDictionary* _Nullable) config {
-    
-    MediaPublicTracker* tracker = [AEPMobileMedia createTrackerWithConfig:config];
+
+    id<AEPMediaTracker> tracker = [AEPMobileMedia createTrackerWithConfig:config];
     ACPMediaTracker* ret = NULL;
 
     if (tracker != nil) {
@@ -49,14 +51,13 @@ governing permissions and limitations under the License.
 }
 
 + (void) createTracker: (void (^ _Nonnull) (ACPMediaTracker* _Nullable)) callback {
-      MediaPublicTracker* tracker = [self createTracker];
-      callback(tracker);
+    id<AEPMediaTracker> tracker = [self createTracker];
+    callback(tracker);
 }
 
 + (void) createTrackerWithConfig: (NSDictionary* _Nullable) config callback: (void (^ _Nonnull) (ACPMediaTracker* _Nullable)) callback {
-    
-      MediaPublicTracker* tracker = [self createTrackerWithConfig:config];
-      callback(tracker);
+    id<AEPMediaTracker> tracker = [self createTrackerWithConfig:config];
+    callback(tracker);
 }
 
 + (NSDictionary* _Nonnull) createMediaObjectWithName: (NSString* _Nonnull) name

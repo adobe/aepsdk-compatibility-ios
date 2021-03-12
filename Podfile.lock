@@ -67,7 +67,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AEPMedia:
-    :commit: 2c37ab06233eb5865a5c5492ba763f513c65b284
+    :commit: de3e9cd39ee144e60d5f94f0ce24f9e623dd68e3
     :git: "git@github.com:adobe/aepsdk-media-ios.git"
   AEPUserProfile:
     :commit: 77d7cfaeb994f22b30a2888e3672476763aa0a6c
@@ -86,6 +86,6 @@ SPEC CHECKSUMS:
   AEPSignal: b4ac5c8e8c68e8902739426d70c01ed3ce229ac9
   AEPUserProfile: d8702b2e3fc321febdc3854208db9bb1ad3b61c8
 
-PODFILE CHECKSUM: 7705710c505292731a085bf52032acb1242f3c1c
+PODFILE CHECKSUM: bc1d6aadcab2bbc44ade8830562410d30bfce402
 
 COCOAPODS: 1.10.0

@@ -12,7 +12,6 @@ governing permissions and limitations under the License.
 #import <Foundation/Foundation.h>
 
 #import "ACPMediaTracker+Private.h"
-//#include "MediaConstants.h"
 #import <AEPMedia/AEPMedia-Swift.h>
 #import <Foundation/Foundation.h>
 #import "ACPMedia.h"
@@ -22,10 +21,10 @@ governing permissions and limitations under the License.
 #import <AEPServices/AEPServices-Swift.h>
 
 @implementation ACPMediaTracker {
-    MediaPublicTracker* core_tracker_;
+    id<AEPMediaTracker> core_tracker_;
 }
 
-- (instancetype _Nonnull) initWithCoreTracker: (MediaPublicTracker*) tracker {
+- (instancetype _Nonnull) initWithCoreTracker: (id<AEPMediaTracker>) tracker {
     if (self = [super init]) {
         core_tracker_  = tracker;
     }
@@ -34,7 +33,7 @@ governing permissions and limitations under the License.
 }
 
 - (void) trackSessionStart: (NSDictionary* _Nonnull) mediaObject data: (NSDictionary* _Nullable) data {
-    [core_tracker_ trackSessionStartWithInfo:mediaObject metadata:data];
+    [core_tracker_ trackSessionStart:mediaObject metadata:data];
 }
     
 - (void) trackPlay {
@@ -54,73 +53,73 @@ governing permissions and limitations under the License.
 }
 
 - (void) trackError: (NSString* _Nonnull) errorId {
-    [core_tracker_ trackErrorWithErrorId: errorId];
+    [core_tracker_ trackError:errorId];
 }
 
 - (void) trackEvent: (ACPMediaEvent) event info: (NSDictionary* _Nullable) info data: (NSDictionary* _Nullable) data {
-    //[core_tracker_ trackEventWithEvent:event info:info metadata:data];
+   //[core_tracker_ trackEvent:event info:info metadata:data];
 }
 
 - (void) updateCurrentPlayhead: (double) time {
-    [core_tracker_ updateCurrentPlayheadWithTime:time];
+    [core_tracker_ updateCurrentPlayhead:time];
 }
 
 - (void) updateQoEObject: (NSDictionary* _Nonnull) qoeObject {
-    [core_tracker_ updateQoEObjectWithQoe:qoeObject];
+    [core_tracker_ updateQoEObject:qoeObject];
 }
 
-//- (std::string) eventToString: (ACPMediaEvent) event {
-//    using EventName = MediaConstants::EventKeys::EventName;
-//
+- (NSString*) eventToString: (ACPMediaEvent) event {
+    //EventName = MediaConstants::EventKeys::EventName;
+
 //    switch (event) {
 //    case ACPMediaEventAdBreakStart:
-//        return EventName::ADBREAK_START;
-//
+//         return AEPMobileMedia
+
 //    case ACPMediaEventAdBreakComplete:
-//        return EventName::ADBREAK_COMPLETE;
+//            return AEPMediaEventAdBreakComplete;
 //
 //    case ACPMediaEventAdStart:
-//        return EventName::AD_START;
+//        return AEPMediaEventAdStart;
 //
 //    case ACPMediaEventAdComplete:
-//        return EventName::AD_COMPLETE;
+//        return AEPMediaEventAEPMediaEventAdComplete;
 //
 //    case ACPMediaEventAdSkip:
-//        return EventName::AD_SKIP;
+//        return AEPMediaEventAEPMediaEventAdSkip;
 //
 //    case ACPMediaEventChapterStart:
-//        return EventName::CHAPTER_START;
+//        return AEPMediaEventAEPMediaEventChapterStart;
 //
 //    case ACPMediaEventChapterComplete:
-//        return EventName::CHAPTER_COMPLETE;
+//        return AEPMediaEventAEPMediaEventChapterComplete;
 //
 //    case ACPMediaEventChapterSkip:
-//        return EventName::CHAPTER_SKIP;
+//        return AEPMediaEventAEPMediaEventChapterSkip;
 //
 //    case ACPMediaEventSeekStart:
-//        return EventName::SEEK_START;
+//        return AEPMediaEventAEPMediaEventSeekStart;
 //
 //    case ACPMediaEventSeekComplete:
-//        return EventName::SEEK_COMPLETE;
+//        return AEPMediaEventAEPMediaEventSeekComplete;
 //
 //    case ACPMediaEventBufferStart:
-//        return EventName::BUFFER_START;
+//        return AEPMediaEventAEPMediaEventBufferStart;
 //
 //    case ACPMediaEventBufferComplete:
-//        return EventName::BUFFER_COMPLETE;
+//        return AEPMediaEventAEPMediaEventBufferComplete;
 //
 //    case ACPMediaEventBitrateChange:
-//        return EventName::BITRATE_CHANGE;
+//        return AEPMediaEventAEPMediaEventBitrateChange;
 //
 //    case ACPMediaEventStateStart:
-//        return EventName::STATE_START;
+//        return AEPMediaEventAEPMediaEventStateStart;
 //
 //    case ACPMediaEventStateEnd:
-//        return EventName::STATE_END;
-//
+//        return AEPMediaEventAEPMediaEventStateEnd;
+
 //    default:
-//        return "";
-//    }
+        return nil;
+    }
 //}
 
 @end
