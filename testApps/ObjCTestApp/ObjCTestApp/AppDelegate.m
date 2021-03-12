@@ -22,6 +22,8 @@ governing permissions and limitations under the License.
 #import <AdformAdobeExtension/AdformAdobeExtension.h>
 #import <AEPAssurance/AEPAssurance.h>
 #import <ACPAnalytics/ACPAnalytics.h>
+#import <ACPMedia/ACPMedia.h>
+#import <ACPMedia/ACPMediaConstants.h>
 #import "SkeletonExtension.h"
 
 
@@ -112,6 +114,7 @@ governing permissions and limitations under the License.
     [ACPUserProfile registerExtension];
     [ACPAudience registerExtension];
     [ACPAnalytics registerExtension];
+    [ACPMedia registerExtension];
 
     [ACPCore start:^{
         [ACPCore lifecycleStart:nil];
@@ -233,6 +236,42 @@ governing permissions and limitations under the License.
     [ACPAnalytics getVisitorIdentifierWithCompletionHandler:^(NSString * _Nullable visitorIdentifier, NSError * _Nullable error) {
         //handle
     }];
+    
+    //Media Analytics Testing
+    NSString *mediaVersion = [ACPMedia extensionVersion];
+    
+    NSMutableDictionary* config = [NSMutableDictionary dictionary];
+    config[ACPMediaKeyConfigChannel] = @"custom-channel";
+    config[ACPMediaKeyConfigDownloadedContent] = @YES;
+    
+    ACPMediaTracker *mediaTracker = [ACPMedia createTrackerWithConfig:config];
+    
+    NSDictionary *mediaObject = [ACPMedia createMediaObjectWithName: @"video-name"
+                                                            mediaId: @"video-id"
+                                                             length: 60
+                                                         streamType: ACPMediaStreamTypeVod
+                                                          mediaType: ACPMediaTypeVideo];
+    
+    NSMutableDictionary *mediaMetadata = [[NSMutableDictionary alloc] init];
+    [mediaMetadata setObject:@"Sample show" forKey:ACPVideoMetadataKeyShow];
+    [mediaMetadata setObject:@"Sample season" forKey:ACPVideoMetadataKeySeason];
+
+   
+    [mediaMetadata setObject:@"false" forKey:@"isUserLoggedIn"];
+    [mediaMetadata setObject:@"Sample TV station" forKey:@"tvStation"];
+
+    [mediaTracker trackSessionStart:mediaObject data:mediaMetadata];
+    [mediaTracker trackPlay];
+    [mediaTracker trackPause];
+    [mediaTracker trackComplete];
+//    NSDictionary* stateObject = [ACPMedia createStateObjectWithName:@"fullscreen"];
+//     [mediaTracker trackEvent:ACPMediaEventStateStart mediaObject:stateObject data:nil];
+//    NSDictionary* stateObject = [ACPMedia createStateObjectWithName:@"fullscreen"];
+//     [mediaTracker trackEvent:ACPMediaEventStateEnd mediaObject:stateObject data:nil];
+    NSDictionary* qoeObject = [ACPMedia createQoEObjectWithBitrate:1000000 startupTime:2 fps:25 droppedFrames:10];
+    [mediaTracker updateQoEObject:qoeObject];
+    [mediaTracker trackError:@"errorId"];
+    [mediaTracker trackSessionEnd];
     
     return YES;
 }

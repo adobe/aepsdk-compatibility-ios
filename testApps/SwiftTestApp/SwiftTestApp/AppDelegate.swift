@@ -225,7 +225,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         config[ACPMediaKeyConfigChannel] = "custom-channel"  // Override channel configured from launch
         config[ACPMediaKeyConfigDownloadedContent] = true
         
-        let mediaTracker = ACPMedia.createTracker(withConfig:config)
+        guard let mediaTracker = ACPMedia.createTracker(withConfig:config) else {
+            return (ACPMedia.createTracker(withConfig:config) != nil);
+        }
         
         let mediaObject = ACPMedia.createMediaObject(withName: "media-name", mediaId: "media-id", length: 60, streamType: ACPMediaStreamTypeVod, mediaType:ACPMediaType.video)
         
@@ -233,21 +235,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         mediaMetadata["isUserLoggedIn"] = "false"
         mediaMetadata["tvStation"] = "Sample TV station"
         
-        mediaTracker?.trackSessionStart(mediaObject, data: mediaMetadata)
-        mediaTracker?.trackPlay()
-        mediaTracker?.trackPause()
-        mediaTracker?.trackError("testError")
-        //mediaTracker?.trackEvent(<#T##event: ACPMediaEvent##ACPMediaEvent#>, info: <#T##[AnyHashable : Any]?#>, data: <#T##[AnyHashable : Any]?#>)
+        mediaTracker.trackSessionStart(mediaObject, data: mediaMetadata)
+        mediaTracker.trackPlay()
+        mediaTracker.trackPause()
+        mediaTracker.trackError("testError")
+        // StateStart
+//        let stateObject = ACPMedia.createStateObject(withName: "fullscreen")
+//        mediaTracker.trackEvent(ACPMediaEvent.stateStart, mediaObject: stateObject, data: nil)
+
+        // StateEnd
+//        let stateObject = ACPMedia.createStateObject(withName: "fullscreen")
+//        tracker.trackEvent(ACPMediaEvent.stateEnd, mediaObject: stateObject, data: nil)
         let qoeObject = ACPMedia.createQoEObject(withBitrate: 1000000, startupTime: 2, fps: 25, droppedFrames: 10)
-        mediaTracker?.updateQoEObject(qoeObject)
-        mediaTracker?.trackComplete()
-        mediaTracker?.trackSessionEnd()
+        mediaTracker.updateQoEObject(qoeObject)
+        mediaTracker.trackComplete()
+        mediaTracker.trackSessionEnd()
 
         return true
     }
        
-    
-
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
@@ -261,7 +267,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
 }
 

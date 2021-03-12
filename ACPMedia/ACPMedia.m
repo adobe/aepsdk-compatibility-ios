@@ -18,9 +18,6 @@ governing permissions and limitations under the License.
 #import <AEPServices/AEPServices-Swift.h>
 #import "ACPMedia.h"
 #import <AEPMedia/AEPMedia-Swift.h>
-//@interface ACPMediaTracker() <MediaTracker>
-//  
-//@end
 
 @implementation ACPMedia{
  

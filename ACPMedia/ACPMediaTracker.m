@@ -68,7 +68,7 @@ governing permissions and limitations under the License.
     [core_tracker_ updateQoEObject:qoeObject];
 }
 
-- (NSString*) eventToString: (ACPMediaEvent) event {
+- (NSString* _Nonnull) eventToString: (ACPMediaEvent) event {
     //EventName = MediaConstants::EventKeys::EventName;
 
 //    switch (event) {

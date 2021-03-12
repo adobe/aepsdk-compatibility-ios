@@ -17,7 +17,7 @@ governing permissions and limitations under the License.
 
 - (instancetype _Nonnull) initWithCoreTracker: (id<AEPMediaTracker>) tracker;
 
-- (NSString*) eventToString: (ACPMediaEvent) event;
+- (NSString*_Nonnull) eventToString: (ACPMediaEvent) event;
 
 @end
 
