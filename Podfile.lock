@@ -67,7 +67,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AEPMedia:
-    :commit: de3e9cd39ee144e60d5f94f0ce24f9e623dd68e3
+    :commit: 66adae4fe633f5e099edd463c8f10e10fba96a49
     :git: "git@github.com:adobe/aepsdk-media-ios.git"
   AEPUserProfile:
     :commit: 77d7cfaeb994f22b30a2888e3672476763aa0a6c

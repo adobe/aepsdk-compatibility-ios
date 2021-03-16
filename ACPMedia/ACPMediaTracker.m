@@ -10,7 +10,6 @@ governing permissions and limitations under the License.
 */
 
 #import <Foundation/Foundation.h>
-
 #import "ACPMediaTracker+Private.h"
 #import <AEPMedia/AEPMedia-Swift.h>
 #import <Foundation/Foundation.h>
@@ -57,7 +56,8 @@ governing permissions and limitations under the License.
 }
 
 - (void) trackEvent: (ACPMediaEvent) event info: (NSDictionary* _Nullable) info data: (NSDictionary* _Nullable) data {
-   //[core_tracker_ trackEvent:event info:info metadata:data];
+    AEPMediaEvent event_name = [self getAepEvent:event];
+    [core_tracker_ trackEvent:event_name info:info metadata:data];
 }
 
 - (void) updateCurrentPlayhead: (double) time {
@@ -68,60 +68,58 @@ governing permissions and limitations under the License.
     [core_tracker_ updateQoEObject:qoeObject];
 }
 
-- (NSString* _Nonnull) eventToString: (ACPMediaEvent) event {
-    //EventName = MediaConstants::EventKeys::EventName;
+- (AEPMediaEvent) getAepEvent: (ACPMediaEvent) event {
 
-//    switch (event) {
-//    case ACPMediaEventAdBreakStart:
-//         return AEPMobileMedia
+    switch (event) {
+    case ACPMediaEventAdBreakStart:
+            return AEPMediaEventAdBreakStart;
 
-//    case ACPMediaEventAdBreakComplete:
-//            return AEPMediaEventAdBreakComplete;
-//
-//    case ACPMediaEventAdStart:
-//        return AEPMediaEventAdStart;
-//
-//    case ACPMediaEventAdComplete:
-//        return AEPMediaEventAEPMediaEventAdComplete;
-//
-//    case ACPMediaEventAdSkip:
-//        return AEPMediaEventAEPMediaEventAdSkip;
-//
-//    case ACPMediaEventChapterStart:
-//        return AEPMediaEventAEPMediaEventChapterStart;
-//
-//    case ACPMediaEventChapterComplete:
-//        return AEPMediaEventAEPMediaEventChapterComplete;
-//
-//    case ACPMediaEventChapterSkip:
-//        return AEPMediaEventAEPMediaEventChapterSkip;
-//
-//    case ACPMediaEventSeekStart:
-//        return AEPMediaEventAEPMediaEventSeekStart;
-//
-//    case ACPMediaEventSeekComplete:
-//        return AEPMediaEventAEPMediaEventSeekComplete;
-//
-//    case ACPMediaEventBufferStart:
-//        return AEPMediaEventAEPMediaEventBufferStart;
-//
-//    case ACPMediaEventBufferComplete:
-//        return AEPMediaEventAEPMediaEventBufferComplete;
-//
-//    case ACPMediaEventBitrateChange:
-//        return AEPMediaEventAEPMediaEventBitrateChange;
-//
-//    case ACPMediaEventStateStart:
-//        return AEPMediaEventAEPMediaEventStateStart;
-//
-//    case ACPMediaEventStateEnd:
-//        return AEPMediaEventAEPMediaEventStateEnd;
+    case ACPMediaEventAdBreakComplete:
+            return AEPMediaEventAdBreakComplete;
 
-//    default:
-        return nil;
+    case ACPMediaEventAdStart:
+        return AEPMediaEventAdStart;
+
+    case ACPMediaEventAdComplete:
+        return AEPMediaEventAdComplete;
+
+    case ACPMediaEventAdSkip:
+        return AEPMediaEventAdSkip;
+
+    case ACPMediaEventChapterStart:
+        return AEPMediaEventChapterStart;
+
+    case ACPMediaEventChapterComplete:
+        return AEPMediaEventChapterComplete;
+
+    case ACPMediaEventChapterSkip:
+        return AEPMediaEventChapterSkip;
+
+    case ACPMediaEventSeekStart:
+        return AEPMediaEventSeekStart;
+
+    case ACPMediaEventSeekComplete:
+        return AEPMediaEventSeekComplete;
+
+    case ACPMediaEventBufferStart:
+        return AEPMediaEventBufferStart;
+
+    case ACPMediaEventBufferComplete:
+        return AEPMediaEventBufferComplete;
+
+    case ACPMediaEventBitrateChange:
+        return AEPMediaEventBitrateChange;
+
+    case ACPMediaEventStateStart:
+        return AEPMediaEventStateStart;
+
+    case ACPMediaEventStateEnd:
+        return AEPMediaEventStateEnd;
+
+    default:
+        return 0;
     }
-//}
-
+}
 @end
 
 

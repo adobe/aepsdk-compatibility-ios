@@ -220,7 +220,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Media Analytics Testing
         
         let mediaAnalyticsVersion = ACPMedia.extensionVersion()
-        
+        //test tracker
         var config: [String: Any] = [:]
         config[ACPMediaKeyConfigChannel] = "custom-channel"  // Override channel configured from launch
         config[ACPMediaKeyConfigDownloadedContent] = true
@@ -228,24 +228,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard let mediaTracker = ACPMedia.createTracker(withConfig:config) else {
             return (ACPMedia.createTracker(withConfig:config) != nil);
         }
-        
+        //test media object
         let mediaObject = ACPMedia.createMediaObject(withName: "media-name", mediaId: "media-id", length: 60, streamType: ACPMediaStreamTypeVod, mediaType:ACPMediaType.video)
         
         var mediaMetadata = [ACPVideoMetadataKeyShow: "Sample show", ACPVideoMetadataKeySeason: "Sample season"]
         mediaMetadata["isUserLoggedIn"] = "false"
         mediaMetadata["tvStation"] = "Sample TV station"
         
+        //Media APIs
         mediaTracker.trackSessionStart(mediaObject, data: mediaMetadata)
         mediaTracker.trackPlay()
         mediaTracker.trackPause()
         mediaTracker.trackError("testError")
-        // StateStart
-//        let stateObject = ACPMedia.createStateObject(withName: "fullscreen")
-//        mediaTracker.trackEvent(ACPMediaEvent.stateStart, mediaObject: stateObject, data: nil)
+        mediaTracker.updateCurrentPlayhead(0.0)
+        //track Event
+        let stateObject = ACPMedia.createStateObject(withName: "fullscreen")
+        mediaTracker.trackEvent(ACPMediaEvent.stateStart, info: stateObject, data: nil)
 
-        // StateEnd
-//        let stateObject = ACPMedia.createStateObject(withName: "fullscreen")
-//        tracker.trackEvent(ACPMediaEvent.stateEnd, mediaObject: stateObject, data: nil)
+        mediaTracker.trackEvent(ACPMediaEvent.stateEnd, info: stateObject, data: nil)
+    
+        //QoE
         let qoeObject = ACPMedia.createQoEObject(withBitrate: 1000000, startupTime: 2, fps: 25, droppedFrames: 10)
         mediaTracker.updateQoEObject(qoeObject)
         mediaTracker.trackComplete()

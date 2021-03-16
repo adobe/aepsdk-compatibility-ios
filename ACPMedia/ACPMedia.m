@@ -36,24 +36,22 @@ governing permissions and limitations under the License.
 
 + (ACPMediaTracker* _Nullable) createTrackerWithConfig: (NSDictionary* _Nullable) config {
 
-    id<AEPMediaTracker> tracker = [AEPMobileMedia createTrackerWithConfig:config];
-    ACPMediaTracker* ret = NULL;
+    id<AEPMediaTracker> aepTracker = [AEPMobileMedia createTrackerWithConfig:config];
+    ACPMediaTracker* acpTracker = NULL;
 
-    if (tracker != nil) {
-        ret = [[ACPMediaTracker alloc] initWithCoreTracker:tracker];
+    if (aepTracker != nil) {
+        acpTracker = [[ACPMediaTracker alloc] initWithCoreTracker:aepTracker];
     }
 
-    return ret;
+    return acpTracker;
 }
 
 + (void) createTracker: (void (^ _Nonnull) (ACPMediaTracker* _Nullable)) callback {
-    id<AEPMediaTracker> tracker = [self createTracker];
-    callback(tracker);
+    callback([self createTrackerWithConfig:nil]);
 }
 
 + (void) createTrackerWithConfig: (NSDictionary* _Nullable) config callback: (void (^ _Nonnull) (ACPMediaTracker* _Nullable)) callback {
-    id<AEPMediaTracker> tracker = [self createTrackerWithConfig:config];
-    callback(tracker);
+    callback([self createTrackerWithConfig:config]);
 }
 
 + (NSDictionary* _Nonnull) createMediaObjectWithName: (NSString* _Nonnull) name
@@ -61,8 +59,12 @@ governing permissions and limitations under the License.
                                               length: (double) length
                                           streamType: (NSString* _Nonnull) streamType
                                            mediaType: (ACPMediaType) mediaType {
-
-    return [AEPMobileMedia createMediaObjectWith:name id:mediaId length:length streamType:streamType mediaType:mediaType];
+    
+    AEPMediaType aepMediaType = AEPMediaTypeVideo;
+    if (mediaType == ACPMediaTypeAudio) {
+        aepMediaType = AEPMediaTypeAudio;
+    }
+    return [AEPMobileMedia createMediaObjectWith:name id:mediaId length:length streamType:streamType mediaType:aepMediaType];
 }
 
 + (NSDictionary* _Nonnull) createAdBreakObjectWithName: (NSString* _Nonnull) name

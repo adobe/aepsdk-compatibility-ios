@@ -263,14 +263,14 @@ governing permissions and limitations under the License.
     [mediaTracker trackSessionStart:mediaObject data:mediaMetadata];
     [mediaTracker trackPlay];
     [mediaTracker trackPause];
-    [mediaTracker trackComplete];
-//    NSDictionary* stateObject = [ACPMedia createStateObjectWithName:@"fullscreen"];
-//     [mediaTracker trackEvent:ACPMediaEventStateStart mediaObject:stateObject data:nil];
-//    NSDictionary* stateObject = [ACPMedia createStateObjectWithName:@"fullscreen"];
-//     [mediaTracker trackEvent:ACPMediaEventStateEnd mediaObject:stateObject data:nil];
+    [mediaTracker updateCurrentPlayhead:(0.0)];
+    NSDictionary* stateObject = [ACPMedia createStateObjectWithName:@"fullscreen"];
+    [mediaTracker trackEvent:ACPMediaEventStateStart info:stateObject data:nil];
+    [mediaTracker trackEvent:ACPMediaEventStateEnd info:stateObject data:nil];
     NSDictionary* qoeObject = [ACPMedia createQoEObjectWithBitrate:1000000 startupTime:2 fps:25 droppedFrames:10];
     [mediaTracker updateQoEObject:qoeObject];
     [mediaTracker trackError:@"errorId"];
+    [mediaTracker trackComplete];
     [mediaTracker trackSessionEnd];
     
     return YES;

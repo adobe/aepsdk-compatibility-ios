@@ -134,7 +134,7 @@ CHECKOUT OPTIONS:
     :commit: 9fe655414c1e88d4252e9be25cf4f8d1dc539bee
     :git: "git@github.com:adobe/aepsdk-core-ios.git"
   AEPMedia:
-    :commit: f0d9c4679064489c6bcbf28ac21d525e74574149
+    :commit: 66adae4fe633f5e099edd463c8f10e10fba96a49
     :git: "git@github.com:adobe/aepsdk-media-ios.git"
   AEPRulesEngine:
     :commit: 1e270654b330b9f07a6b1ec374e686f2e631e039
