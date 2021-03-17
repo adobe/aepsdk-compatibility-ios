@@ -21,6 +21,8 @@ import ACPAudience
 import AEPAudience
 import ACPAnalytics
 import AEPAnalytics
+import AEPMedia
+import ACPMedia
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -97,7 +99,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         ACPCore.setWrapperType(.flutter)
         
-        let extensionsToRegister = [Identity.self, Lifecycle.self, Signal.self, UserProfile.self, Analytics.self, Audience.self]
+        let extensionsToRegister = [Identity.self, Lifecycle.self, Signal.self, UserProfile.self, Analytics.self, Audience.self, Media.self]
         ACPCore.registerExtensions(extensionsToRegister) {
             ACPCore.lifecycleStart(nil)
         }
@@ -215,9 +217,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           //handle
         }
         
+        //Media Analytics Testing
+        
+        let mediaAnalyticsVersion = ACPMedia.extensionVersion()
+        //test tracker
+        var config: [String: Any] = [:]
+        config[ACPMediaKeyConfigChannel] = "custom-channel"  // Override channel configured from launch
+        config[ACPMediaKeyConfigDownloadedContent] = true
+        
+        guard let mediaTracker = ACPMedia.createTracker(withConfig:config) else {
+            return (ACPMedia.createTracker(withConfig:config) != nil);
+        }
+        //test media object
+        let mediaObject = ACPMedia.createMediaObject(withName: "media-name", mediaId: "media-id", length: 60, streamType: ACPMediaStreamTypeVod, mediaType:ACPMediaType.video)
+        
+        var mediaMetadata = [ACPVideoMetadataKeyShow: "Sample show", ACPVideoMetadataKeySeason: "Sample season"]
+        mediaMetadata["isUserLoggedIn"] = "false"
+        mediaMetadata["tvStation"] = "Sample TV station"
+        
+        //Media APIs
+        mediaTracker.trackSessionStart(mediaObject, data: mediaMetadata)
+        mediaTracker.trackPlay()
+        mediaTracker.trackPause()
+        mediaTracker.trackError("testError")
+        mediaTracker.updateCurrentPlayhead(0.0)
+        //track Event
+        let stateObject = ACPMedia.createStateObject(withName: "fullscreen")
+        mediaTracker.trackEvent(ACPMediaEvent.stateStart, info: stateObject, data: nil)
+
+        mediaTracker.trackEvent(ACPMediaEvent.stateEnd, info: stateObject, data: nil)
+    
+        //QoE
+        let qoeObject = ACPMedia.createQoEObject(withBitrate: 1000000, startupTime: 2, fps: 25, droppedFrames: 10)
+        mediaTracker.updateQoEObject(qoeObject)
+        mediaTracker.trackComplete()
+        mediaTracker.trackSessionEnd()
+
         return true
     }
-
+       
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
@@ -231,7 +269,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
 }
 

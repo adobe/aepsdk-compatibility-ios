@@ -39,10 +39,15 @@
 		74A6AB369858D3179856CE3D /* Pods_ACPAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F8EB6057F2220DC4C7C88F /* Pods_ACPAnalytics.framework */; };
 		92438BEC25A5354500359C53 /* ACPAnalytics.h in Headers */ = {isa = PBXBuildFile; fileRef = 92438BEA25A5354500359C53 /* ACPAnalytics.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		92438BF525A5388300359C53 /* ACPAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = 92438BF425A5388300359C53 /* ACPAnalytics.m */; };
+		92E627A125F30A4E00EDF218 /* ACPMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E627A025F30A4E00EDF218 /* ACPMedia.m */; };
+		92E627AA25F30A9300EDF218 /* ACPMediaTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E627A925F30A9300EDF218 /* ACPMediaTracker.m */; };
+		92E627B225F30AD600EDF218 /* ACPMediaConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E627B125F30AD600EDF218 /* ACPMediaConstants.m */; };
+		92F29AA025F2BD2F00577263 /* ACPMedia.h in Headers */ = {isa = PBXBuildFile; fileRef = 92F29A9E25F2BD2F00577263 /* ACPMedia.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		975248CD3BA74F1731A0BAB5 /* Pods_ACPCore_ACPCoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5FF225D46F436B40871F06 /* Pods_ACPCore_ACPCoreTests.framework */; };
 		BBFCF5A32552004A000EA193 /* ACPUserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = BBFCF5A12552004A000EA193 /* ACPUserProfile.m */; };
 		D6DBA86D25A5251A0089FB71 /* ACPAudience.h in Headers */ = {isa = PBXBuildFile; fileRef = D6DBA86B25A5251A0089FB71 /* ACPAudience.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D6DBA88B25A527760089FB71 /* ACPAudience.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DBA88A25A527760089FB71 /* ACPAudience.m */; };
+		DBF3FC84CD82ECB11606050A /* Pods_ACPMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D09339F7DC43450B874AC9E /* Pods_ACPMedia.framework */; };
 		DFBBEF4BDD09554134B12D72 /* Pods_ACPCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBF8ACCB7BF85927CDCC2F7 /* Pods_ACPCore.framework */; };
 		FA807DDB05775B3552B84E0E /* Pods_ACPUserProfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE930440D2BEA4AB7BBD72ED /* Pods_ACPUserProfile.framework */; };
 /* End PBXBuildFile section */
@@ -91,30 +96,41 @@
 		21558C4424DE1D44004B3921 /* ACPBridgeExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACPBridgeExtension.h; sourceTree = "<group>"; };
 		21558C4524DE1D44004B3921 /* ACPBridgeExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACPBridgeExtension.m; sourceTree = "<group>"; };
 		21C7E300A6664489755A841E /* Pods-ACPUserProfile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPUserProfile.debug.xcconfig"; path = "Target Support Files/Pods-ACPUserProfile/Pods-ACPUserProfile.debug.xcconfig"; sourceTree = "<group>"; };
-		39E3043AA19547343B6B1809 /* Pods-ACPAudience.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPAudience.debug.xcconfig"; path = "Target Support Files/Pods-ACPAudience/Pods-ACPAudience.debug.xcconfig"; sourceTree = "<group>"; };
 		23F8EB6057F2220DC4C7C88F /* Pods_ACPAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACPAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39E3043AA19547343B6B1809 /* Pods-ACPAudience.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPAudience.debug.xcconfig"; path = "Target Support Files/Pods-ACPAudience/Pods-ACPAudience.debug.xcconfig"; sourceTree = "<group>"; };
 		3F975D6B256D801100C490DC /* ACPUserProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPUserProfile.h; sourceTree = "<group>"; };
 		4CBF8ACCB7BF85927CDCC2F7 /* Pods_ACPCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACPCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D09339F7DC43450B874AC9E /* Pods_ACPMedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACPMedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D385E2E3759857490D2259 /* Pods-ACPCore-ACPCoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPCore-ACPCoreTests.release.xcconfig"; path = "Target Support Files/Pods-ACPCore-ACPCoreTests/Pods-ACPCore-ACPCoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		91F2EFCBAC5F76897D7A8E3E /* Pods-ACPCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPCore.release.xcconfig"; path = "Target Support Files/Pods-ACPCore/Pods-ACPCore.release.xcconfig"; sourceTree = "<group>"; };
 		92438BE825A5354500359C53 /* ACPAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACPAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92438BEA25A5354500359C53 /* ACPAnalytics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACPAnalytics.h; sourceTree = "<group>"; };
 		92438BEB25A5354500359C53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92438BF425A5388300359C53 /* ACPAnalytics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACPAnalytics.m; sourceTree = "<group>"; };
+		92E627A025F30A4E00EDF218 /* ACPMedia.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACPMedia.m; sourceTree = "<group>"; };
+		92E627A825F30A6D00EDF218 /* ACPMediaConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACPMediaConstants.h; sourceTree = "<group>"; };
+		92E627A925F30A9300EDF218 /* ACPMediaTracker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACPMediaTracker.m; sourceTree = "<group>"; };
+		92E627B125F30AD600EDF218 /* ACPMediaConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACPMediaConstants.m; sourceTree = "<group>"; };
+		92E627B925F30AF700EDF218 /* ACPMediaTracker+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ACPMediaTracker+Private.h"; sourceTree = "<group>"; };
+		92F29A9C25F2BD2F00577263 /* ACPMedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACPMedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92F29A9E25F2BD2F00577263 /* ACPMedia.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACPMedia.h; sourceTree = "<group>"; };
+		92F29A9F25F2BD2F00577263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96087480F6F8EE933A5D9972 /* Pods-ACPCore-ACPCoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPCore-ACPCoreTests.debug.xcconfig"; path = "Target Support Files/Pods-ACPCore-ACPCoreTests/Pods-ACPCore-ACPCoreTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9639640F8E8B012FBBF2F35C /* Pods-ACPUserProfile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPUserProfile.release.xcconfig"; path = "Target Support Files/Pods-ACPUserProfile/Pods-ACPUserProfile.release.xcconfig"; sourceTree = "<group>"; };
-		A70D649236C206224270B160 /* Pods_ACPAudience.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACPAudience.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98194C2C6BE8BCEE422CF790 /* Pods-ACPAnalytics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPAnalytics.debug.xcconfig"; path = "Target Support Files/Pods-ACPAnalytics/Pods-ACPAnalytics.debug.xcconfig"; sourceTree = "<group>"; };
+		A70D649236C206224270B160 /* Pods_ACPAudience.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACPAudience.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE930440D2BEA4AB7BBD72ED /* Pods_ACPUserProfile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACPUserProfile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA2B12A3E10D4F0295BC67B6 /* Pods-ACPAudience.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPAudience.release.xcconfig"; path = "Target Support Files/Pods-ACPAudience/Pods-ACPAudience.release.xcconfig"; sourceTree = "<group>"; };
 		BBFCF5982552001B000EA193 /* ACPUserProfile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACPUserProfile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBFCF59B2552001B000EA193 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBFCF5A12552004A000EA193 /* ACPUserProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPUserProfile.m; sourceTree = "<group>"; };
+		C26E738D6E100EDC7C8CF07D /* Pods-ACPAnalytics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPAnalytics.release.xcconfig"; path = "Target Support Files/Pods-ACPAnalytics/Pods-ACPAnalytics.release.xcconfig"; sourceTree = "<group>"; };
+		C8D930034405A5D8A2B19618 /* Pods-ACPMedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPMedia.release.xcconfig"; path = "Target Support Files/Pods-ACPMedia/Pods-ACPMedia.release.xcconfig"; sourceTree = "<group>"; };
 		D6DBA86925A5251A0089FB71 /* ACPAudience.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACPAudience.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6DBA86B25A5251A0089FB71 /* ACPAudience.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACPAudience.h; sourceTree = "<group>"; };
 		D6DBA86C25A5251A0089FB71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6DBA88A25A527760089FB71 /* ACPAudience.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACPAudience.m; sourceTree = "<group>"; };
-		C26E738D6E100EDC7C8CF07D /* Pods-ACPAnalytics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPAnalytics.release.xcconfig"; path = "Target Support Files/Pods-ACPAnalytics/Pods-ACPAnalytics.release.xcconfig"; sourceTree = "<group>"; };
+		FB18104620CA632B3122C45C /* Pods-ACPMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPMedia.debug.xcconfig"; path = "Target Support Files/Pods-ACPMedia/Pods-ACPMedia.debug.xcconfig"; sourceTree = "<group>"; };
 		FE13D1FCDB9783830360EF51 /* Pods-ACPCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPCore.debug.xcconfig"; path = "Target Support Files/Pods-ACPCore/Pods-ACPCore.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +157,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				74A6AB369858D3179856CE3D /* Pods_ACPAnalytics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92F29A9925F2BD2F00577263 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBF3FC84CD82ECB11606050A /* Pods_ACPMedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +195,7 @@
 				BBFCF5992552001B000EA193 /* ACPUserProfile */,
 				D6DBA86A25A5251A0089FB71 /* ACPAudience */,
 				92438BE925A5354500359C53 /* ACPAnalytics */,
+				92F29A9D25F2BD2F00577263 /* ACPMedia */,
 				21558BA324DCA373004B3921 /* Products */,
 				7760FA52E364B0E47A19AD11 /* Pods */,
 				E5A701BD62609B58F7C128D8 /* Frameworks */,
@@ -185,6 +210,7 @@
 				BBFCF5982552001B000EA193 /* ACPUserProfile.framework */,
 				D6DBA86925A5251A0089FB71 /* ACPAudience.framework */,
 				92438BE825A5354500359C53 /* ACPAnalytics.framework */,
+				92F29A9C25F2BD2F00577263 /* ACPMedia.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -285,6 +311,8 @@
 				BA2B12A3E10D4F0295BC67B6 /* Pods-ACPAudience.release.xcconfig */,
 				98194C2C6BE8BCEE422CF790 /* Pods-ACPAnalytics.debug.xcconfig */,
 				C26E738D6E100EDC7C8CF07D /* Pods-ACPAnalytics.release.xcconfig */,
+				FB18104620CA632B3122C45C /* Pods-ACPMedia.debug.xcconfig */,
+				C8D930034405A5D8A2B19618 /* Pods-ACPMedia.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -297,6 +325,20 @@
 				92438BF425A5388300359C53 /* ACPAnalytics.m */,
 			);
 			path = ACPAnalytics;
+			sourceTree = "<group>";
+		};
+		92F29A9D25F2BD2F00577263 /* ACPMedia */ = {
+			isa = PBXGroup;
+			children = (
+				92F29A9E25F2BD2F00577263 /* ACPMedia.h */,
+				92F29A9F25F2BD2F00577263 /* Info.plist */,
+				92E627A025F30A4E00EDF218 /* ACPMedia.m */,
+				92E627A825F30A6D00EDF218 /* ACPMediaConstants.h */,
+				92E627A925F30A9300EDF218 /* ACPMediaTracker.m */,
+				92E627B125F30AD600EDF218 /* ACPMediaConstants.m */,
+				92E627B925F30AF700EDF218 /* ACPMediaTracker+Private.h */,
+			);
+			path = ACPMedia;
 			sourceTree = "<group>";
 		};
 		BBFCF5992552001B000EA193 /* ACPUserProfile */ = {
@@ -327,6 +369,7 @@
 				AE930440D2BEA4AB7BBD72ED /* Pods_ACPUserProfile.framework */,
 				A70D649236C206224270B160 /* Pods_ACPAudience.framework */,
 				23F8EB6057F2220DC4C7C88F /* Pods_ACPAnalytics.framework */,
+				8D09339F7DC43450B874AC9E /* Pods_ACPMedia.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -359,6 +402,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				92438BEC25A5354500359C53 /* ACPAnalytics.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92F29A9725F2BD2F00577263 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92F29AA025F2BD2F00577263 /* ACPMedia.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +490,25 @@
 			productReference = 92438BE825A5354500359C53 /* ACPAnalytics.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		92F29A9B25F2BD2F00577263 /* ACPMedia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92F29AA325F2BD2F00577263 /* Build configuration list for PBXNativeTarget "ACPMedia" */;
+			buildPhases = (
+				753DCD12245961F27C36ABB4 /* [CP] Check Pods Manifest.lock */,
+				92F29A9725F2BD2F00577263 /* Headers */,
+				92F29A9825F2BD2F00577263 /* Sources */,
+				92F29A9925F2BD2F00577263 /* Frameworks */,
+				92F29A9A25F2BD2F00577263 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ACPMedia;
+			productName = ACPMedia;
+			productReference = 92F29A9C25F2BD2F00577263 /* ACPMedia.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		BBFCF5972552001B000EA193 /* ACPUserProfile */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BBFCF59F2552001B000EA193 /* Build configuration list for PBXNativeTarget "ACPUserProfile" */;
@@ -495,6 +565,9 @@
 					92438BE725A5354500359C53 = {
 						CreatedOnToolsVersion = 12.2;
 					};
+					92F29A9B25F2BD2F00577263 = {
+						CreatedOnToolsVersion = 12.2;
+					};
 					BBFCF5972552001B000EA193 = {
 						CreatedOnToolsVersion = 11.7;
 					};
@@ -521,6 +594,7 @@
 				BBFCF5972552001B000EA193 /* ACPUserProfile */,
 				D6DBA86825A5251A0089FB71 /* ACPAudience */,
 				92438BE725A5354500359C53 /* ACPAnalytics */,
+				92F29A9B25F2BD2F00577263 /* ACPMedia */,
 			);
 		};
 /* End PBXProject section */
@@ -547,6 +621,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		92F29A9A25F2BD2F00577263 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BBFCF5962552001B000EA193 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -564,6 +645,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		753DCD12245961F27C36ABB4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ACPMedia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		897350843083EDB49CD14EB7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -726,6 +829,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				92438BF525A5388300359C53 /* ACPAnalytics.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92F29A9825F2BD2F00577263 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92E627AA25F30A9300EDF218 /* ACPMediaTracker.m in Sources */,
+				92E627B225F30AD600EDF218 /* ACPMediaConstants.m in Sources */,
+				92E627A125F30A4E00EDF218 /* ACPMedia.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1010,6 +1123,66 @@
 			};
 			name = Release;
 		};
+		92F29AA125F2BD2F00577263 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB18104620CA632B3122C45C /* Pods-ACPMedia.debug.xcconfig */;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ACPMedia/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.aep.ACPMedia;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		92F29AA225F2BD2F00577263 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8D930034405A5D8A2B19618 /* Pods-ACPMedia.release.xcconfig */;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ACPMedia/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.aep.ACPMedia;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		BBFCF59D2552001B000EA193 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 21C7E300A6664489755A841E /* Pods-ACPUserProfile.debug.xcconfig */;
@@ -1145,6 +1318,15 @@
 			buildConfigurations = (
 				92438BED25A5354500359C53 /* Debug */,
 				92438BEE25A5354500359C53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92F29AA325F2BD2F00577263 /* Build configuration list for PBXNativeTarget "ACPMedia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92F29AA125F2BD2F00577263 /* Debug */,
+				92F29AA225F2BD2F00577263 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

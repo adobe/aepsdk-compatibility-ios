@@ -43,7 +43,7 @@ target 'ACPAnalytics' do
   pod 'AEPCore'
   pod 'AEPServices'
   pod 'AEPIdentity'
-  pod 'AEPAnalytics', :git => 'git@github.com:adobe/aepsdk-analytics-ios.git', :branch => 'main'
+  pod 'AEPAnalytics'
 end
 
 target 'ACPAudience' do
@@ -53,5 +53,17 @@ target 'ACPAudience' do
   pod 'ACPCore', :path => './'
   pod 'AEPServices'
   pod 'AEPCore'
-  pod 'AEPAudience', :git => 'git@github.com:adobe/aepsdk-audience-ios.git', :branch => 'main'
+  pod 'AEPAudience'
+end
+
+target 'ACPMedia' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for ACPMedia
+  pod 'ACPCore', :path => './'
+  pod 'AEPServices'
+  pod 'AEPCore'
+  pod 'AEPIdentity'
+  pod 'AEPMedia', :git => 'git@github.com:adobe/aepsdk-media-ios.git', :branch => 'dev'
 end
