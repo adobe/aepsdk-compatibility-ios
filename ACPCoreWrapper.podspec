@@ -16,5 +16,8 @@ ACPCore backward compatible layer
   s.requires_arc      = true
   
   s.dependency 'AEPCore'
+  s.dependency 'AEPServices'
+  s.dependency 'AEPRulesEngine'
+
 
 end
