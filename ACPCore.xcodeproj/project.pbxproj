@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		149C39C1206E0467D54154B0 /* Pods_ACPAudience.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70D649236C206224270B160 /* Pods_ACPAudience.framework */; };
 		21558BAC24DCA373004B3921 /* ACPCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21558BA224DCA373004B3921 /* ACPCore.framework */; };
 		21558BB124DCA373004B3921 /* ACPCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21558BB024DCA373004B3921 /* ACPCoreTests.m */; };
 		21558BB324DCA373004B3921 /* ACPCoreUmbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558BA524DCA373004B3921 /* ACPCoreUmbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -19,12 +18,6 @@
 		21558BCD24DCA415004B3921 /* ACPMobileVisitorId.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558BC524DCA415004B3921 /* ACPMobileVisitorId.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21558BCE24DCA415004B3921 /* NSError+AEPError.m in Sources */ = {isa = PBXBuildFile; fileRef = 21558BC624DCA415004B3921 /* NSError+AEPError.m */; };
 		21558BCF24DCA415004B3921 /* NSError+AEPError.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558BC724DCA415004B3921 /* NSError+AEPError.h */; };
-		21558BD224DCA4C8004B3921 /* ACPIdentity.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558BD024DCA4C8004B3921 /* ACPIdentity.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		21558BD324DCA4C8004B3921 /* ACPIdentity.m in Sources */ = {isa = PBXBuildFile; fileRef = 21558BD124DCA4C8004B3921 /* ACPIdentity.m */; };
-		21558BD624DCA4E9004B3921 /* ACPLifecycle.m in Sources */ = {isa = PBXBuildFile; fileRef = 21558BD424DCA4E8004B3921 /* ACPLifecycle.m */; };
-		21558BD724DCA4E9004B3921 /* ACPLifecycle.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558BD524DCA4E9004B3921 /* ACPLifecycle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		21558BDA24DCA4F6004B3921 /* ACPSignal.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558BD824DCA4F6004B3921 /* ACPSignal.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		21558BDB24DCA4F6004B3921 /* ACPSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 21558BD924DCA4F6004B3921 /* ACPSignal.m */; };
 		21558C3824DDD352004B3921 /* ACPExtensionError.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558C3424DDD352004B3921 /* ACPExtensionError.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21558C3924DDD352004B3921 /* ACPExtensionListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558C3524DDD352004B3921 /* ACPExtensionListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21558C3A24DDD352004B3921 /* ACPExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558C3624DDD352004B3921 /* ACPExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -35,21 +28,8 @@
 		21558C4324DDD3A8004B3921 /* ACPExtensionError.m in Sources */ = {isa = PBXBuildFile; fileRef = 21558C3F24DDD3A8004B3921 /* ACPExtensionError.m */; };
 		21558C4624DE1D44004B3921 /* ACPBridgeExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558C4424DE1D44004B3921 /* ACPBridgeExtension.h */; };
 		21558C4724DE1D44004B3921 /* ACPBridgeExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 21558C4524DE1D44004B3921 /* ACPBridgeExtension.m */; };
-		3F975D6C256D801100C490DC /* ACPUserProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F975D6B256D801100C490DC /* ACPUserProfile.h */; };
-		74A6AB369858D3179856CE3D /* Pods_ACPAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F8EB6057F2220DC4C7C88F /* Pods_ACPAnalytics.framework */; };
-		92438BEC25A5354500359C53 /* ACPAnalytics.h in Headers */ = {isa = PBXBuildFile; fileRef = 92438BEA25A5354500359C53 /* ACPAnalytics.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		92438BF525A5388300359C53 /* ACPAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = 92438BF425A5388300359C53 /* ACPAnalytics.m */; };
-		92E627A125F30A4E00EDF218 /* ACPMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E627A025F30A4E00EDF218 /* ACPMedia.m */; };
-		92E627AA25F30A9300EDF218 /* ACPMediaTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E627A925F30A9300EDF218 /* ACPMediaTracker.m */; };
-		92E627B225F30AD600EDF218 /* ACPMediaConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E627B125F30AD600EDF218 /* ACPMediaConstants.m */; };
-		92F29AA025F2BD2F00577263 /* ACPMedia.h in Headers */ = {isa = PBXBuildFile; fileRef = 92F29A9E25F2BD2F00577263 /* ACPMedia.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		975248CD3BA74F1731A0BAB5 /* Pods_ACPCore_ACPCoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5FF225D46F436B40871F06 /* Pods_ACPCore_ACPCoreTests.framework */; };
-		BBFCF5A32552004A000EA193 /* ACPUserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = BBFCF5A12552004A000EA193 /* ACPUserProfile.m */; };
-		D6DBA86D25A5251A0089FB71 /* ACPAudience.h in Headers */ = {isa = PBXBuildFile; fileRef = D6DBA86B25A5251A0089FB71 /* ACPAudience.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D6DBA88B25A527760089FB71 /* ACPAudience.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DBA88A25A527760089FB71 /* ACPAudience.m */; };
-		DBF3FC84CD82ECB11606050A /* Pods_ACPMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D09339F7DC43450B874AC9E /* Pods_ACPMedia.framework */; };
 		DFBBEF4BDD09554134B12D72 /* Pods_ACPCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBF8ACCB7BF85927CDCC2F7 /* Pods_ACPCore.framework */; };
-		FA807DDB05775B3552B84E0E /* Pods_ACPUserProfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE930440D2BEA4AB7BBD72ED /* Pods_ACPUserProfile.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,12 +58,6 @@
 		21558BC524DCA415004B3921 /* ACPMobileVisitorId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPMobileVisitorId.h; sourceTree = "<group>"; };
 		21558BC624DCA415004B3921 /* NSError+AEPError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+AEPError.m"; sourceTree = "<group>"; };
 		21558BC724DCA415004B3921 /* NSError+AEPError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+AEPError.h"; sourceTree = "<group>"; };
-		21558BD024DCA4C8004B3921 /* ACPIdentity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPIdentity.h; sourceTree = "<group>"; };
-		21558BD124DCA4C8004B3921 /* ACPIdentity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPIdentity.m; sourceTree = "<group>"; };
-		21558BD424DCA4E8004B3921 /* ACPLifecycle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPLifecycle.m; sourceTree = "<group>"; };
-		21558BD524DCA4E9004B3921 /* ACPLifecycle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPLifecycle.h; sourceTree = "<group>"; };
-		21558BD824DCA4F6004B3921 /* ACPSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPSignal.h; sourceTree = "<group>"; };
-		21558BD924DCA4F6004B3921 /* ACPSignal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPSignal.m; sourceTree = "<group>"; };
 		21558BDC24DCAD74004B3921 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		21558C3424DDD352004B3921 /* ACPExtensionError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPExtensionError.h; sourceTree = "<group>"; };
 		21558C3524DDD352004B3921 /* ACPExtensionListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPExtensionListener.h; sourceTree = "<group>"; };
@@ -95,42 +69,14 @@
 		21558C3F24DDD3A8004B3921 /* ACPExtensionError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPExtensionError.m; sourceTree = "<group>"; };
 		21558C4424DE1D44004B3921 /* ACPBridgeExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACPBridgeExtension.h; sourceTree = "<group>"; };
 		21558C4524DE1D44004B3921 /* ACPBridgeExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACPBridgeExtension.m; sourceTree = "<group>"; };
-		21C7E300A6664489755A841E /* Pods-ACPUserProfile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPUserProfile.debug.xcconfig"; path = "Target Support Files/Pods-ACPUserProfile/Pods-ACPUserProfile.debug.xcconfig"; sourceTree = "<group>"; };
-		23F8EB6057F2220DC4C7C88F /* Pods_ACPAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACPAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		39E3043AA19547343B6B1809 /* Pods-ACPAudience.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPAudience.debug.xcconfig"; path = "Target Support Files/Pods-ACPAudience/Pods-ACPAudience.debug.xcconfig"; sourceTree = "<group>"; };
-		3F975D6B256D801100C490DC /* ACPUserProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPUserProfile.h; sourceTree = "<group>"; };
 		4CBF8ACCB7BF85927CDCC2F7 /* Pods_ACPCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACPCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D09339F7DC43450B874AC9E /* Pods_ACPMedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACPMedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D385E2E3759857490D2259 /* Pods-ACPCore-ACPCoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPCore-ACPCoreTests.release.xcconfig"; path = "Target Support Files/Pods-ACPCore-ACPCoreTests/Pods-ACPCore-ACPCoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		91F2EFCBAC5F76897D7A8E3E /* Pods-ACPCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPCore.release.xcconfig"; path = "Target Support Files/Pods-ACPCore/Pods-ACPCore.release.xcconfig"; sourceTree = "<group>"; };
 		92438BE825A5354500359C53 /* ACPAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACPAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		92438BEA25A5354500359C53 /* ACPAnalytics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACPAnalytics.h; sourceTree = "<group>"; };
-		92438BEB25A5354500359C53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		92438BF425A5388300359C53 /* ACPAnalytics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACPAnalytics.m; sourceTree = "<group>"; };
-		92E627A025F30A4E00EDF218 /* ACPMedia.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACPMedia.m; sourceTree = "<group>"; };
-		92E627A825F30A6D00EDF218 /* ACPMediaConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACPMediaConstants.h; sourceTree = "<group>"; };
-		92E627A925F30A9300EDF218 /* ACPMediaTracker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACPMediaTracker.m; sourceTree = "<group>"; };
-		92E627B125F30AD600EDF218 /* ACPMediaConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACPMediaConstants.m; sourceTree = "<group>"; };
-		92E627B925F30AF700EDF218 /* ACPMediaTracker+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ACPMediaTracker+Private.h"; sourceTree = "<group>"; };
 		92F29A9C25F2BD2F00577263 /* ACPMedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACPMedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		92F29A9E25F2BD2F00577263 /* ACPMedia.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACPMedia.h; sourceTree = "<group>"; };
-		92F29A9F25F2BD2F00577263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96087480F6F8EE933A5D9972 /* Pods-ACPCore-ACPCoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPCore-ACPCoreTests.debug.xcconfig"; path = "Target Support Files/Pods-ACPCore-ACPCoreTests/Pods-ACPCore-ACPCoreTests.debug.xcconfig"; sourceTree = "<group>"; };
-		9639640F8E8B012FBBF2F35C /* Pods-ACPUserProfile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPUserProfile.release.xcconfig"; path = "Target Support Files/Pods-ACPUserProfile/Pods-ACPUserProfile.release.xcconfig"; sourceTree = "<group>"; };
-		98194C2C6BE8BCEE422CF790 /* Pods-ACPAnalytics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPAnalytics.debug.xcconfig"; path = "Target Support Files/Pods-ACPAnalytics/Pods-ACPAnalytics.debug.xcconfig"; sourceTree = "<group>"; };
-		A70D649236C206224270B160 /* Pods_ACPAudience.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACPAudience.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE930440D2BEA4AB7BBD72ED /* Pods_ACPUserProfile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACPUserProfile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA2B12A3E10D4F0295BC67B6 /* Pods-ACPAudience.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPAudience.release.xcconfig"; path = "Target Support Files/Pods-ACPAudience/Pods-ACPAudience.release.xcconfig"; sourceTree = "<group>"; };
 		BBFCF5982552001B000EA193 /* ACPUserProfile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACPUserProfile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BBFCF59B2552001B000EA193 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BBFCF5A12552004A000EA193 /* ACPUserProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPUserProfile.m; sourceTree = "<group>"; };
-		C26E738D6E100EDC7C8CF07D /* Pods-ACPAnalytics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPAnalytics.release.xcconfig"; path = "Target Support Files/Pods-ACPAnalytics/Pods-ACPAnalytics.release.xcconfig"; sourceTree = "<group>"; };
-		C8D930034405A5D8A2B19618 /* Pods-ACPMedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPMedia.release.xcconfig"; path = "Target Support Files/Pods-ACPMedia/Pods-ACPMedia.release.xcconfig"; sourceTree = "<group>"; };
 		D6DBA86925A5251A0089FB71 /* ACPAudience.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACPAudience.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D6DBA86B25A5251A0089FB71 /* ACPAudience.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACPAudience.h; sourceTree = "<group>"; };
-		D6DBA86C25A5251A0089FB71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D6DBA88A25A527760089FB71 /* ACPAudience.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACPAudience.m; sourceTree = "<group>"; };
-		FB18104620CA632B3122C45C /* Pods-ACPMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPMedia.debug.xcconfig"; path = "Target Support Files/Pods-ACPMedia/Pods-ACPMedia.debug.xcconfig"; sourceTree = "<group>"; };
 		FE13D1FCDB9783830360EF51 /* Pods-ACPCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPCore.debug.xcconfig"; path = "Target Support Files/Pods-ACPCore/Pods-ACPCore.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,7 +102,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74A6AB369858D3179856CE3D /* Pods_ACPAnalytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +109,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBF3FC84CD82ECB11606050A /* Pods_ACPMedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +116,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA807DDB05775B3552B84E0E /* Pods_ACPUserProfile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +123,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				149C39C1206E0467D54154B0 /* Pods_ACPAudience.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,10 +134,6 @@
 			children = (
 				21558BA424DCA373004B3921 /* ACPCore */,
 				21558BAF24DCA373004B3921 /* ACPCoreTests */,
-				BBFCF5992552001B000EA193 /* ACPUserProfile */,
-				D6DBA86A25A5251A0089FB71 /* ACPAudience */,
-				92438BE925A5354500359C53 /* ACPAnalytics */,
-				92F29A9D25F2BD2F00577263 /* ACPMedia */,
 				21558BA324DCA373004B3921 /* Products */,
 				7760FA52E364B0E47A19AD11 /* Pods */,
 				E5A701BD62609B58F7C128D8 /* Frameworks */,
@@ -220,9 +158,6 @@
 			children = (
 				21558C3324DDD26B004B3921 /* extensions */,
 				21558BBC24DCA3D9004B3921 /* core */,
-				21558BBE24DCA3E5004B3921 /* identity */,
-				21558BBD24DCA3DE004B3921 /* lifecycle */,
-				21558BBF24DCA3EC004B3921 /* signal */,
 				21558BA524DCA373004B3921 /* ACPCoreUmbrella.h */,
 				21558BA624DCA373004B3921 /* Info.plist */,
 				21558BDC24DCAD74004B3921 /* module.modulemap */,
@@ -254,33 +189,6 @@
 			path = core;
 			sourceTree = "<group>";
 		};
-		21558BBD24DCA3DE004B3921 /* lifecycle */ = {
-			isa = PBXGroup;
-			children = (
-				21558BD524DCA4E9004B3921 /* ACPLifecycle.h */,
-				21558BD424DCA4E8004B3921 /* ACPLifecycle.m */,
-			);
-			path = lifecycle;
-			sourceTree = "<group>";
-		};
-		21558BBE24DCA3E5004B3921 /* identity */ = {
-			isa = PBXGroup;
-			children = (
-				21558BD024DCA4C8004B3921 /* ACPIdentity.h */,
-				21558BD124DCA4C8004B3921 /* ACPIdentity.m */,
-			);
-			path = identity;
-			sourceTree = "<group>";
-		};
-		21558BBF24DCA3EC004B3921 /* signal */ = {
-			isa = PBXGroup;
-			children = (
-				21558BD824DCA4F6004B3921 /* ACPSignal.h */,
-				21558BD924DCA4F6004B3921 /* ACPSignal.m */,
-			);
-			path = signal;
-			sourceTree = "<group>";
-		};
 		21558C3324DDD26B004B3921 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,60 +213,8 @@
 				91F2EFCBAC5F76897D7A8E3E /* Pods-ACPCore.release.xcconfig */,
 				96087480F6F8EE933A5D9972 /* Pods-ACPCore-ACPCoreTests.debug.xcconfig */,
 				90D385E2E3759857490D2259 /* Pods-ACPCore-ACPCoreTests.release.xcconfig */,
-				21C7E300A6664489755A841E /* Pods-ACPUserProfile.debug.xcconfig */,
-				9639640F8E8B012FBBF2F35C /* Pods-ACPUserProfile.release.xcconfig */,
-				39E3043AA19547343B6B1809 /* Pods-ACPAudience.debug.xcconfig */,
-				BA2B12A3E10D4F0295BC67B6 /* Pods-ACPAudience.release.xcconfig */,
-				98194C2C6BE8BCEE422CF790 /* Pods-ACPAnalytics.debug.xcconfig */,
-				C26E738D6E100EDC7C8CF07D /* Pods-ACPAnalytics.release.xcconfig */,
-				FB18104620CA632B3122C45C /* Pods-ACPMedia.debug.xcconfig */,
-				C8D930034405A5D8A2B19618 /* Pods-ACPMedia.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		92438BE925A5354500359C53 /* ACPAnalytics */ = {
-			isa = PBXGroup;
-			children = (
-				92438BEA25A5354500359C53 /* ACPAnalytics.h */,
-				92438BEB25A5354500359C53 /* Info.plist */,
-				92438BF425A5388300359C53 /* ACPAnalytics.m */,
-			);
-			path = ACPAnalytics;
-			sourceTree = "<group>";
-		};
-		92F29A9D25F2BD2F00577263 /* ACPMedia */ = {
-			isa = PBXGroup;
-			children = (
-				92F29A9E25F2BD2F00577263 /* ACPMedia.h */,
-				92F29A9F25F2BD2F00577263 /* Info.plist */,
-				92E627A025F30A4E00EDF218 /* ACPMedia.m */,
-				92E627A825F30A6D00EDF218 /* ACPMediaConstants.h */,
-				92E627A925F30A9300EDF218 /* ACPMediaTracker.m */,
-				92E627B125F30AD600EDF218 /* ACPMediaConstants.m */,
-				92E627B925F30AF700EDF218 /* ACPMediaTracker+Private.h */,
-			);
-			path = ACPMedia;
-			sourceTree = "<group>";
-		};
-		BBFCF5992552001B000EA193 /* ACPUserProfile */ = {
-			isa = PBXGroup;
-			children = (
-				3F975D6B256D801100C490DC /* ACPUserProfile.h */,
-				BBFCF5A12552004A000EA193 /* ACPUserProfile.m */,
-				BBFCF59B2552001B000EA193 /* Info.plist */,
-			);
-			path = ACPUserProfile;
-			sourceTree = "<group>";
-		};
-		D6DBA86A25A5251A0089FB71 /* ACPAudience */ = {
-			isa = PBXGroup;
-			children = (
-				D6DBA86B25A5251A0089FB71 /* ACPAudience.h */,
-				D6DBA88A25A527760089FB71 /* ACPAudience.m */,
-				D6DBA86C25A5251A0089FB71 /* Info.plist */,
-			);
-			path = ACPAudience;
 			sourceTree = "<group>";
 		};
 		E5A701BD62609B58F7C128D8 /* Frameworks */ = {
@@ -366,10 +222,6 @@
 			children = (
 				4CBF8ACCB7BF85927CDCC2F7 /* Pods_ACPCore.framework */,
 				0F5FF225D46F436B40871F06 /* Pods_ACPCore_ACPCoreTests.framework */,
-				AE930440D2BEA4AB7BBD72ED /* Pods_ACPUserProfile.framework */,
-				A70D649236C206224270B160 /* Pods_ACPAudience.framework */,
-				23F8EB6057F2220DC4C7C88F /* Pods_ACPAnalytics.framework */,
-				8D09339F7DC43450B874AC9E /* Pods_ACPMedia.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -389,11 +241,8 @@
 				21558C3A24DDD352004B3921 /* ACPExtension.h in Headers */,
 				21558C3824DDD352004B3921 /* ACPExtensionError.h in Headers */,
 				21558C3B24DDD352004B3921 /* ACPExtensionApi.h in Headers */,
-				21558BDA24DCA4F6004B3921 /* ACPSignal.h in Headers */,
-				21558BD224DCA4C8004B3921 /* ACPIdentity.h in Headers */,
 				21558BCF24DCA415004B3921 /* NSError+AEPError.h in Headers */,
 				21558BCD24DCA415004B3921 /* ACPMobileVisitorId.h in Headers */,
-				21558BD724DCA4E9004B3921 /* ACPLifecycle.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,7 +250,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92438BEC25A5354500359C53 /* ACPAnalytics.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,7 +257,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92F29AA025F2BD2F00577263 /* ACPMedia.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,7 +264,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F975D6C256D801100C490DC /* ACPUserProfile.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,7 +271,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6DBA86D25A5251A0089FB71 /* ACPAudience.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,7 +320,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92438BEF25A5354500359C53 /* Build configuration list for PBXNativeTarget "ACPAnalytics" */;
 			buildPhases = (
-				FB9747A685BB3AC765690F0F /* [CP] Check Pods Manifest.lock */,
 				92438BE325A5354500359C53 /* Headers */,
 				92438BE425A5354500359C53 /* Sources */,
 				92438BE525A5354500359C53 /* Frameworks */,
@@ -494,7 +338,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92F29AA325F2BD2F00577263 /* Build configuration list for PBXNativeTarget "ACPMedia" */;
 			buildPhases = (
-				753DCD12245961F27C36ABB4 /* [CP] Check Pods Manifest.lock */,
 				92F29A9725F2BD2F00577263 /* Headers */,
 				92F29A9825F2BD2F00577263 /* Sources */,
 				92F29A9925F2BD2F00577263 /* Frameworks */,
@@ -513,7 +356,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BBFCF59F2552001B000EA193 /* Build configuration list for PBXNativeTarget "ACPUserProfile" */;
 			buildPhases = (
-				897350843083EDB49CD14EB7 /* [CP] Check Pods Manifest.lock */,
 				BBFCF5932552001B000EA193 /* Headers */,
 				BBFCF5942552001B000EA193 /* Sources */,
 				BBFCF5952552001B000EA193 /* Frameworks */,
@@ -532,7 +374,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D6DBA86E25A5251A0089FB71 /* Build configuration list for PBXNativeTarget "ACPAudience" */;
 			buildPhases = (
-				9FA7C9B3545D28D05CC0668C /* [CP] Check Pods Manifest.lock */,
 				D6DBA86425A5251A0089FB71 /* Headers */,
 				D6DBA86525A5251A0089FB71 /* Sources */,
 				D6DBA86625A5251A0089FB71 /* Frameworks */,
@@ -645,72 +486,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		753DCD12245961F27C36ABB4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ACPMedia-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		897350843083EDB49CD14EB7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ACPUserProfile-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9FA7C9B3545D28D05CC0668C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ACPAudience-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B721B8D30566850E886A9114 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -772,28 +547,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FB9747A685BB3AC765690F0F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ACPAnalytics-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -803,12 +556,9 @@
 			files = (
 				21558C4324DDD3A8004B3921 /* ACPExtensionError.m in Sources */,
 				21558C4124DDD3A8004B3921 /* ACPExtension.m in Sources */,
-				21558BD324DCA4C8004B3921 /* ACPIdentity.m in Sources */,
-				21558BD624DCA4E9004B3921 /* ACPLifecycle.m in Sources */,
 				21558BC924DCA415004B3921 /* ACPExtensionEvent.m in Sources */,
 				21558C4724DE1D44004B3921 /* ACPBridgeExtension.m in Sources */,
 				21558BCC24DCA415004B3921 /* ACPMobileVisitorId.m in Sources */,
-				21558BDB24DCA4F6004B3921 /* ACPSignal.m in Sources */,
 				21558BCB24DCA415004B3921 /* ACPCore.m in Sources */,
 				21558C4224DDD3A8004B3921 /* ACPExtensionApi.m in Sources */,
 				21558C4024DDD3A8004B3921 /* ACPExtensionListener.m in Sources */,
@@ -828,7 +578,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92438BF525A5388300359C53 /* ACPAnalytics.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -836,9 +585,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92E627AA25F30A9300EDF218 /* ACPMediaTracker.m in Sources */,
-				92E627B225F30AD600EDF218 /* ACPMediaConstants.m in Sources */,
-				92E627A125F30A4E00EDF218 /* ACPMedia.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -846,7 +592,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBFCF5A32552004A000EA193 /* ACPUserProfile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -854,7 +599,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6DBA88B25A527760089FB71 /* ACPAudience.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1073,7 +817,6 @@
 		};
 		92438BED25A5354500359C53 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98194C2C6BE8BCEE422CF790 /* Pods-ACPAnalytics.debug.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1099,7 +842,6 @@
 		};
 		92438BEE25A5354500359C53 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C26E738D6E100EDC7C8CF07D /* Pods-ACPAnalytics.release.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1125,7 +867,6 @@
 		};
 		92F29AA125F2BD2F00577263 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB18104620CA632B3122C45C /* Pods-ACPMedia.debug.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
@@ -1155,7 +896,6 @@
 		};
 		92F29AA225F2BD2F00577263 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8D930034405A5D8A2B19618 /* Pods-ACPMedia.release.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
@@ -1185,7 +925,6 @@
 		};
 		BBFCF59D2552001B000EA193 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21C7E300A6664489755A841E /* Pods-ACPUserProfile.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -1209,7 +948,6 @@
 		};
 		BBFCF59E2552001B000EA193 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9639640F8E8B012FBBF2F35C /* Pods-ACPUserProfile.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -1233,7 +971,6 @@
 		};
 		D6DBA86F25A5251A0089FB71 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39E3043AA19547343B6B1809 /* Pods-ACPAudience.debug.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1259,7 +996,6 @@
 		};
 		D6DBA87025A5251A0089FB71 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BA2B12A3E10D4F0295BC67B6 /* Pods-ACPAudience.release.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;

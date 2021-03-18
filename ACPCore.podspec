@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
-  s.name             = "ACPCore"
+  s.name             = "ACPCoreWrapper"
   s.version          = "2.9.9"
-  s.summary          = "ACPCore"
+  s.summary          = "ACPCoreWrapper"
   s.description      = <<-DESC
 ACPCore backward compatible layer
                         DESC
@@ -15,11 +15,6 @@ ACPCore backward compatible layer
   s.source_files          = 'ACPCore/**/*.{h,m}'
   s.requires_arc      = true
   
-  s.dependency 'AEPServices'
   s.dependency 'AEPCore'
-  s.dependency 'AEPLifecycle'
-  s.dependency 'AEPIdentity'
-  s.dependency 'AEPSignal'
-  s.dependency 'AEPRulesEngine'
 
 end
