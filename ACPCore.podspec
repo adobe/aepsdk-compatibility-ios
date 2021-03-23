@@ -12,7 +12,7 @@ ACPCore backward compatible layer
 
   s.ios.deployment_target = '10.0'
   s.pod_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
-  s.source_files          = 'ACPCore/**/*.{h,m,swift}'
+  s.source_files          = 'ACPCore/**/*.{h,m}'
   s.requires_arc      = true
   
   s.dependency 'AEPServices'
