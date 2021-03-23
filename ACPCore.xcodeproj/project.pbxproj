@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		149C39C1206E0467D54154B0 /* Pods_ACPAudience.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70D649236C206224270B160 /* Pods_ACPAudience.framework */; };
+		2130A56C260AAC0B005DBA0F /* MobileCore+Legacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2130A56B260AAC0B005DBA0F /* MobileCore+Legacy.swift */; };
 		21558BAC24DCA373004B3921 /* ACPCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21558BA224DCA373004B3921 /* ACPCore.framework */; };
 		21558BB124DCA373004B3921 /* ACPCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21558BB024DCA373004B3921 /* ACPCoreTests.m */; };
 		21558BB324DCA373004B3921 /* ACPCoreUmbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 21558BA524DCA373004B3921 /* ACPCoreUmbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -64,6 +65,7 @@
 
 /* Begin PBXFileReference section */
 		0F5FF225D46F436B40871F06 /* Pods_ACPCore_ACPCoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACPCore_ACPCoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2130A56B260AAC0B005DBA0F /* MobileCore+Legacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MobileCore+Legacy.swift"; sourceTree = "<group>"; };
 		21558BA224DCA373004B3921 /* ACPCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACPCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21558BA524DCA373004B3921 /* ACPCoreUmbrella.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACPCoreUmbrella.h; sourceTree = "<group>"; };
 		21558BA624DCA373004B3921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 			children = (
 				21558BC224DCA415004B3921 /* ACPCore.h */,
 				21558BC324DCA415004B3921 /* ACPCore.m */,
+				2130A56B260AAC0B005DBA0F /* MobileCore+Legacy.swift */,
 				21558BC024DCA415004B3921 /* ACPExtensionEvent.h */,
 				21558BC124DCA415004B3921 /* ACPExtensionEvent.m */,
 				21558BC524DCA415004B3921 /* ACPMobileVisitorId.h */,
@@ -558,6 +561,7 @@
 				TargetAttributes = {
 					21558BA124DCA373004B3921 = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1200;
 					};
 					21558BAA24DCA373004B3921 = {
 						CreatedOnToolsVersion = 11.6;
@@ -806,6 +810,7 @@
 				21558BD324DCA4C8004B3921 /* ACPIdentity.m in Sources */,
 				21558BD624DCA4E9004B3921 /* ACPLifecycle.m in Sources */,
 				21558BC924DCA415004B3921 /* ACPExtensionEvent.m in Sources */,
+				2130A56C260AAC0B005DBA0F /* MobileCore+Legacy.swift in Sources */,
 				21558C4724DE1D44004B3921 /* ACPBridgeExtension.m in Sources */,
 				21558BCC24DCA415004B3921 /* ACPMobileVisitorId.m in Sources */,
 				21558BDB24DCA4F6004B3921 /* ACPSignal.m in Sources */,
@@ -989,6 +994,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FE13D1FCDB9783830360EF51 /* Pods-ACPCore.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
@@ -1006,6 +1012,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Adobe.ACPCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1014,6 +1022,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 91F2EFCBAC5F76897D7A8E3E /* Pods-ACPCore.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
@@ -1031,6 +1040,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Adobe.ACPCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1039,6 +1049,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 96087480F6F8EE933A5D9972 /* Pods-ACPCore-ACPCoreTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GP6Z9HB7H4;
 				INFOPLIST_FILE = ACPCoreTests/Info.plist;
@@ -1057,6 +1068,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 90D385E2E3759857490D2259 /* Pods-ACPCore-ACPCoreTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GP6Z9HB7H4;
 				INFOPLIST_FILE = ACPCoreTests/Info.plist;
