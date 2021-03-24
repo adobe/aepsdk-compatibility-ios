@@ -82,12 +82,10 @@ governing permissions and limitations under the License.
                      error: (NSError* _Nullable* _Nullable) error {
     // If registering a legacy 3rd party extension, we need to create a wrapper extension
     extensionClass = [self wrapExtensionClassIfNeeded:extensionClass];
-    if (!extensionClass) {
-        return nil;
+    if (extensionClass) {
+        [AEPMobileCore registerExtension: extensionClass completion: nil];
     }
-    
-    [AEPMobileCore registerExtension:extensionClass completion:nil];
-    
+
     return YES;
 }
 
@@ -211,6 +209,7 @@ governing permissions and limitations under the License.
 #pragma mark - Private Helpers
 
 /// This method determines if `extensionClass` is a descendent of `ACPExtension`, if so, it dynamically creates a new class derived from `ACPBridgeExtension`  to wrap the instance of `ACPExtension`
+/// If `extensionClass` does not inherit from `ACPExtension` but exposes a `registerExtension` API we attempt to invoke the `registerExtension` API and return nil
 /// @param extensionClass the class which should be registered with the `EventHub`
 + (Class _Nonnull)wrapExtensionClassIfNeeded:(Class _Nonnull)extensionClass {
     // This extension is a legacy 3rd party extension if it inherits from `ACPExtension`
