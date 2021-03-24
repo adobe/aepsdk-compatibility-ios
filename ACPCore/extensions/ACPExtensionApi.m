@@ -127,7 +127,14 @@ governing permissions and limitations under the License.
 - (nullable NSDictionary*) getSharedEventState: (nonnull NSString*) name
                                          event: (nullable ACPExtensionEvent*) event
                                          error: (NSError* _Nullable* _Nullable) error {
-    AEPSharedStateResult *result = [runtime_ getSharedStateWithExtensionName:name event:event.aepEvent  barrier:false];
+    AEPEvent *aepEvent = event.aepEvent
+    if (!aepEvent) {
+        // Swift core returns earliest shared state for nil events, but old extensions will expect the latest when passing nil
+        // Create a dummy event that has not been dispatched though the event hub which will result in fetching the latest shared state
+        aepEvent = [[AEPEvent alloc] initWithName:@"Compatibility Bridge Event" type:@"" source:@"" data:nil];
+    }
+    
+    AEPSharedStateResult *result = [runtime_ getSharedStateWithExtensionName:name event:aepEvent  barrier:false];
     return result.value;
 }
 
