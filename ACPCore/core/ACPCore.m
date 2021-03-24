@@ -78,18 +78,6 @@ governing permissions and limitations under the License.
 
 #pragma mark - Extensions
 
-+ (void) registerExtensions: (NSArray* __nullable) extensions callback:(nullable void (^) (void)) callback {
-    NSMutableArray *cleanedExtensions = [NSMutableArray array];
-    for (id extensionClass in extensions) {
-        Class wrappedExtension = [self wrapExtensionClassIfNeeded:extensionClass];
-        if (wrappedExtension) {
-            [cleanedExtensions addObject:wrappedExtension];
-        }
-    }
-    
-    [AEPMobileCore registerExtensions:cleanedExtensions completion:callback];
-}
-
 + (BOOL) registerExtension: (nonnull Class) extensionClass
                      error: (NSError* _Nullable* _Nullable) error {
     // If registering a legacy 3rd party extension, we need to create a wrapper extension

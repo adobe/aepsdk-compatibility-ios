@@ -222,14 +222,6 @@ typedef NS_ENUM(NSUInteger, ACPMobileWrapperType) {
 
 #pragma mark - Extensions
 
-/**
- * @brief Registers the extensions with Core and begins event processing
- *
- * @param extensions The extensions to be registered
- * @param callback Closure to run when extensions have been registered
- */
-+ (void) registerExtensions: (NSArray* __nullable) extensions callback:(nullable void (^) (void)) callback;
-
 /*
  * @brief Register an extension class derived from `ACPExtension` with a unique name.
  *
