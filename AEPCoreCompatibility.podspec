@@ -15,6 +15,4 @@ ACPCore backward compatible layer
   s.source_files          = 'ACPCore/**/*.{h,m}'
   s.requires_arc      = true
 
-  s.dependency 'AEPCore'
-
 end
