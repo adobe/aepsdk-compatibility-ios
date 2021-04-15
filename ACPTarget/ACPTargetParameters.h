@@ -33,6 +33,10 @@ governing permissions and limitations under the License.
                                       profileParameters: (nullable NSDictionary*) profileParameters
                                                 product: (nullable ACPTargetProduct*) product
                                                   order: (nullable ACPTargetOrder*) order;
+
+/**
+ * @brief Converts the current instance to an AEPTargetParameters object
+ */
 - (nonnull AEPTargetParameters* ) toAEPObject;
 
 @end

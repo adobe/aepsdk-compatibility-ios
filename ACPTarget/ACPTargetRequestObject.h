@@ -38,14 +38,15 @@ governing permissions and limitations under the License.
  * @param callback method which will be invoked once content is available for requested mbox/location
  * @return a pointer to an ACPTargetRequestObject containing pre-set values provided by the parameters
  *
- * @see ADBMobileMarketing::targetRequestObjectWithName()
- * @see ADBMobileMarketing::targetLoadRequests()
  */
 + (nonnull instancetype) targetRequestObjectWithName: (nonnull NSString*) name
                                     targetParameters: (nullable ACPTargetParameters*) targetParameters
                                       defaultContent: (nonnull NSString*) defaultContent
                                             callback: (nullable void (^) (NSString* __nullable content)) callback;
 
+/**
+ * @brief Converts the current instance to an AEPTargetRequestObject
+ */
 - (nonnull AEPTargetRequestObject* ) toAEPObject;
 
 @end

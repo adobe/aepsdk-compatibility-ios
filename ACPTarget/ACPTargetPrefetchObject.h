@@ -34,13 +34,13 @@ governing permissions and limitations under the License.
  * @param targetParameters parameters to be associated with mbox
  * @return a pointer to an ACPTargetPrefetchObject containing values provided by the parameters
  *
- * @see ADBMobileMarketing::targetPrefetchObjectWithName()
- * @see ADBMobileMarketing::targetPrefetchContent()
  */
 + (nonnull instancetype) targetPrefetchObjectWithName: (nonnull NSString*) name
                                      targetParameters: (nullable ACPTargetParameters*) targetParameters;
 
-
+/**
+ * @brief Converts the current instance to an AEPTargetPrefetchObject
+ */
 - (nonnull AEPTargetPrefetchObject* ) toAEPObject;
 
 @end

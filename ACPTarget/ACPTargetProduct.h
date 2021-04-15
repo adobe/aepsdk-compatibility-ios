@@ -25,6 +25,9 @@ governing permissions and limitations under the License.
 + (nonnull instancetype) targetProductWithId: (nonnull NSString*) productId
                                   categoryId: (nullable NSString*) categoryId;
 
+/**
+ * @brief Converts the current instance to an AEPTargetProduct object
+ */
 - (nonnull AEPTargetProduct* ) toAEPObject;
 
 @end

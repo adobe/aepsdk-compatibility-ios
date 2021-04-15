@@ -22,12 +22,15 @@ governing permissions and limitations under the License.
  *
  * @param orderId order id associated with the order
  * @param total value of the order
- * @param purchasedProductIds an array of puchased product ids
+ * @param purchasedProductIds an array of pucharsed product ids
  */
 + (nonnull instancetype) targetOrderWithId: (nonnull NSString*) orderId
                                      total: (nullable NSNumber*) total
                        purchasedProductIds: (nullable NSArray <NSString*>*) purchasedProductIds;
 
+/**
+ * @brief Converts the current instance to an AEPTargetOrder object
+ */
 - (nonnull AEPTargetOrder* ) toAEPObject;
 
 @end

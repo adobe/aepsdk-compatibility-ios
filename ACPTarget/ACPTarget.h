@@ -53,7 +53,6 @@ governing permissions and limitations under the License.
  *  @param callback invoked with the current tnt id or `nil` if no tnt id is set.
  *
  *  @see ACPTarget::prefetchContent:withProfileParameters:callback:
- *  @see ACPTarget::loadRequests:withProfileParameters:
  *  @see ACPTarget::resetExperience
  */
 + (void) getTntId: (nonnull void (^) (NSString* __nullable tntId)) callback;
