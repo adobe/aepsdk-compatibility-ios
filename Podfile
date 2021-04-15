@@ -67,3 +67,14 @@ target 'ACPMedia' do
   pod 'AEPIdentity'
   pod 'AEPMedia', :git => 'git@github.com:adobe/aepsdk-media-ios.git', :branch => 'dev'
 end
+
+target 'ACPTarget' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for ACPTarget
+  pod 'ACPCore', :path => './'
+  pod 'AEPServices'
+  pod 'AEPCore'
+  pod 'AEPTarget'
+end
