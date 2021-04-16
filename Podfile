@@ -74,7 +74,6 @@ target 'ACPTarget' do
 
   # Pods for ACPTarget
   pod 'ACPCore', :path => './'
-  pod 'AEPServices'
   pod 'AEPCore'
   pod 'AEPTarget'
 end
