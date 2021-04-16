@@ -32,7 +32,8 @@ governing permissions and limitations under the License.
 }
 
 - (void) trackSessionStart: (NSDictionary* _Nonnull) mediaObject data: (NSDictionary* _Nullable) data {
-    [core_tracker_ trackSessionStart:mediaObject metadata:data];
+    NSDictionary* sanitizeMetadata = [self sanitizeContextData:data];
+    [core_tracker_ trackSessionStart:mediaObject metadata:sanitizeMetadata];
 }
     
 - (void) trackPlay {
@@ -57,7 +58,8 @@ governing permissions and limitations under the License.
 
 - (void) trackEvent: (ACPMediaEvent) event info: (NSDictionary* _Nullable) info data: (NSDictionary* _Nullable) data {
     AEPMediaEvent event_name = [self getAepEvent:event];
-    [core_tracker_ trackEvent:event_name info:info metadata:data];
+    NSDictionary* sanitizeMetadata = [self sanitizeContextData:data];
+    [core_tracker_ trackEvent:event_name info:info metadata:sanitizeMetadata];
 }
 
 - (void) updateCurrentPlayhead: (double) time {
@@ -119,6 +121,24 @@ governing permissions and limitations under the License.
     default:
         return 0;
     }
+}
+-   (NSDictionary * _Nullable) sanitizeContextData:(nullable NSDictionary *)inputData {
+        NSMutableDictionary *sanitizedDictionary = [NSMutableDictionary dictionaryWithCapacity:inputData.count];
+        for (id key in inputData.allKeys) {
+            if (![key isKindOfClass:NSString.class]) {
+                NSString *errorMessage = [NSString stringWithFormat:@"Removing entry with non-string key: %@", key];
+                [ACPCore log:ACPMobileLogLevelWarning tag:@"ACPCore Compatibility" message:errorMessage];
+                continue;
+            }
+            id value = inputData[key];
+            if (![value isKindOfClass:NSString.class]) {
+                NSString *errorMessage = [NSString stringWithFormat:@"Removing entry for key '%@' with non-string value: %@", key, value];
+                [ACPCore log:ACPMobileLogLevelWarning tag:@"ACPCore Compatibility" message:errorMessage];
+                continue;
+            }
+            sanitizedDictionary[key] = value;
+        }
+        return sanitizedDictionary;
 }
 @end
 
