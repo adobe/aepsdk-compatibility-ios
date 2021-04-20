@@ -103,8 +103,7 @@
  * @return NULL if xdm state does not exists or NSDictionary* containing state data at that version in JSON format
  */
 - (nullable NSDictionary*) getXDMSharedEventState: (nonnull NSString*) name
-                                         event: (nullable ACPExtensionEvent*) event
-                                         error: (NSError* _Nullable* _Nullable) error;
+                                         event: (nullable ACPExtensionEvent*) event;
 
 /*
  * @brief Un-register this extension. This can be called at any time after SDK initialization.
