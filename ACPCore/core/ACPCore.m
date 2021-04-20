@@ -20,8 +20,6 @@ governing permissions and limitations under the License.
 
 #pragma mark - ACPCore Implementation
 
-static NSMutableArray *_pendingExtensions;
-
 @implementation ACPCore
 
 #pragma mark - Configuration
@@ -80,39 +78,19 @@ static NSMutableArray *_pendingExtensions;
 
 #pragma mark - Extensions
 
-+ (void) registerExtensions: (NSArray* __nullable) extensions callback:(nullable void (^) (void)) callback {
-    NSMutableArray *cleanedExtensions = [NSMutableArray arrayWithArray:_pendingExtensions];
-    for (id extensionClass in extensions) {
-        Class wrappedExtension = [self wrapExtensionClassIfNeeded:extensionClass];
-        if (wrappedExtension) {
-            [cleanedExtensions addObject:wrappedExtension];
-        }
-    }
-    
-    [AEPMobileCore registerExtensions:cleanedExtensions completion:callback];
-    [_pendingExtensions removeAllObjects];
-}
-
 + (BOOL) registerExtension: (nonnull Class) extensionClass
                      error: (NSError* _Nullable* _Nullable) error {
     // If registering a legacy 3rd party extension, we need to create a wrapper extension
     extensionClass = [self wrapExtensionClassIfNeeded:extensionClass];
-    if (!extensionClass) {
-        return nil;
+    if (extensionClass) {
+        [AEPMobileCore registerExtension: extensionClass completion: nil];
     }
-    
-    if (!_pendingExtensions) {
-        _pendingExtensions = [NSMutableArray array];
-    }
-    
-    [_pendingExtensions addObject:extensionClass];
-    
+
     return YES;
 }
 
 + (void) start: (nullable void (^) (void)) callback {
-    [AEPMobileCore registerExtensions:_pendingExtensions completion:^{
-        [_pendingExtensions removeAllObjects];
+    [AEPMobileCore registerExtensions:@[] completion:^{
         callback();
     }];
 }
@@ -231,6 +209,7 @@ static NSMutableArray *_pendingExtensions;
 #pragma mark - Private Helpers
 
 /// This method determines if `extensionClass` is a descendent of `ACPExtension`, if so, it dynamically creates a new class derived from `ACPBridgeExtension`  to wrap the instance of `ACPExtension`
+/// If `extensionClass` does not inherit from `ACPExtension` but exposes a `registerExtension` API we attempt to invoke the `registerExtension` API and return nil
 /// @param extensionClass the class which should be registered with the `EventHub`
 + (Class _Nonnull)wrapExtensionClassIfNeeded:(Class _Nonnull)extensionClass {
     // This extension is a legacy 3rd party extension if it inherits from `ACPExtension`
@@ -248,6 +227,9 @@ static NSMutableArray *_pendingExtensions;
         [ACPBridgeExtension setExtensionClass:extensionClass withName:wrapperClassName]; // set the underlying extension class to the original extension class
         
         return wrapperClass;
+    } else if ([extensionClass respondsToSelector:NSSelectorFromString(@"registerExtension")]) {
+        [extensionClass performSelector:NSSelectorFromString(@"registerExtension") withObject:nil afterDelay:0];
+        return nil;
     }
     
     return extensionClass;

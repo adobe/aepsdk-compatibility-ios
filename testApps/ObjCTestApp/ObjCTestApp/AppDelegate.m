@@ -1,5 +1,5 @@
 /*
-Copyright 2018 Adobe. All rights reserved.
+Copyright 2021 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -17,9 +17,13 @@ governing permissions and limitations under the License.
 #import <ACPCore/ACPSignal.h>
 #import <ACPCore/ACPExtensionEvent.h>
 #import <ACPUserProfile/ACPUserProfile.h>
+#import <ACPAudience/ACPAudience.h>
 #import "AppsFlyerAdobeExtension/AppsFlyerAdobeExtension.h"
 #import <AdformAdobeExtension/AdformAdobeExtension.h>
 #import <AEPAssurance/AEPAssurance.h>
+#import <ACPAnalytics/ACPAnalytics.h>
+#import <ACPMedia/ACPMedia.h>
+#import <ACPMedia/ACPMediaConstants.h>
 #import "SkeletonExtension.h"
 
 
@@ -108,6 +112,9 @@ governing permissions and limitations under the License.
     [AdformAdobeExtension registerExtension];
     [AEPAssurance registerExtension];
     [ACPUserProfile registerExtension];
+    [ACPAudience registerExtension];
+    [ACPAnalytics registerExtension];
+    [ACPMedia registerExtension];
 
     [ACPCore start:^{
         [ACPCore lifecycleStart:nil];
@@ -163,6 +170,108 @@ governing permissions and limitations under the License.
     [ACPUserProfile getUserAttributes:attributes withCompletionHandler:^(NSDictionary* dict, NSError* error){
     // your customized code
     }];
+    
+    // Audience Manager Testing
+    [ACPCore setPrivacyStatus:ACPMobilePrivacyStatusOptIn];
+    sleep(1);
+    NSMutableDictionary *traits = [[NSMutableDictionary alloc] init];
+        [traits setObject:@"myvalue" forKey:@"mykey"];
+    
+    [ACPAudience signalWithData:traits callback:^(NSDictionary * _Nullable visitorProfile) {
+        NSLog(@"Audience::#signalWithData - visitor profile: %@",[visitorProfile descriptionInStringsFileFormat]);
+    }];
+    
+    [ACPAudience signalWithData:traits withCompletionHandler:^(NSDictionary * _Nullable visitorProfile, NSError * _Nullable error) {
+        if(error) {
+            NSLog(@"Audience::#signalWithDataWithCompletionHandler - error occured: %@", [error localizedDescription]);
+        }
+        else{
+            NSLog(@"Audience::#signalWithDataWithCompletionHandler - visitor profile: %@",[visitorProfile descriptionInStringsFileFormat]);
+        }
+    }];
+    
+    [ACPAudience getVisitorProfile:^(NSDictionary * _Nullable profile) {
+        NSLog(@"Audience::#getVisitorProfile - retrieved visitor profile: %@",[profile descriptionInStringsFileFormat]);
+    }];
+    
+    [ACPAudience getVisitorProfileWithCompletionHandler:^(NSDictionary * _Nullable visitorProfile, NSError * _Nullable error) {
+        if(error) {
+            NSLog(@"Audience::#getVisitorProfileWithCompletionHandler - error while retrieving visitor profile: %@", [error localizedDescription]);
+        }
+        else {
+            NSLog(@"Audience::#getVisitorProfileWithCompletionHandler - retrieved visitor profile: %@",[visitorProfile descriptionInStringsFileFormat]);
+        }
+    }];
+    
+    [ACPAudience reset];
+
+    //Analytics Testing
+
+    NSString *analyticsVersion = [ACPAnalytics extensionVersion];
+    
+    [ACPAnalytics getQueueSize:^(NSUInteger queueSize) {
+       //handle
+    }];
+    
+    [ACPAnalytics getQueueSizeWithCompletionHandler:^(NSUInteger queueSize, NSError * _Nullable error) {
+        //handle
+    }];
+    
+    [ACPAnalytics sendQueuedHits];
+    
+    [ACPAnalytics clearQueue];
+    
+    [ACPAnalytics getTrackingIdentifier:^(NSString * _Nullable trackingIdentifier) {
+        //handle
+    }];
+    
+    [ACPAnalytics getTrackingIdentifierWithCompletionHandler:^(NSString * _Nullable trackingIdentifier, NSError * _Nullable error) {
+        //handle
+    }];
+    
+    [ACPAnalytics getVisitorIdentifier:^(NSString * _Nullable visitorIdentifier) {
+        //handle
+    }];
+
+    [ACPAnalytics getVisitorIdentifierWithCompletionHandler:^(NSString * _Nullable visitorIdentifier, NSError * _Nullable error) {
+        //handle
+    }];
+    
+    //Media Analytics Testing
+    NSString *mediaVersion = [ACPMedia extensionVersion];
+    
+    NSMutableDictionary* config = [NSMutableDictionary dictionary];
+    config[ACPMediaKeyConfigChannel] = @"custom-channel";
+    config[ACPMediaKeyConfigDownloadedContent] = @YES;
+    
+    ACPMediaTracker *mediaTracker = [ACPMedia createTrackerWithConfig:config];
+    
+    NSDictionary *mediaObject = [ACPMedia createMediaObjectWithName: @"video-name"
+                                                            mediaId: @"video-id"
+                                                             length: 60
+                                                         streamType: ACPMediaStreamTypeVod
+                                                          mediaType: ACPMediaTypeVideo];
+    
+    NSMutableDictionary *mediaMetadata = [[NSMutableDictionary alloc] init];
+    [mediaMetadata setObject:@"Sample show" forKey:ACPVideoMetadataKeyShow];
+    [mediaMetadata setObject:@"Sample season" forKey:ACPVideoMetadataKeySeason];
+
+   
+    [mediaMetadata setObject:@"false" forKey:@"isUserLoggedIn"];
+    [mediaMetadata setObject:@"Sample TV station" forKey:@"tvStation"];
+
+    [mediaTracker trackSessionStart:mediaObject data:mediaMetadata];
+    [mediaTracker trackPlay];
+    [mediaTracker trackPause];
+    [mediaTracker updateCurrentPlayhead:(0.0)];
+    NSDictionary* stateObject = [ACPMedia createStateObjectWithName:@"fullscreen"];
+    [mediaTracker trackEvent:ACPMediaEventStateStart info:stateObject data:nil];
+    [mediaTracker trackEvent:ACPMediaEventStateEnd info:stateObject data:nil];
+    NSDictionary* qoeObject = [ACPMedia createQoEObjectWithBitrate:1000000 startupTime:2 fps:25 droppedFrames:10];
+    [mediaTracker updateQoEObject:qoeObject];
+    [mediaTracker trackError:@"errorId"];
+    [mediaTracker trackComplete];
+    [mediaTracker trackSessionEnd];
     
     return YES;
 }
