@@ -32,8 +32,8 @@ governing permissions and limitations under the License.
 }
 
 - (void) trackSessionStart: (NSDictionary* _Nonnull) mediaObject data: (NSDictionary* _Nullable) data {
-    NSDictionary* sanitizeMetadata = [self sanitizeContextData:data];
-    [core_tracker_ trackSessionStart:mediaObject metadata:sanitizeMetadata];
+    NSDictionary* sanitizedContextData = [self sanitizeContextData:data];
+    [core_tracker_ trackSessionStart:mediaObject metadata:sanitizedContextData];
 }
     
 - (void) trackPlay {
@@ -58,8 +58,8 @@ governing permissions and limitations under the License.
 
 - (void) trackEvent: (ACPMediaEvent) event info: (NSDictionary* _Nullable) info data: (NSDictionary* _Nullable) data {
     AEPMediaEvent event_name = [self getAepEvent:event];
-    NSDictionary* sanitizeMetadata = [self sanitizeContextData:data];
-    [core_tracker_ trackEvent:event_name info:info metadata:sanitizeMetadata];
+    NSDictionary* sanitizedContextData = [self sanitizeContextData:data];
+    [core_tracker_ trackEvent:event_name info:info metadata:sanitizedContextData];
 }
 
 - (void) updateCurrentPlayhead: (double) time {
@@ -127,13 +127,13 @@ governing permissions and limitations under the License.
         for (id key in inputData.allKeys) {
             if (![key isKindOfClass:NSString.class]) {
                 NSString *errorMessage = [NSString stringWithFormat:@"Removing entry with non-string key: %@", key];
-                [ACPCore log:ACPMobileLogLevelWarning tag:@"ACPCore Compatibility" message:errorMessage];
+                [ACPCore log:ACPMobileLogLevelWarning tag:@"ACPMedia Compatibility" message:errorMessage];
                 continue;
             }
             id value = inputData[key];
             if (![value isKindOfClass:NSString.class]) {
                 NSString *errorMessage = [NSString stringWithFormat:@"Removing entry for key '%@' with non-string value: %@", key, value];
-                [ACPCore log:ACPMobileLogLevelWarning tag:@"ACPCore Compatibility" message:errorMessage];
+                [ACPCore log:ACPMobileLogLevelWarning tag:@"ACPMedia Compatibility" message:errorMessage];
                 continue;
             }
             sanitizedDictionary[key] = value;

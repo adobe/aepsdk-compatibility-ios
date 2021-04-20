@@ -20,7 +20,7 @@ PODS:
     - AEPCore (= 3.1.1)
   - AEPLifecycle (3.1.1):
     - AEPCore (= 3.1.1)
-  - AEPMedia (0.0.1):
+  - AEPMedia (3.0.0):
     - AEPCore
     - AEPIdentity
     - AEPServices
@@ -71,7 +71,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AEPMedia:
-    :commit: b86886d5fbd85fbaf93f42cb03bc80f99c34862d
+    :commit: 3bcd5d179e73700c2ff3ff261389a783e7e99b28
     :git: "git@github.com:adobe/aepsdk-media-ios.git"
   AEPUserProfile:
     :commit: 77d7cfaeb994f22b30a2888e3672476763aa0a6c
@@ -84,7 +84,7 @@ SPEC CHECKSUMS:
   AEPCore: 46ed4c5ed27ba49490990e397bb7454cf9906601
   AEPIdentity: 017d2ee5e49dd7a7cd29761339c535924e89d968
   AEPLifecycle: 580d11bb4262e7b154751540852a2ff9febbde0d
-  AEPMedia: a76d59f7f81262ad6a0edd964df570295722e789
+  AEPMedia: 9eb72b5b2456e1e22af15aa33b2f36ce079d371d
   AEPRulesEngine: 8bbc694fce6900cd33b2496c7d4b33ee2eeffc46
   AEPServices: bdd8a78f1d6cda0165f6a58e42cce0d7e9f43ae1
   AEPSignal: 4259aed43857c9e0ae89590a682c6d12865b7ce3
