@@ -132,9 +132,8 @@ governing permissions and limitations under the License.
 }
 
 - (nullable NSDictionary*) getXDMSharedEventState: (nonnull NSString*) name
-                                         event: (nullable ACPExtensionEvent*) event
-                                         error: (NSError* _Nullable* _Nullable) error {
-    AEPSharedStateResult *result = [runtime_ getSharedStateWithExtensionName:name event:event.aepEvent  barrier:false];
+                                         event: (nullable ACPExtensionEvent*) event {
+    AEPSharedStateResult *result = [runtime_ getXDMSharedStateWithExtensionName:name event:event.aepEvent  barrier:false];
     return result.value;
 }
 
