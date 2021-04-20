@@ -88,12 +88,21 @@
  * @brief Called by extension from a listener to get a shared state during event processing.
  * @param name State to retrieve data for. See documentation for the list of available states.
  * @param event The event for which the state is being requested. Passing `nil` will retrieve latest state available.
- * @param error An optional parameter where an NSError* will be returned in case of failure
  * @return NULL if state does not exists or NSDictionary* containing state data at that version in JSON format
  */
 - (nullable NSDictionary*) getSharedEventState: (nonnull NSString*) name
                                          event: (nullable ACPExtensionEvent*) event
                                          error: (NSError* _Nullable* _Nullable) error;
+
+/*
+ * @brief Called by extension from a listener to get a XDM shared state during event processing.
+ * @param name State to retrieve data for. See documentation for the list of available states.
+ * @param event The event for which the state is being requested. Passing `nil` will retrieve latest xdm state available.
+ * @param error An optional parameter where an NSError* will be returned in case of failure
+ * @return NULL if xdm state does not exists or NSDictionary* containing state data at that version in JSON format
+ */
+- (nullable NSDictionary*) getXDMSharedEventState: (nonnull NSString*) name
+                                         event: (nullable ACPExtensionEvent*) event;
 
 /*
  * @brief Un-register this extension. This can be called at any time after SDK initialization.

@@ -131,6 +131,12 @@ governing permissions and limitations under the License.
     return result.value;
 }
 
+- (nullable NSDictionary*) getXDMSharedEventState: (nonnull NSString*) name
+                                         event: (nullable ACPExtensionEvent*) event {
+    AEPSharedStateResult *result = [runtime_ getXDMSharedStateWithExtensionName:name event:event.aepEvent  barrier:false];
+    return result.value;
+}
+
 - (void) unregisterExtension {
     extension_ = nil;
 }
