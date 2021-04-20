@@ -88,7 +88,6 @@
  * @brief Called by extension from a listener to get a shared state during event processing.
  * @param name State to retrieve data for. See documentation for the list of available states.
  * @param event The event for which the state is being requested. Passing `nil` will retrieve latest state available.
- * @param error An optional parameter where an NSError* will be returned in case of failure
  * @return NULL if state does not exists or NSDictionary* containing state data at that version in JSON format
  */
 - (nullable NSDictionary*) getSharedEventState: (nonnull NSString*) name
