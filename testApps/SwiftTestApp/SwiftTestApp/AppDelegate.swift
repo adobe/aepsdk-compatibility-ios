@@ -23,6 +23,8 @@ import ACPAnalytics
 import AEPAnalytics
 import AEPMedia
 import ACPMedia
+import AEPCampaign
+import ACPCampaign
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -99,10 +101,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         ACPCore.setWrapperType(.flutter)
         
-        let extensionsToRegister = [Identity.self, Lifecycle.self, Signal.self, UserProfile.self, Analytics.self, Audience.self, Media.self]
-        ACPCore.registerExtensions(extensionsToRegister) {
-            ACPCore.lifecycleStart(nil)
-        }
+        let extensionsToRegister = [Identity.self, Lifecycle.self, Signal.self, UserProfile.self, Analytics.self, Audience.self, Media.self, Campaign.self]
+        MobileCore.registerExtensions(extensionsToRegister)
         
         ACPIdentity.append(to: URL(string: "https://test.com")!) { (url) in
             // handle
@@ -252,7 +252,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         mediaTracker.updateQoEObject(qoeObject)
         mediaTracker.trackComplete()
         mediaTracker.trackSessionEnd()
-
+        
+        // Campaign Testing
+        ACPCampaign.setLinkageFields(["cusFirstName": "John", "cusLastName": "Doe", "cusEmail": "john.doe@email.com"])
+        ACPCampaign.resetLinkageFields()
         return true
     }
        

@@ -24,6 +24,7 @@ governing permissions and limitations under the License.
 #import <ACPAnalytics/ACPAnalytics.h>
 #import <ACPMedia/ACPMedia.h>
 #import <ACPMedia/ACPMediaConstants.h>
+#import <ACPCampaign/ACPCampaign.h>
 #import "SkeletonExtension.h"
 
 
@@ -115,6 +116,7 @@ governing permissions and limitations under the License.
     [ACPAudience registerExtension];
     [ACPAnalytics registerExtension];
     [ACPMedia registerExtension];
+    [ACPCampaign registerExtension];
 
     [ACPCore start:^{
         [ACPCore lifecycleStart:nil];
@@ -273,6 +275,9 @@ governing permissions and limitations under the License.
     [mediaTracker trackComplete];
     [mediaTracker trackSessionEnd];
     
+    // Campaign Testing
+    [ACPCampaign setLinkageFields:@{@"cusFirstName" : @"John", @"cusLastName": @"Doe", @"cusEmail": @"john.doe@email.com"}];
+    [ACPCampaign resetLinkageFields];
     return YES;
 }
 
