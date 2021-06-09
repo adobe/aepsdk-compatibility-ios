@@ -18,19 +18,19 @@ PODS:
     - AEPIdentity
     - AEPRulesEngine
     - AEPServices
-  - AEPCore (3.1.3):
+  - AEPCore (3.2.0):
     - AEPRulesEngine (= 1.0.1)
-    - AEPServices (= 3.1.3)
-  - AEPIdentity (3.1.3):
-    - AEPCore (= 3.1.3)
-  - AEPLifecycle (3.1.3):
-    - AEPCore (= 3.1.3)
+    - AEPServices (= 3.2.0)
+  - AEPIdentity (3.2.0):
+    - AEPCore (= 3.2.0)
+  - AEPLifecycle (3.2.0):
+    - AEPCore (= 3.2.0)
   - AEPMedia (3.0.0):
     - AEPCore
   - AEPRulesEngine (1.0.1)
-  - AEPServices (3.1.3)
-  - AEPSignal (3.1.3):
-    - AEPCore (= 3.1.3)
+  - AEPServices (3.2.0)
+  - AEPSignal (3.2.0):
+    - AEPCore (= 3.2.0)
   - AEPTarget (3.0.0):
     - AEPCore (>= 3.1.0)
   - AEPUserProfile (3.0.0):
@@ -38,100 +38,60 @@ PODS:
 
 DEPENDENCIES:
   - ACPCore (from `./`)
-  - "AEPAnalytics (from `git@github.com:adobe/aepsdk-analytics-ios.git`, branch `main`)"
-  - "AEPAudience (from `git@github.com:adobe/aepsdk-audience-ios.git`, branch `main`)"
-  - "AEPCampaign (from `git@github.com:rymorale/aepsdk-campaign-ios.git`, branch `objc-test`)"
-  - "AEPCore (from `git@github.com:adobe/aepsdk-core-ios.git`, branch `dev-v3.1.4`)"
-  - "AEPIdentity (from `git@github.com:adobe/aepsdk-core-ios.git`, branch `dev-v3.1.4`)"
+  - AEPAnalytics
+  - AEPAudience
+  - AEPCampaign
+  - AEPCore
+  - AEPIdentity
   - AEPLifecycle
-  - "AEPMedia (from `git@github.com:adobe/aepsdk-media-ios.git`, branch `main`)"
+  - AEPMedia
   - "AEPRulesEngine (from `git@github.com:adobe/aepsdk-rulesengine-ios.git`, branch `dev-v1.0.2`)"
-  - "AEPServices (from `git@github.com:adobe/aepsdk-core-ios.git`, branch `dev-v3.1.4`)"
+  - AEPServices
   - AEPSignal
   - AEPTarget
-  - "AEPUserProfile (from `git@github.com:adobe/aepsdk-userprofile-ios.git`, branch `main`)"
+  - AEPUserProfile
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
+    - AEPAnalytics
+    - AEPAudience
+    - AEPCampaign
+    - AEPCore
+    - AEPIdentity
     - AEPLifecycle
+    - AEPMedia
+    - AEPServices
     - AEPSignal
     - AEPTarget
+    - AEPUserProfile
 
 EXTERNAL SOURCES:
   ACPCore:
     :path: "./"
-  AEPAnalytics:
-    :branch: main
-    :git: "git@github.com:adobe/aepsdk-analytics-ios.git"
-  AEPAudience:
-    :branch: main
-    :git: "git@github.com:adobe/aepsdk-audience-ios.git"
-  AEPCampaign:
-    :branch: objc-test
-    :git: "git@github.com:rymorale/aepsdk-campaign-ios.git"
-  AEPCore:
-    :branch: dev-v3.1.4
-    :git: "git@github.com:adobe/aepsdk-core-ios.git"
-  AEPIdentity:
-    :branch: dev-v3.1.4
-    :git: "git@github.com:adobe/aepsdk-core-ios.git"
-  AEPMedia:
-    :branch: main
-    :git: "git@github.com:adobe/aepsdk-media-ios.git"
   AEPRulesEngine:
     :branch: dev-v1.0.2
     :git: "git@github.com:adobe/aepsdk-rulesengine-ios.git"
-  AEPServices:
-    :branch: dev-v3.1.4
-    :git: "git@github.com:adobe/aepsdk-core-ios.git"
-  AEPUserProfile:
-    :branch: main
-    :git: "git@github.com:adobe/aepsdk-userprofile-ios.git"
 
 CHECKOUT OPTIONS:
-  AEPAnalytics:
-    :commit: b9121586e787a3700fbaba319304b34df2e7aab9
-    :git: "git@github.com:adobe/aepsdk-analytics-ios.git"
-  AEPAudience:
-    :commit: 327c453826b55a6422de5845e0be05801f4e4bbe
-    :git: "git@github.com:adobe/aepsdk-audience-ios.git"
-  AEPCampaign:
-    :commit: ab7e6e530330653e478a0a7a47861372d6107f8c
-    :git: "git@github.com:rymorale/aepsdk-campaign-ios.git"
-  AEPCore:
-    :commit: b00c71fe0d30c7069690b9a74cdd970812bd5daa
-    :git: "git@github.com:adobe/aepsdk-core-ios.git"
-  AEPIdentity:
-    :commit: b00c71fe0d30c7069690b9a74cdd970812bd5daa
-    :git: "git@github.com:adobe/aepsdk-core-ios.git"
-  AEPMedia:
-    :commit: 388734a427f7e88bc7994ab7d496359dd350a54c
-    :git: "git@github.com:adobe/aepsdk-media-ios.git"
   AEPRulesEngine:
     :commit: 39a1d7850a8c37807723545cb8a1a7d8d3c7e9c0
     :git: "git@github.com:adobe/aepsdk-rulesengine-ios.git"
-  AEPServices:
-    :commit: b00c71fe0d30c7069690b9a74cdd970812bd5daa
-    :git: "git@github.com:adobe/aepsdk-core-ios.git"
-  AEPUserProfile:
-    :commit: 77d7cfaeb994f22b30a2888e3672476763aa0a6c
-    :git: "git@github.com:adobe/aepsdk-userprofile-ios.git"
 
 SPEC CHECKSUMS:
   ACPCore: 67e4b855bf16cfb6a63024a4ddb73d15c0fd30e5
   AEPAnalytics: 13353b3ea333be0af7cfc4845830d87d360726e2
   AEPAudience: d76048a8d1fa3f9c96b69e9ee55f7ec845955565
   AEPCampaign: 15dd9a864524aaeb0a29690a6132a0f457ac86e2
-  AEPCore: 6ec14ec9b1ff45999ea53be112aba85522ad00c4
-  AEPIdentity: 49e6c742238be0f77d5ae8928c13acfd1d8bec3c
-  AEPLifecycle: 9ed7ceabd98cc5c94b13c3b085c9f1eef2c714fe
+  AEPCore: 741e1ffb754d042919c37291dbec506bfd014598
+  AEPIdentity: 7dd6a5dde51c942aab5acdb53b214c5de4f5fd0b
+  AEPLifecycle: 64e0319f9fadc40fef0fae6ee4060927b4e4b6e4
   AEPMedia: e239c1fb45486537118bf6ebff291e58dd074aa6
   AEPRulesEngine: 5075ed294026a12e37bd26fe260f74604d205354
-  AEPServices: e032bfacfcb31f3a583b2aa1e87df5d427cca95d
-  AEPSignal: c0619814fbf50dbb1dde4e79141d528aa2606e9e
+  AEPServices: 3120a4824903b60229644f84de35d49c502cda9c
+  AEPSignal: b066f0f9a31dda84791451db9e54b1c648607092
   AEPTarget: 3411e002f25b5bb4b9718878f3f4aa47ded82fd7
   AEPUserProfile: d8702b2e3fc321febdc3854208db9bb1ad3b61c8
 
-PODFILE CHECKSUM: 3c131dc5cdac8dc257c0c56e5d386e0e06f0dabc
+PODFILE CHECKSUM: a2ad6e9786d262a2b5b37d6f419cce16df29720e
 
 COCOAPODS: 1.10.1
