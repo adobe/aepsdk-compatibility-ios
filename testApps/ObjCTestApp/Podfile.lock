@@ -11,6 +11,13 @@ PODS:
     - AEPCore
     - AEPIdentity
     - AEPServices
+  - ACPCampaign (2.9.9):
+    - ACPCore
+    - AEPCampaign
+    - AEPCore
+    - AEPIdentity
+    - AEPRulesEngine
+    - AEPServices
   - ACPCore (2.9.9):
     - AEPCore
     - AEPIdentity
@@ -38,44 +45,48 @@ PODS:
     - AdformTracking (~> 1.5.1)
   - AdformTracking (1.5.1):
     - Protobuf (~> 3.1)
-  - AEPAnalytics (3.0.0):
+  - AEPAnalytics (3.0.1):
     - AEPCore
     - AEPServices
-  - AEPAssurance (1.1.0):
+  - AEPAssurance (1.1.2):
     - ACPCore (>= 2.9.0)
-    - AEPAssurance/xcframeworks (= 1.1.0)
-  - AEPAssurance/xcframeworks (1.1.0):
+    - AEPAssurance/xcframeworks (= 1.1.2)
+  - AEPAssurance/xcframeworks (1.1.2):
     - ACPCore (>= 2.9.0)
-  - AEPAudience (3.0.0):
+  - AEPAudience (3.0.1):
     - AEPCore
     - AEPIdentity
     - AEPServices
-  - AEPCore (3.0.0):
-    - AEPRulesEngine (= 1.0.0)
-    - AEPServices (= 3.0.0)
-  - AEPIdentity (3.0.0):
-    - AEPCore (= 3.0.0)
-  - AEPLifecycle (3.0.0):
-    - AEPCore (= 3.0.0)
-  - AEPMedia (0.0.1):
+  - AEPCampaign (3.0.0):
     - AEPCore
     - AEPIdentity
+    - AEPRulesEngine
     - AEPServices
-  - AEPRulesEngine (1.0.0)
-  - AEPServices (3.0.0)
-  - AEPSignal (3.0.0):
-    - AEPCore (= 3.0.0)
+  - AEPCore (3.2.0):
+    - AEPRulesEngine (= 1.0.1)
+    - AEPServices (= 3.2.0)
+  - AEPIdentity (3.2.0):
+    - AEPCore (= 3.2.0)
+  - AEPLifecycle (3.2.0):
+    - AEPCore (= 3.2.0)
+  - AEPMedia (3.0.0):
+    - AEPCore
+  - AEPRulesEngine (1.0.1)
+  - AEPServices (3.2.0)
+  - AEPSignal (3.2.0):
+    - AEPCore (= 3.2.0)
   - AEPUserProfile (3.0.0):
     - AEPCore
   - AppsFlyerAdobeExtension (5.4.1):
     - ACPCore
     - AppsFlyerFramework (~> 5.4.1)
   - AppsFlyerFramework (5.4.4)
-  - Protobuf (3.14.0)
+  - Protobuf (3.17.0)
 
 DEPENDENCIES:
   - ACPAnalytics (from `../../`)
   - ACPAudience (from `../../`)
+  - ACPCampaign (from `../../`)
   - ACPCore (from `../../`)
   - ACPMedia (from `../../`)
   - ACPUserProfile (from `../../`)
@@ -86,7 +97,7 @@ DEPENDENCIES:
   - "AEPCore (from `git@github.com:adobe/aepsdk-core-ios.git`, branch `main`)"
   - "AEPIdentity (from `git@github.com:adobe/aepsdk-core-ios.git`, branch `main`)"
   - "AEPLifecycle (from `git@github.com:adobe/aepsdk-core-ios.git`, branch `main`)"
-  - "AEPMedia (from `git@github.com:adobe/aepsdk-media-ios.git`, branch `dev`)"
+  - "AEPMedia (from `git@github.com:adobe/aepsdk-media-ios.git`, branch `main`)"
   - "AEPRulesEngine (from `git@github.com:adobe/aepsdk-rulesengine-ios.git`, branch `main`)"
   - "AEPServices (from `git@github.com:adobe/aepsdk-core-ios.git`, branch `main`)"
   - "AEPSignal (from `git@github.com:adobe/aepsdk-core-ios.git`, branch `main`)"
@@ -98,6 +109,7 @@ SPEC REPOS:
     - AdformAdobeExtension
     - AdformTracking
     - AEPAssurance
+    - AEPCampaign
     - AppsFlyerAdobeExtension
     - AppsFlyerFramework
     - Protobuf
@@ -106,6 +118,8 @@ EXTERNAL SOURCES:
   ACPAnalytics:
     :path: "../../"
   ACPAudience:
+    :path: "../../"
+  ACPCampaign:
     :path: "../../"
   ACPCore:
     :path: "../../"
@@ -129,7 +143,7 @@ EXTERNAL SOURCES:
     :branch: main
     :git: "git@github.com:adobe/aepsdk-core-ios.git"
   AEPMedia:
-    :branch: dev
+    :branch: main
     :git: "git@github.com:adobe/aepsdk-media-ios.git"
   AEPRulesEngine:
     :branch: main
@@ -146,31 +160,31 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AEPAnalytics:
-    :commit: ec25108e075c6f0b24b64f0dcfe0c808fc501c9e
+    :commit: b9121586e787a3700fbaba319304b34df2e7aab9
     :git: "git@github.com:adobe/aepsdk-analytics-ios.git"
   AEPAudience:
-    :commit: b9c6af70c801c5375b358c752c53c296d8d8fffd
+    :commit: 327c453826b55a6422de5845e0be05801f4e4bbe
     :git: "git@github.com:adobe/aepsdk-audience-ios.git"
   AEPCore:
-    :commit: 9fe655414c1e88d4252e9be25cf4f8d1dc539bee
+    :commit: 1ca8d8ed0dee38dbd8a00b08b236fad027cd3620
     :git: "git@github.com:adobe/aepsdk-core-ios.git"
   AEPIdentity:
-    :commit: 9fe655414c1e88d4252e9be25cf4f8d1dc539bee
+    :commit: 1ca8d8ed0dee38dbd8a00b08b236fad027cd3620
     :git: "git@github.com:adobe/aepsdk-core-ios.git"
   AEPLifecycle:
-    :commit: 9fe655414c1e88d4252e9be25cf4f8d1dc539bee
+    :commit: 1ca8d8ed0dee38dbd8a00b08b236fad027cd3620
     :git: "git@github.com:adobe/aepsdk-core-ios.git"
   AEPMedia:
-    :commit: 66adae4fe633f5e099edd463c8f10e10fba96a49
+    :commit: 388734a427f7e88bc7994ab7d496359dd350a54c
     :git: "git@github.com:adobe/aepsdk-media-ios.git"
   AEPRulesEngine:
-    :commit: 1e270654b330b9f07a6b1ec374e686f2e631e039
+    :commit: c3337be0f893db495aa497fef760e0518a1e5fe2
     :git: "git@github.com:adobe/aepsdk-rulesengine-ios.git"
   AEPServices:
-    :commit: 9fe655414c1e88d4252e9be25cf4f8d1dc539bee
+    :commit: 1ca8d8ed0dee38dbd8a00b08b236fad027cd3620
     :git: "git@github.com:adobe/aepsdk-core-ios.git"
   AEPSignal:
-    :commit: 9fe655414c1e88d4252e9be25cf4f8d1dc539bee
+    :commit: 1ca8d8ed0dee38dbd8a00b08b236fad027cd3620
     :git: "git@github.com:adobe/aepsdk-core-ios.git"
   AEPUserProfile:
     :commit: 77d7cfaeb994f22b30a2888e3672476763aa0a6c
@@ -179,26 +193,28 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   ACPAnalytics: 53c9d8891c1291a127c539cbe879dee46e40cf82
   ACPAudience: ebc37545a41fac50d1f291b62645e57b14904527
+  ACPCampaign: d1ff1cc1c1c1fdb710fba9e1cc76a2ab11cc2297
   ACPCore: 67e4b855bf16cfb6a63024a4ddb73d15c0fd30e5
   ACPMedia: 8d25b98e5ae23f36d0d20e717dc092cfad2c6da1
   ACPUserProfile: a45d0bddff3b2644350fa6ad00f1220dfc987f2c
   AdformAdobeExtension: b123105956913d2789b98a05418ee2ff120b9ae6
   AdformTracking: 8bfde03b85e745a35bd66983384cf82f5a05d2f2
-  AEPAnalytics: a36c1483c5f47340374f791d2f3a329f64d37318
-  AEPAssurance: c9c21b7e57bf993db210766631db2ef3732d4fa4
-  AEPAudience: 22e6eceb857844c4edf6b8ccdbfd38ea09d1f0e5
-  AEPCore: 9ced1f1fddcbfd61517461e548e36aee740bf7c8
-  AEPIdentity: 79c57508bbabc8c2cf7f90e2baed15b03f4e97e6
-  AEPLifecycle: ed9b2fca314eb91da83766986bad8cb914555499
-  AEPMedia: a76d59f7f81262ad6a0edd964df570295722e789
-  AEPRulesEngine: 8bbc694fce6900cd33b2496c7d4b33ee2eeffc46
-  AEPServices: 21ea64149483fdfbd5f88f546b9f5ad7d4987400
-  AEPSignal: b4ac5c8e8c68e8902739426d70c01ed3ce229ac9
+  AEPAnalytics: 13353b3ea333be0af7cfc4845830d87d360726e2
+  AEPAssurance: c53056ea40b3566b36f7340c5f779624c1ef6359
+  AEPAudience: d76048a8d1fa3f9c96b69e9ee55f7ec845955565
+  AEPCampaign: 15dd9a864524aaeb0a29690a6132a0f457ac86e2
+  AEPCore: 741e1ffb754d042919c37291dbec506bfd014598
+  AEPIdentity: 7dd6a5dde51c942aab5acdb53b214c5de4f5fd0b
+  AEPLifecycle: 64e0319f9fadc40fef0fae6ee4060927b4e4b6e4
+  AEPMedia: e239c1fb45486537118bf6ebff291e58dd074aa6
+  AEPRulesEngine: 5075ed294026a12e37bd26fe260f74604d205354
+  AEPServices: 3120a4824903b60229644f84de35d49c502cda9c
+  AEPSignal: b066f0f9a31dda84791451db9e54b1c648607092
   AEPUserProfile: d8702b2e3fc321febdc3854208db9bb1ad3b61c8
   AppsFlyerAdobeExtension: 804317126d74cb753ff6c7e8088235908d0cd503
   AppsFlyerFramework: a511099f7bedbb1d5804d733c6152d6f8092c4fa
-  Protobuf: 0cde852566359049847168e51bd1c690e0f70056
+  Protobuf: 7327d4444215b5f18e560a97f879ff5503c4581c
 
-PODFILE CHECKSUM: f17ed04388b854477a5a7e8bb6219177b3d90155
+PODFILE CHECKSUM: c48fed02e34f33bd99f3729d8f874ca3df494600
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1
