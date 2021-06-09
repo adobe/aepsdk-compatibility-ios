@@ -118,8 +118,8 @@
 		4169F7CA243FCFD618E1D9E6 /* Pods-ACPTarget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPTarget.debug.xcconfig"; path = "Target Support Files/Pods-ACPTarget/Pods-ACPTarget.debug.xcconfig"; sourceTree = "<group>"; };
 		4CBF8ACCB7BF85927CDCC2F7 /* Pods_ACPCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACPCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6766B72745DC93B27A52779A /* Pods-ACPTarget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPTarget.release.xcconfig"; path = "Target Support Files/Pods-ACPTarget/Pods-ACPTarget.release.xcconfig"; sourceTree = "<group>"; };
-		8D09339F7DC43450B874AC9E /* Pods_ACPMedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACPMedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		732B91D0B147CF5EA6A5BFEA /* Pods-ACPCampaign.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPCampaign.debug.xcconfig"; path = "Target Support Files/Pods-ACPCampaign/Pods-ACPCampaign.debug.xcconfig"; sourceTree = "<group>"; };
+		8D09339F7DC43450B874AC9E /* Pods_ACPMedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACPMedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D385E2E3759857490D2259 /* Pods-ACPCore-ACPCoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPCore-ACPCoreTests.release.xcconfig"; path = "Target Support Files/Pods-ACPCore-ACPCoreTests/Pods-ACPCore-ACPCoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		91F2EFCBAC5F76897D7A8E3E /* Pods-ACPCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPCore.release.xcconfig"; path = "Target Support Files/Pods-ACPCore/Pods-ACPCore.release.xcconfig"; sourceTree = "<group>"; };
 		92438BE825A5354500359C53 /* ACPAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACPAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,9 +168,9 @@
 		D6DBA86C25A5251A0089FB71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6DBA88A25A527760089FB71 /* ACPAudience.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACPAudience.m; sourceTree = "<group>"; };
 		E163E832FFEB8E4BBB2C558C /* Pods_ACPTarget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACPTarget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB18104620CA632B3122C45C /* Pods-ACPMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPMedia.debug.xcconfig"; path = "Target Support Files/Pods-ACPMedia/Pods-ACPMedia.debug.xcconfig"; sourceTree = "<group>"; };
 		E65C64966D92E475E30D480D /* Pods-ACPCampaign.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPCampaign.release.xcconfig"; path = "Target Support Files/Pods-ACPCampaign/Pods-ACPCampaign.release.xcconfig"; sourceTree = "<group>"; };
 		F49645C063940E3430340593 /* Pods_ACPCampaign.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACPCampaign.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB18104620CA632B3122C45C /* Pods-ACPMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPMedia.debug.xcconfig"; path = "Target Support Files/Pods-ACPMedia/Pods-ACPMedia.debug.xcconfig"; sourceTree = "<group>"; };
 		FE13D1FCDB9783830360EF51 /* Pods-ACPCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACPCore.debug.xcconfig"; path = "Target Support Files/Pods-ACPCore/Pods-ACPCore.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1283,7 +1283,7 @@
 			baseConfigurationReference = 96087480F6F8EE933A5D9972 /* Pods-ACPCore-ACPCoreTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GP6Z9HB7H4;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ACPCoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1301,7 +1301,7 @@
 			baseConfigurationReference = 90D385E2E3759857490D2259 /* Pods-ACPCore-ACPCoreTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GP6Z9HB7H4;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ACPCoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1534,7 +1534,7 @@
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = FKGEE875K4;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1563,7 +1563,7 @@
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = FKGEE875K4;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";

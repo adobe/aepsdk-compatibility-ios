@@ -45,7 +45,7 @@ DEPENDENCIES:
   - AEPIdentity
   - AEPLifecycle
   - AEPMedia
-  - "AEPRulesEngine (from `git@github.com:adobe/aepsdk-rulesengine-ios.git`, branch `dev-v1.0.2`)"
+  - AEPRulesEngine
   - AEPServices
   - AEPSignal
   - AEPTarget
@@ -60,6 +60,7 @@ SPEC REPOS:
     - AEPIdentity
     - AEPLifecycle
     - AEPMedia
+    - AEPRulesEngine
     - AEPServices
     - AEPSignal
     - AEPTarget
@@ -68,14 +69,6 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   ACPCore:
     :path: "./"
-  AEPRulesEngine:
-    :branch: dev-v1.0.2
-    :git: "git@github.com:adobe/aepsdk-rulesengine-ios.git"
-
-CHECKOUT OPTIONS:
-  AEPRulesEngine:
-    :commit: 39a1d7850a8c37807723545cb8a1a7d8d3c7e9c0
-    :git: "git@github.com:adobe/aepsdk-rulesengine-ios.git"
 
 SPEC CHECKSUMS:
   ACPCore: 67e4b855bf16cfb6a63024a4ddb73d15c0fd30e5
@@ -92,6 +85,6 @@ SPEC CHECKSUMS:
   AEPTarget: 3411e002f25b5bb4b9718878f3f4aa47ded82fd7
   AEPUserProfile: d8702b2e3fc321febdc3854208db9bb1ad3b61c8
 
-PODFILE CHECKSUM: b53f3ccff03056ab4cf89e7a74625b7dffaef168
+PODFILE CHECKSUM: d78e9ab67d36557b2e61a9e4e28b41cf03712d8b
 
 COCOAPODS: 1.10.1

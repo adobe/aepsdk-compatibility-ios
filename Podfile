@@ -11,7 +11,7 @@ target 'ACPCore' do
   pod 'AEPLifecycle'
   pod 'AEPIdentity'
   pod 'AEPSignal'
-  pod 'AEPRulesEngine', :git => 'git@github.com:adobe/aepsdk-rulesengine-ios.git', :branch => 'dev-v1.0.2'
+  pod 'AEPRulesEngine'
 
   target 'ACPCoreTests' do
     # Pods for testing
@@ -30,7 +30,7 @@ target 'ACPUserProfile' do
   pod 'AEPLifecycle'
   pod 'AEPIdentity'
   pod 'AEPSignal'
-  pod 'AEPRulesEngine', :git => 'git@github.com:adobe/aepsdk-rulesengine-ios.git', :branch => 'dev-v1.0.2'
+  pod 'AEPRulesEngine'
   pod 'AEPUserProfile'
 end
 
@@ -85,7 +85,7 @@ target 'ACPCampaign' do
   pod 'ACPCore', :path => './'
   pod 'AEPCore'
   pod 'AEPServices'
-  pod 'AEPRulesEngine', :git => 'git@github.com:adobe/aepsdk-rulesengine-ios.git', :branch => 'dev-v1.0.2'
+  pod 'AEPRulesEngine'
   pod 'AEPIdentity'
   pod 'AEPCampaign'
 end
